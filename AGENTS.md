@@ -1,0 +1,3 @@
+# Project instructions for Codex
+
+Read `PROJECT_BRIEF.md` before doing any work. Keep user-facing claims honest: quantum advantage and novelty unproven. Work in small, reviewable phases, test actual code, and never fabricate benchmark data or success claims. Keep QUBO optional, classical solver baselines first-class, and require original-problem feasibility validation after decoding. Do not submit paid IBM Quantum jobs, expose credentials, or start phases beyond the user's latest approved scope. At the end of a task, report changed files, commands executed, passing and failing tests, and unresolved concerns.

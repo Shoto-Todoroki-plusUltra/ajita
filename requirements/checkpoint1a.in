@@ -1,0 +1,7 @@
+# Native macOS arm64 / CPython 3.12 lock target; quantum packages excluded.
+pydantic==2.14.1
+ortools==9.15.6755
+pytest==9.1.1
+pip-tools==7.6.2
+pip==26.1
+setuptools==84.0.0
