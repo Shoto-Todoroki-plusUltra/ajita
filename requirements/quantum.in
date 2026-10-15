@@ -1,0 +1,7 @@
+# Optional local research environment, native macOS arm64 CPython 3.12.
+# Classical lock remains unchanged and independently usable.
+-r checkpoint1a.in
+qiskit==2.5.2
+qiskit-aer==0.17.2
+scipy==1.18.0
+psutil==7.2.2

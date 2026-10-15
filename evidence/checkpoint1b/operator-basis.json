@@ -1,0 +1,4776 @@
+{
+  "basis_states": [
+    {
+      "integer": 0,
+      "display": "000000000",
+      "operator_expectation": -8.0,
+      "offset": 104.0,
+      "total_energy": 96.0,
+      "independent_reference": 96.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 1,
+      "display": "000000001",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 2,
+      "display": "000000010",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 3,
+      "display": "000000011",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 4,
+      "display": "000000100",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 5,
+      "display": "000000101",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 6,
+      "display": "000000110",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 7,
+      "display": "000000111",
+      "operator_expectation": -6.0,
+      "offset": 104.0,
+      "total_energy": 98.0,
+      "independent_reference": 98.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 8,
+      "display": "000001000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 9,
+      "display": "000001001",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 10,
+      "display": "000001010",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 11,
+      "display": "000001011",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 12,
+      "display": "000001100",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 13,
+      "display": "000001101",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 14,
+      "display": "000001110",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 15,
+      "display": "000001111",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 16,
+      "display": "000010000",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 17,
+      "display": "000010001",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 18,
+      "display": "000010010",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 19,
+      "display": "000010011",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 20,
+      "display": "000010100",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 21,
+      "display": "000010101",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 22,
+      "display": "000010110",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 23,
+      "display": "000010111",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 24,
+      "display": "000011000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 25,
+      "display": "000011001",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 26,
+      "display": "000011010",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 27,
+      "display": "000011011",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 28,
+      "display": "000011100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 29,
+      "display": "000011101",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 30,
+      "display": "000011110",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 31,
+      "display": "000011111",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 32,
+      "display": "000100000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 33,
+      "display": "000100001",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 34,
+      "display": "000100010",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 35,
+      "display": "000100011",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 36,
+      "display": "000100100",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 37,
+      "display": "000100101",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 38,
+      "display": "000100110",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 39,
+      "display": "000100111",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 40,
+      "display": "000101000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 41,
+      "display": "000101001",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 42,
+      "display": "000101010",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 43,
+      "display": "000101011",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 44,
+      "display": "000101100",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 45,
+      "display": "000101101",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 46,
+      "display": "000101110",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 47,
+      "display": "000101111",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 48,
+      "display": "000110000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 49,
+      "display": "000110001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 50,
+      "display": "000110010",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 51,
+      "display": "000110011",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 52,
+      "display": "000110100",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 53,
+      "display": "000110101",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 54,
+      "display": "000110110",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 55,
+      "display": "000110111",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 56,
+      "display": "000111000",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 57,
+      "display": "000111001",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 58,
+      "display": "000111010",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 59,
+      "display": "000111011",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 60,
+      "display": "000111100",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 61,
+      "display": "000111101",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 62,
+      "display": "000111110",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 63,
+      "display": "000111111",
+      "operator_expectation": 98.0,
+      "offset": 104.0,
+      "total_energy": 202.0,
+      "independent_reference": 202.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 64,
+      "display": "001000000",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 65,
+      "display": "001000001",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 66,
+      "display": "001000010",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 67,
+      "display": "001000011",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 68,
+      "display": "001000100",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 69,
+      "display": "001000101",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 70,
+      "display": "001000110",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 71,
+      "display": "001000111",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 72,
+      "display": "001001000",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 73,
+      "display": "001001001",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 74,
+      "display": "001001010",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 75,
+      "display": "001001011",
+      "operator_expectation": -1.0,
+      "offset": 104.0,
+      "total_energy": 103.0,
+      "independent_reference": 103.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 76,
+      "display": "001001100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 77,
+      "display": "001001101",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 78,
+      "display": "001001110",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 79,
+      "display": "001001111",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 80,
+      "display": "001010000",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 81,
+      "display": "001010001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 82,
+      "display": "001010010",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 83,
+      "display": "001010011",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 84,
+      "display": "001010100",
+      "operator_expectation": -100.0,
+      "offset": 104.0,
+      "total_energy": 4.0,
+      "independent_reference": 4.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 85,
+      "display": "001010101",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 86,
+      "display": "001010110",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 87,
+      "display": "001010111",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 88,
+      "display": "001011000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 89,
+      "display": "001011001",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 90,
+      "display": "001011010",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 91,
+      "display": "001011011",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 92,
+      "display": "001011100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 93,
+      "display": "001011101",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 94,
+      "display": "001011110",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 95,
+      "display": "001011111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 96,
+      "display": "001100000",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 97,
+      "display": "001100001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 98,
+      "display": "001100010",
+      "operator_expectation": -98.0,
+      "offset": 104.0,
+      "total_energy": 6.0,
+      "independent_reference": 6.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 99,
+      "display": "001100011",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 100,
+      "display": "001100100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 101,
+      "display": "001100101",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 102,
+      "display": "001100110",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 103,
+      "display": "001100111",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 104,
+      "display": "001101000",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 105,
+      "display": "001101001",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 106,
+      "display": "001101010",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 107,
+      "display": "001101011",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 108,
+      "display": "001101100",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 109,
+      "display": "001101101",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 110,
+      "display": "001101110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 111,
+      "display": "001101111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 112,
+      "display": "001110000",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 113,
+      "display": "001110001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 114,
+      "display": "001110010",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 115,
+      "display": "001110011",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 116,
+      "display": "001110100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 117,
+      "display": "001110101",
+      "operator_expectation": -32.0,
+      "offset": 104.0,
+      "total_energy": 72.0,
+      "independent_reference": 72.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 118,
+      "display": "001110110",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 119,
+      "display": "001110111",
+      "operator_expectation": 35.0,
+      "offset": 104.0,
+      "total_energy": 139.0,
+      "independent_reference": 139.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 120,
+      "display": "001111000",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 121,
+      "display": "001111001",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 122,
+      "display": "001111010",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 123,
+      "display": "001111011",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 124,
+      "display": "001111100",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 125,
+      "display": "001111101",
+      "operator_expectation": 66.0,
+      "offset": 104.0,
+      "total_energy": 170.0,
+      "independent_reference": 170.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 126,
+      "display": "001111110",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 127,
+      "display": "001111111",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 128,
+      "display": "010000000",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 129,
+      "display": "010000001",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 130,
+      "display": "010000010",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 131,
+      "display": "010000011",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 132,
+      "display": "010000100",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 133,
+      "display": "010000101",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 134,
+      "display": "010000110",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 135,
+      "display": "010000111",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 136,
+      "display": "010001000",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 137,
+      "display": "010001001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 138,
+      "display": "010001010",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 139,
+      "display": "010001011",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 140,
+      "display": "010001100",
+      "operator_expectation": -98.0,
+      "offset": 104.0,
+      "total_energy": 6.0,
+      "independent_reference": 6.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 141,
+      "display": "010001101",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 142,
+      "display": "010001110",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 143,
+      "display": "010001111",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 144,
+      "display": "010010000",
+      "operator_expectation": -40.0,
+      "offset": 104.0,
+      "total_energy": 64.0,
+      "independent_reference": 64.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 145,
+      "display": "010010001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 146,
+      "display": "010010010",
+      "operator_expectation": -8.0,
+      "offset": 104.0,
+      "total_energy": 96.0,
+      "independent_reference": 96.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 147,
+      "display": "010010011",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 148,
+      "display": "010010100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 149,
+      "display": "010010101",
+      "operator_expectation": -64.0,
+      "offset": 104.0,
+      "total_energy": 40.0,
+      "independent_reference": 40.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 150,
+      "display": "010010110",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 151,
+      "display": "010010111",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 152,
+      "display": "010011000",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 153,
+      "display": "010011001",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 154,
+      "display": "010011010",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 155,
+      "display": "010011011",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 156,
+      "display": "010011100",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 157,
+      "display": "010011101",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 158,
+      "display": "010011110",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 159,
+      "display": "010011111",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 160,
+      "display": "010100000",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 161,
+      "display": "010100001",
+      "operator_expectation": -98.0,
+      "offset": 104.0,
+      "total_energy": 6.0,
+      "independent_reference": 6.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 162,
+      "display": "010100010",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 163,
+      "display": "010100011",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 164,
+      "display": "010100100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 165,
+      "display": "010100101",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 166,
+      "display": "010100110",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 167,
+      "display": "010100111",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 168,
+      "display": "010101000",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 169,
+      "display": "010101001",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 170,
+      "display": "010101010",
+      "operator_expectation": -64.0,
+      "offset": 104.0,
+      "total_energy": 40.0,
+      "independent_reference": 40.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 171,
+      "display": "010101011",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 172,
+      "display": "010101100",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 173,
+      "display": "010101101",
+      "operator_expectation": -28.0,
+      "offset": 104.0,
+      "total_energy": 76.0,
+      "independent_reference": 76.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 174,
+      "display": "010101110",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 175,
+      "display": "010101111",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 176,
+      "display": "010110000",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 177,
+      "display": "010110001",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 178,
+      "display": "010110010",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 179,
+      "display": "010110011",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 180,
+      "display": "010110100",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 181,
+      "display": "010110101",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 182,
+      "display": "010110110",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 183,
+      "display": "010110111",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 184,
+      "display": "010111000",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 185,
+      "display": "010111001",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 186,
+      "display": "010111010",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 187,
+      "display": "010111011",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 188,
+      "display": "010111100",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 189,
+      "display": "010111101",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 190,
+      "display": "010111110",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 191,
+      "display": "010111111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 192,
+      "display": "011000000",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 193,
+      "display": "011000001",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 194,
+      "display": "011000010",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 195,
+      "display": "011000011",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 196,
+      "display": "011000100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 197,
+      "display": "011000101",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 198,
+      "display": "011000110",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 199,
+      "display": "011000111",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 200,
+      "display": "011001000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 201,
+      "display": "011001001",
+      "operator_expectation": -1.0,
+      "offset": 104.0,
+      "total_energy": 103.0,
+      "independent_reference": 103.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 202,
+      "display": "011001010",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 203,
+      "display": "011001011",
+      "operator_expectation": 34.0,
+      "offset": 104.0,
+      "total_energy": 138.0,
+      "independent_reference": 138.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 204,
+      "display": "011001100",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 205,
+      "display": "011001101",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 206,
+      "display": "011001110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 207,
+      "display": "011001111",
+      "operator_expectation": 69.0,
+      "offset": 104.0,
+      "total_energy": 173.0,
+      "independent_reference": 173.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 208,
+      "display": "011010000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 209,
+      "display": "011010001",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 210,
+      "display": "011010010",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 211,
+      "display": "011010011",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 212,
+      "display": "011010100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 213,
+      "display": "011010101",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 214,
+      "display": "011010110",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 215,
+      "display": "011010111",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 216,
+      "display": "011011000",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 217,
+      "display": "011011001",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 218,
+      "display": "011011010",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 219,
+      "display": "011011011",
+      "operator_expectation": 100.0,
+      "offset": 104.0,
+      "total_energy": 204.0,
+      "independent_reference": 204.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 220,
+      "display": "011011100",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 221,
+      "display": "011011101",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 222,
+      "display": "011011110",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 223,
+      "display": "011011111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 224,
+      "display": "011100000",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 225,
+      "display": "011100001",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 226,
+      "display": "011100010",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 227,
+      "display": "011100011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 228,
+      "display": "011100100",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 229,
+      "display": "011100101",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 230,
+      "display": "011100110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 231,
+      "display": "011100111",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 232,
+      "display": "011101000",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 233,
+      "display": "011101001",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 234,
+      "display": "011101010",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 235,
+      "display": "011101011",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 236,
+      "display": "011101100",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 237,
+      "display": "011101101",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 238,
+      "display": "011101110",
+      "operator_expectation": 6.0,
+      "offset": 104.0,
+      "total_energy": 110.0,
+      "independent_reference": 110.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 239,
+      "display": "011101111",
+      "operator_expectation": 105.0,
+      "offset": 104.0,
+      "total_energy": 209.0,
+      "independent_reference": 209.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 240,
+      "display": "011110000",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 241,
+      "display": "011110001",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 242,
+      "display": "011110010",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 243,
+      "display": "011110011",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 244,
+      "display": "011110100",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 245,
+      "display": "011110101",
+      "operator_expectation": 5.0,
+      "offset": 104.0,
+      "total_energy": 109.0,
+      "independent_reference": 109.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 246,
+      "display": "011110110",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 247,
+      "display": "011110111",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 248,
+      "display": "011111000",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 249,
+      "display": "011111001",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 250,
+      "display": "011111010",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 251,
+      "display": "011111011",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 252,
+      "display": "011111100",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 253,
+      "display": "011111101",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 254,
+      "display": "011111110",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 255,
+      "display": "011111111",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 256,
+      "display": "100000000",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 257,
+      "display": "100000001",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 258,
+      "display": "100000010",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 259,
+      "display": "100000011",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 260,
+      "display": "100000100",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 261,
+      "display": "100000101",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 262,
+      "display": "100000110",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 263,
+      "display": "100000111",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 264,
+      "display": "100001000",
+      "operator_expectation": -69.0,
+      "offset": 104.0,
+      "total_energy": 35.0,
+      "independent_reference": 35.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 265,
+      "display": "100001001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 266,
+      "display": "100001010",
+      "operator_expectation": -98.0,
+      "offset": 104.0,
+      "total_energy": 6.0,
+      "independent_reference": 6.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 267,
+      "display": "100001011",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 268,
+      "display": "100001100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 269,
+      "display": "100001101",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 270,
+      "display": "100001110",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 271,
+      "display": "100001111",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 272,
+      "display": "100010000",
+      "operator_expectation": -70.0,
+      "offset": 104.0,
+      "total_energy": 34.0,
+      "independent_reference": 34.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 273,
+      "display": "100010001",
+      "operator_expectation": -100.0,
+      "offset": 104.0,
+      "total_energy": 4.0,
+      "independent_reference": 4.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 274,
+      "display": "100010010",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 275,
+      "display": "100010011",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 276,
+      "display": "100010100",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 277,
+      "display": "100010101",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 278,
+      "display": "100010110",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 279,
+      "display": "100010111",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 280,
+      "display": "100011000",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 281,
+      "display": "100011001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 282,
+      "display": "100011010",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 283,
+      "display": "100011011",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 284,
+      "display": "100011100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 285,
+      "display": "100011101",
+      "operator_expectation": -32.0,
+      "offset": 104.0,
+      "total_energy": 72.0,
+      "independent_reference": 72.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 286,
+      "display": "100011110",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 287,
+      "display": "100011111",
+      "operator_expectation": 35.0,
+      "offset": 104.0,
+      "total_energy": 139.0,
+      "independent_reference": 139.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 288,
+      "display": "100100000",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 289,
+      "display": "100100001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 290,
+      "display": "100100010",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 291,
+      "display": "100100011",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 292,
+      "display": "100100100",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 293,
+      "display": "100100101",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 294,
+      "display": "100100110",
+      "operator_expectation": -1.0,
+      "offset": 104.0,
+      "total_energy": 103.0,
+      "independent_reference": 103.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 295,
+      "display": "100100111",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 296,
+      "display": "100101000",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 297,
+      "display": "100101001",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 298,
+      "display": "100101010",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 299,
+      "display": "100101011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 300,
+      "display": "100101100",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 301,
+      "display": "100101101",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 302,
+      "display": "100101110",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 303,
+      "display": "100101111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 304,
+      "display": "100110000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 305,
+      "display": "100110001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 306,
+      "display": "100110010",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 307,
+      "display": "100110011",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 308,
+      "display": "100110100",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 309,
+      "display": "100110101",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 310,
+      "display": "100110110",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 311,
+      "display": "100110111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 312,
+      "display": "100111000",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 313,
+      "display": "100111001",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 314,
+      "display": "100111010",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 315,
+      "display": "100111011",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 316,
+      "display": "100111100",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 317,
+      "display": "100111101",
+      "operator_expectation": 66.0,
+      "offset": 104.0,
+      "total_energy": 170.0,
+      "independent_reference": 170.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 318,
+      "display": "100111110",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 319,
+      "display": "100111111",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 320,
+      "display": "101000000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 321,
+      "display": "101000001",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 322,
+      "display": "101000010",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 323,
+      "display": "101000011",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 324,
+      "display": "101000100",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 325,
+      "display": "101000101",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 326,
+      "display": "101000110",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 327,
+      "display": "101000111",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 328,
+      "display": "101001000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 329,
+      "display": "101001001",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 330,
+      "display": "101001010",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 331,
+      "display": "101001011",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 332,
+      "display": "101001100",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 333,
+      "display": "101001101",
+      "operator_expectation": 30.0,
+      "offset": 104.0,
+      "total_energy": 134.0,
+      "independent_reference": 134.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 334,
+      "display": "101001110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 335,
+      "display": "101001111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 336,
+      "display": "101010000",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 337,
+      "display": "101010001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 338,
+      "display": "101010010",
+      "operator_expectation": -64.0,
+      "offset": 104.0,
+      "total_energy": 40.0,
+      "independent_reference": 40.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 339,
+      "display": "101010011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 340,
+      "display": "101010100",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 341,
+      "display": "101010101",
+      "operator_expectation": -32.0,
+      "offset": 104.0,
+      "total_energy": 72.0,
+      "independent_reference": 72.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 342,
+      "display": "101010110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 343,
+      "display": "101010111",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 344,
+      "display": "101011000",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 345,
+      "display": "101011001",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 346,
+      "display": "101011010",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 347,
+      "display": "101011011",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 348,
+      "display": "101011100",
+      "operator_expectation": -32.0,
+      "offset": 104.0,
+      "total_energy": 72.0,
+      "independent_reference": 72.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 349,
+      "display": "101011101",
+      "operator_expectation": 34.0,
+      "offset": 104.0,
+      "total_energy": 138.0,
+      "independent_reference": 138.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 350,
+      "display": "101011110",
+      "operator_expectation": 5.0,
+      "offset": 104.0,
+      "total_energy": 109.0,
+      "independent_reference": 109.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 351,
+      "display": "101011111",
+      "operator_expectation": 103.0,
+      "offset": 104.0,
+      "total_energy": 207.0,
+      "independent_reference": 207.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 352,
+      "display": "101100000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 353,
+      "display": "101100001",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 354,
+      "display": "101100010",
+      "operator_expectation": -63.0,
+      "offset": 104.0,
+      "total_energy": 41.0,
+      "independent_reference": 41.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 355,
+      "display": "101100011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 356,
+      "display": "101100100",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 357,
+      "display": "101100101",
+      "operator_expectation": 30.0,
+      "offset": 104.0,
+      "total_energy": 134.0,
+      "independent_reference": 134.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 358,
+      "display": "101100110",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 359,
+      "display": "101100111",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 360,
+      "display": "101101000",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 361,
+      "display": "101101001",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 362,
+      "display": "101101010",
+      "operator_expectation": -28.0,
+      "offset": 104.0,
+      "total_energy": 76.0,
+      "independent_reference": 76.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 363,
+      "display": "101101011",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 364,
+      "display": "101101100",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 365,
+      "display": "101101101",
+      "operator_expectation": 96.0,
+      "offset": 104.0,
+      "total_energy": 200.0,
+      "independent_reference": 200.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 366,
+      "display": "101101110",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 367,
+      "display": "101101111",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 368,
+      "display": "101110000",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 369,
+      "display": "101110001",
+      "operator_expectation": -32.0,
+      "offset": 104.0,
+      "total_energy": 72.0,
+      "independent_reference": 72.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 370,
+      "display": "101110010",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 371,
+      "display": "101110011",
+      "operator_expectation": 5.0,
+      "offset": 104.0,
+      "total_energy": 109.0,
+      "independent_reference": 109.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 372,
+      "display": "101110100",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 373,
+      "display": "101110101",
+      "operator_expectation": 34.0,
+      "offset": 104.0,
+      "total_energy": 138.0,
+      "independent_reference": 138.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 374,
+      "display": "101110110",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 375,
+      "display": "101110111",
+      "operator_expectation": 103.0,
+      "offset": 104.0,
+      "total_energy": 207.0,
+      "independent_reference": 207.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 376,
+      "display": "101111000",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 377,
+      "display": "101111001",
+      "operator_expectation": 66.0,
+      "offset": 104.0,
+      "total_energy": 170.0,
+      "independent_reference": 170.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 378,
+      "display": "101111010",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 379,
+      "display": "101111011",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 380,
+      "display": "101111100",
+      "operator_expectation": 66.0,
+      "offset": 104.0,
+      "total_energy": 170.0,
+      "independent_reference": 170.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 381,
+      "display": "101111101",
+      "operator_expectation": 132.0,
+      "offset": 104.0,
+      "total_energy": 236.0,
+      "independent_reference": 236.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 382,
+      "display": "101111110",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 383,
+      "display": "101111111",
+      "operator_expectation": 202.0,
+      "offset": 104.0,
+      "total_energy": 306.0,
+      "independent_reference": 306.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 384,
+      "display": "110000000",
+      "operator_expectation": -39.0,
+      "offset": 104.0,
+      "total_energy": 65.0,
+      "independent_reference": 65.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 385,
+      "display": "110000001",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 386,
+      "display": "110000010",
+      "operator_expectation": -37.0,
+      "offset": 104.0,
+      "total_energy": 67.0,
+      "independent_reference": 67.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 387,
+      "display": "110000011",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 388,
+      "display": "110000100",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 389,
+      "display": "110000101",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 390,
+      "display": "110000110",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 391,
+      "display": "110000111",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 392,
+      "display": "110001000",
+      "operator_expectation": -68.0,
+      "offset": 104.0,
+      "total_energy": 36.0,
+      "independent_reference": 36.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 393,
+      "display": "110001001",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 394,
+      "display": "110001010",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 395,
+      "display": "110001011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 396,
+      "display": "110001100",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 397,
+      "display": "110001101",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 398,
+      "display": "110001110",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 399,
+      "display": "110001111",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 400,
+      "display": "110010000",
+      "operator_expectation": -38.0,
+      "offset": 104.0,
+      "total_energy": 66.0,
+      "independent_reference": 66.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 401,
+      "display": "110010001",
+      "operator_expectation": -66.0,
+      "offset": 104.0,
+      "total_energy": 38.0,
+      "independent_reference": 38.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 402,
+      "display": "110010010",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 403,
+      "display": "110010011",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 404,
+      "display": "110010100",
+      "operator_expectation": -34.0,
+      "offset": 104.0,
+      "total_energy": 70.0,
+      "independent_reference": 70.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 405,
+      "display": "110010101",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 406,
+      "display": "110010110",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 407,
+      "display": "110010111",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 408,
+      "display": "110011000",
+      "operator_expectation": -35.0,
+      "offset": 104.0,
+      "total_energy": 69.0,
+      "independent_reference": 69.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 409,
+      "display": "110011001",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 410,
+      "display": "110011010",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 411,
+      "display": "110011011",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 412,
+      "display": "110011100",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 413,
+      "display": "110011101",
+      "operator_expectation": 5.0,
+      "offset": 104.0,
+      "total_energy": 109.0,
+      "independent_reference": 109.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 414,
+      "display": "110011110",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 415,
+      "display": "110011111",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 416,
+      "display": "110100000",
+      "operator_expectation": -36.0,
+      "offset": 104.0,
+      "total_energy": 68.0,
+      "independent_reference": 68.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 417,
+      "display": "110100001",
+      "operator_expectation": -65.0,
+      "offset": 104.0,
+      "total_energy": 39.0,
+      "independent_reference": 39.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 418,
+      "display": "110100010",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 419,
+      "display": "110100011",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 420,
+      "display": "110100100",
+      "operator_expectation": -1.0,
+      "offset": 104.0,
+      "total_energy": 103.0,
+      "independent_reference": 103.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 421,
+      "display": "110100101",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 422,
+      "display": "110100110",
+      "operator_expectation": 34.0,
+      "offset": 104.0,
+      "total_energy": 138.0,
+      "independent_reference": 138.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 423,
+      "display": "110100111",
+      "operator_expectation": 69.0,
+      "offset": 104.0,
+      "total_energy": 173.0,
+      "independent_reference": 173.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 424,
+      "display": "110101000",
+      "operator_expectation": -33.0,
+      "offset": 104.0,
+      "total_energy": 71.0,
+      "independent_reference": 71.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 425,
+      "display": "110101001",
+      "operator_expectation": -30.0,
+      "offset": 104.0,
+      "total_energy": 74.0,
+      "independent_reference": 74.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 426,
+      "display": "110101010",
+      "operator_expectation": -29.0,
+      "offset": 104.0,
+      "total_energy": 75.0,
+      "independent_reference": 75.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 427,
+      "display": "110101011",
+      "operator_expectation": 6.0,
+      "offset": 104.0,
+      "total_energy": 110.0,
+      "independent_reference": 110.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 428,
+      "display": "110101100",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 429,
+      "display": "110101101",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 430,
+      "display": "110101110",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 431,
+      "display": "110101111",
+      "operator_expectation": 105.0,
+      "offset": 104.0,
+      "total_energy": 209.0,
+      "independent_reference": 209.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 432,
+      "display": "110110000",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 433,
+      "display": "110110001",
+      "operator_expectation": -31.0,
+      "offset": 104.0,
+      "total_energy": 73.0,
+      "independent_reference": 73.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 434,
+      "display": "110110010",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 435,
+      "display": "110110011",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 436,
+      "display": "110110100",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 437,
+      "display": "110110101",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 438,
+      "display": "110110110",
+      "operator_expectation": 100.0,
+      "offset": 104.0,
+      "total_energy": 204.0,
+      "independent_reference": 204.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 439,
+      "display": "110110111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 440,
+      "display": "110111000",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 441,
+      "display": "110111001",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 442,
+      "display": "110111010",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 443,
+      "display": "110111011",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 444,
+      "display": "110111100",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 445,
+      "display": "110111101",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 446,
+      "display": "110111110",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 447,
+      "display": "110111111",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 448,
+      "display": "111000000",
+      "operator_expectation": -6.0,
+      "offset": 104.0,
+      "total_energy": 98.0,
+      "independent_reference": 98.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 449,
+      "display": "111000001",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 450,
+      "display": "111000010",
+      "operator_expectation": -2.0,
+      "offset": 104.0,
+      "total_energy": 102.0,
+      "independent_reference": 102.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 451,
+      "display": "111000011",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 452,
+      "display": "111000100",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 453,
+      "display": "111000101",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 454,
+      "display": "111000110",
+      "operator_expectation": 33.0,
+      "offset": 104.0,
+      "total_energy": 137.0,
+      "independent_reference": 137.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 455,
+      "display": "111000111",
+      "operator_expectation": 100.0,
+      "offset": 104.0,
+      "total_energy": 204.0,
+      "independent_reference": 204.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 456,
+      "display": "111001000",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 457,
+      "display": "111001001",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 458,
+      "display": "111001010",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 459,
+      "display": "111001011",
+      "operator_expectation": 69.0,
+      "offset": 104.0,
+      "total_energy": 173.0,
+      "independent_reference": 173.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 460,
+      "display": "111001100",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 461,
+      "display": "111001101",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 462,
+      "display": "111001110",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 463,
+      "display": "111001111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 464,
+      "display": "111010000",
+      "operator_expectation": -4.0,
+      "offset": 104.0,
+      "total_energy": 100.0,
+      "independent_reference": 100.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 465,
+      "display": "111010001",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 466,
+      "display": "111010010",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 467,
+      "display": "111010011",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 468,
+      "display": "111010100",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 469,
+      "display": "111010101",
+      "operator_expectation": 36.0,
+      "offset": 104.0,
+      "total_energy": 140.0,
+      "independent_reference": 140.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 470,
+      "display": "111010110",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 471,
+      "display": "111010111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 472,
+      "display": "111011000",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 473,
+      "display": "111011001",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 474,
+      "display": "111011010",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 475,
+      "display": "111011011",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 476,
+      "display": "111011100",
+      "operator_expectation": 35.0,
+      "offset": 104.0,
+      "total_energy": 139.0,
+      "independent_reference": 139.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 477,
+      "display": "111011101",
+      "operator_expectation": 103.0,
+      "offset": 104.0,
+      "total_energy": 207.0,
+      "independent_reference": 207.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 478,
+      "display": "111011110",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 479,
+      "display": "111011111",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 480,
+      "display": "111100000",
+      "operator_expectation": -3.0,
+      "offset": 104.0,
+      "total_energy": 101.0,
+      "independent_reference": 101.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 481,
+      "display": "111100001",
+      "operator_expectation": 0.0,
+      "offset": 104.0,
+      "total_energy": 104.0,
+      "independent_reference": 104.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 482,
+      "display": "111100010",
+      "operator_expectation": 2.0,
+      "offset": 104.0,
+      "total_energy": 106.0,
+      "independent_reference": 106.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 483,
+      "display": "111100011",
+      "operator_expectation": 37.0,
+      "offset": 104.0,
+      "total_energy": 141.0,
+      "independent_reference": 141.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 484,
+      "display": "111100100",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 485,
+      "display": "111100101",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 486,
+      "display": "111100110",
+      "operator_expectation": 69.0,
+      "offset": 104.0,
+      "total_energy": 173.0,
+      "independent_reference": 173.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 487,
+      "display": "111100111",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 488,
+      "display": "111101000",
+      "operator_expectation": 32.0,
+      "offset": 104.0,
+      "total_energy": 136.0,
+      "independent_reference": 136.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 489,
+      "display": "111101001",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 490,
+      "display": "111101010",
+      "operator_expectation": 38.0,
+      "offset": 104.0,
+      "total_energy": 142.0,
+      "independent_reference": 142.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 491,
+      "display": "111101011",
+      "operator_expectation": 105.0,
+      "offset": 104.0,
+      "total_energy": 209.0,
+      "independent_reference": 209.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 492,
+      "display": "111101100",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 493,
+      "display": "111101101",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 494,
+      "display": "111101110",
+      "operator_expectation": 105.0,
+      "offset": 104.0,
+      "total_energy": 209.0,
+      "independent_reference": 209.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 495,
+      "display": "111101111",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 496,
+      "display": "111110000",
+      "operator_expectation": 31.0,
+      "offset": 104.0,
+      "total_energy": 135.0,
+      "independent_reference": 135.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 497,
+      "display": "111110001",
+      "operator_expectation": 35.0,
+      "offset": 104.0,
+      "total_energy": 139.0,
+      "independent_reference": 139.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 498,
+      "display": "111110010",
+      "operator_expectation": 68.0,
+      "offset": 104.0,
+      "total_energy": 172.0,
+      "independent_reference": 172.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 499,
+      "display": "111110011",
+      "operator_expectation": 104.0,
+      "offset": 104.0,
+      "total_energy": 208.0,
+      "independent_reference": 208.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 500,
+      "display": "111110100",
+      "operator_expectation": 67.0,
+      "offset": 104.0,
+      "total_energy": 171.0,
+      "independent_reference": 171.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 501,
+      "display": "111110101",
+      "operator_expectation": 103.0,
+      "offset": 104.0,
+      "total_energy": 207.0,
+      "independent_reference": 207.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 502,
+      "display": "111110110",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 503,
+      "display": "111110111",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 504,
+      "display": "111111000",
+      "operator_expectation": 98.0,
+      "offset": 104.0,
+      "total_energy": 202.0,
+      "independent_reference": 202.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 505,
+      "display": "111111001",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 506,
+      "display": "111111010",
+      "operator_expectation": 136.0,
+      "offset": 104.0,
+      "total_energy": 240.0,
+      "independent_reference": 240.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 507,
+      "display": "111111011",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 508,
+      "display": "111111100",
+      "operator_expectation": 134.0,
+      "offset": 104.0,
+      "total_energy": 238.0,
+      "independent_reference": 238.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 509,
+      "display": "111111101",
+      "operator_expectation": 202.0,
+      "offset": 104.0,
+      "total_energy": 306.0,
+      "independent_reference": 306.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 510,
+      "display": "111111110",
+      "operator_expectation": 204.0,
+      "offset": 104.0,
+      "total_energy": 308.0,
+      "independent_reference": 308.0,
+      "absolute_error": 0.0
+    },
+    {
+      "integer": 511,
+      "display": "111111111",
+      "operator_expectation": 304.0,
+      "offset": 104.0,
+      "total_energy": 408.0,
+      "independent_reference": 408.0,
+      "absolute_error": 0.0
+    }
+  ],
+  "offset": 104.0,
+  "pauli_terms": [
+    [
+      "IIIIIIIIZ",
+      -17.25
+    ],
+    [
+      "IIIIIIIZI",
+      -17.5
+    ],
+    [
+      "IIIIIIZII",
+      -17.25
+    ],
+    [
+      "IIIIIZIII",
+      -17.5
+    ],
+    [
+      "IIIIZIIII",
+      -17.0
+    ],
+    [
+      "IIIZIIIII",
+      -17.5
+    ],
+    [
+      "IIZIIIIII",
+      -17.25
+    ],
+    [
+      "IZIIIIIII",
+      -17.5
+    ],
+    [
+      "ZIIIIIIII",
+      -17.25
+    ],
+    [
+      "IIIIIIIZZ",
+      8.0
+    ],
+    [
+      "IIIIIIZIZ",
+      8.0
+    ],
+    [
+      "IIIIIZIIZ",
+      8.0
+    ],
+    [
+      "IIIIZIIIZ",
+      0.25
+    ],
+    [
+      "IIZIIIIIZ",
+      8.0
+    ],
+    [
+      "IZIIIIIIZ",
+      0.5
+    ],
+    [
+      "IIIIIIZZI",
+      8.0
+    ],
+    [
+      "IIIIIZIZI",
+      0.25
+    ],
+    [
+      "IIIIZIIZI",
+      8.0
+    ],
+    [
+      "IIIZIIIZI",
+      0.25
+    ],
+    [
+      "IIZIIIIZI",
+      0.5
+    ],
+    [
+      "IZIIIIIZI",
+      8.0
+    ],
+    [
+      "ZIIIIIIZI",
+      0.5
+    ],
+    [
+      "IIIIZIZII",
+      0.25
+    ],
+    [
+      "IIIZIIZII",
+      8.0
+    ],
+    [
+      "IZIIIIZII",
+      0.5
+    ],
+    [
+      "ZIIIIIZII",
+      8.0
+    ],
+    [
+      "IIIIZZIII",
+      8.0
+    ],
+    [
+      "IIIZIZIII",
+      8.0
+    ],
+    [
+      "IIZIIZIII",
+      8.0
+    ],
+    [
+      "IZIIIZIII",
+      0.25
+    ],
+    [
+      "IIIZZIIII",
+      8.0
+    ],
+    [
+      "IIZIZIIII",
+      0.25
+    ],
+    [
+      "IZIIZIIII",
+      8.0
+    ],
+    [
+      "ZIIIZIIII",
+      0.25
+    ],
+    [
+      "IZIZIIIII",
+      0.25
+    ],
+    [
+      "ZIIZIIIII",
+      8.0
+    ],
+    [
+      "IZZIIIIII",
+      8.0
+    ],
+    [
+      "ZIZIIIIII",
+      8.0
+    ],
+    [
+      "ZZIIIIIII",
+      8.0
+    ]
+  ],
+  "max_absolute_error": 0.0,
+  "relative_tolerance": 1e-12,
+  "absolute_tolerance": 1e-10,
+  "bit_order": "logical i -> qubit i -> Pauli character n-1-i; displayed rightmost bit is x0",
+  "input_qubo_sha256": "ec15905574d91b015036582d8efb340f8d6e184fb783370707bcf4f571b4af31"
+}
