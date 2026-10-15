@@ -1,0 +1,83 @@
+{
+  "assignments": 512,
+  "energy_comparison": {
+    "absolute_tolerance": 1e-10,
+    "all_exactly_equal": true,
+    "relative_tolerance": 1e-12
+  },
+  "exact_optimum": 4.0,
+  "feasible": 6,
+  "infeasible": 506,
+  "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+  "lower_bound_attained": true,
+  "min_infeasible_energy": 34.0,
+  "offset": 96.0,
+  "original_lower_bound": 4.0,
+  "ortools_original_objective": 4.0,
+  "penalty": 16.0,
+  "quantum_advantage_demonstrated": false,
+  "qubo_global_minimum": 4.0,
+  "schema_version": 1,
+  "tied_optima": 2,
+  "weak_penalty_example": {
+    "below_feasible_optimum": true,
+    "bits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "energy": 0.0,
+    "feasible": false,
+    "penalty": 0,
+    "violations": [
+      {
+        "code": "missing_city",
+        "entity_ids": [
+          "B"
+        ],
+        "message": "city selected 0 times"
+      },
+      {
+        "code": "missing_city",
+        "entity_ids": [
+          "C"
+        ],
+        "message": "city selected 0 times"
+      },
+      {
+        "code": "missing_city",
+        "entity_ids": [
+          "D"
+        ],
+        "message": "city selected 0 times"
+      },
+      {
+        "code": "empty_position",
+        "entity_ids": [
+          "1"
+        ],
+        "message": "position selects 0 cities"
+      },
+      {
+        "code": "empty_position",
+        "entity_ids": [
+          "2"
+        ],
+        "message": "position selects 0 cities"
+      },
+      {
+        "code": "empty_position",
+        "entity_ids": [
+          "3"
+        ],
+        "message": "position selects 0 cities"
+      }
+    ]
+  }
+}

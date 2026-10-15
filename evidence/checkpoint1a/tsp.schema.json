@@ -1,0 +1,163 @@
+{
+  "$defs": {
+    "CoordinatesInput": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "coordinates",
+          "title": "Kind",
+          "type": "string"
+        },
+        "metric": {
+          "const": "euclidean_2d",
+          "title": "Metric",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "maxItems": 200,
+          "minItems": 4,
+          "title": "Points",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "metric",
+        "points"
+      ],
+      "title": "CoordinatesInput",
+      "type": "object"
+    },
+    "MatrixInput": {
+      "additionalProperties": false,
+      "properties": {
+        "distances": {
+          "items": {
+            "items": {
+              "minimum": 0,
+              "type": "number"
+            },
+            "maxItems": 200,
+            "minItems": 4,
+            "type": "array"
+          },
+          "maxItems": 200,
+          "minItems": 4,
+          "title": "Distances",
+          "type": "array"
+        },
+        "kind": {
+          "const": "matrix",
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "distances"
+      ],
+      "title": "MatrixInput",
+      "type": "object"
+    },
+    "Point": {
+      "additionalProperties": false,
+      "properties": {
+        "city_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "City Id",
+          "type": "string"
+        },
+        "x": {
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "title": "Y",
+          "type": "number"
+        }
+      },
+      "required": [
+        "city_id",
+        "x",
+        "y"
+      ],
+      "title": "Point",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "city_ids": {
+      "items": {
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 200,
+      "minItems": 4,
+      "title": "City Ids",
+      "type": "array"
+    },
+    "depot_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Depot Id",
+      "type": "string"
+    },
+    "distance_unit": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Distance Unit",
+      "type": "string"
+    },
+    "geometry": {
+      "discriminator": {
+        "mapping": {
+          "coordinates": "#/$defs/CoordinatesInput",
+          "matrix": "#/$defs/MatrixInput"
+        },
+        "propertyName": "kind"
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/MatrixInput"
+        },
+        {
+          "$ref": "#/$defs/CoordinatesInput"
+        }
+      ],
+      "title": "Geometry"
+    },
+    "instance_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Instance Id",
+      "type": "string"
+    },
+    "kind": {
+      "const": "tsp",
+      "title": "Kind",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "instance_id",
+    "city_ids",
+    "depot_id",
+    "distance_unit",
+    "geometry"
+  ],
+  "title": "TspInstance",
+  "type": "object"
+}

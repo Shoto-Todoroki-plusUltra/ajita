@@ -9,6 +9,9 @@ description = "Checkpoint 1A: independently verified classical TSP and explicit 
 requires-python = ">=3.11,<3.13"
 dependencies = ["pydantic==2.14.1", "ortools==9.15.6755"]
 
+[project.scripts]
+qws = "quantum_workload_studio.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

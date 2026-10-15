@@ -1,0 +1,31 @@
+{
+  "architecture": "arm64",
+  "lock_sha256": "41f310dcb5a4069afffe9dc3ab90a2e6a5d4941664d76459917b693b0f59b00f",
+  "macos": "26.5.2",
+  "note": "Deterministic enumeration; OR-Tools deterministic strategies, no random sampler; timings are single-run measurements, not benchmarks.",
+  "packages": {
+    "ortools": "9.15.6755",
+    "pip-tools": "7.6.2",
+    "pydantic": "2.14.1",
+    "pytest": "9.1.1"
+  },
+  "peak_memory_bytes": null,
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "quantum_execution": false,
+  "recorded_at_utc": "2026-10-15T03:36:25.612059+00:00",
+  "seed": null,
+  "source_sha256": {
+    "src/quantum_workload_studio/__init__.py": "01bd44623e47adcf5273c388b9ad5e9d4091b2046f3cf30d119292e459b9af54",
+    "src/quantum_workload_studio/classical/__init__.py": "3f2ef98bec8b06f25d7a35f7b2e0124c076b00ce6ddf659ba659a743ac9e0d6b",
+    "src/quantum_workload_studio/classical/tsp.py": "228800cd3e1237bb5bcb1941cca34fc76284fbe3ef0a5b1d6d1e12d66a522b18",
+    "src/quantum_workload_studio/cli.py": "180406f1831c195557b646547a3acd74c839700f7647bc2a3f7e1cf055c3bb45",
+    "src/quantum_workload_studio/domains/__init__.py": "3e5c9abc0c27267bb89b48dcaad84c1e46705d050133f5fd7297631febb3dfcd",
+    "src/quantum_workload_studio/domains/tsp.py": "146dd88511e9aaea3fd0e655c1d7574dc1273475a2ad809f1fb5a21a6a1ca4cf",
+    "src/quantum_workload_studio/evidence.py": "558f84c976d9852c7cf0d79d3066afcdef48102f6873cd4dd47810d01f0a1be0",
+    "src/quantum_workload_studio/models/__init__.py": "428159ba51de729022c3608e7bdd6be43cedb09aefb43c058865d7601fb5c0db",
+    "src/quantum_workload_studio/models/tsp.py": "c9225ed66ea8e586d2a59ba8df8d050ef61f5116b1a6025d5bd55cde314f5ec6",
+    "src/quantum_workload_studio/qubo/__init__.py": "d20001122983fbfcc31ef646f08a549bfb96501cef5b6480ea640c3954841d76",
+    "src/quantum_workload_studio/qubo/basis.py": "4578e459cc872706b61efdc3df808864d8bd3e57579bf9c537b5e737e90cabb5",
+    "src/quantum_workload_studio/qubo/tsp.py": "d323ee2de7dbc751d413992fbcbc7e876c2dca0f74c90647854014ed6fdf0338"
+  }
+}

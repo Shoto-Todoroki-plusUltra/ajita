@@ -18,7 +18,7 @@ class StrictModel(BaseModel):
 
 class MatrixInput(StrictModel):
     kind: Literal["matrix"]
-    distances: Annotated[list[list[Nonnegative]], Field(min_length=4, max_length=200)]
+    distances: Annotated[list[Annotated[list[Nonnegative], Field(min_length=4, max_length=200)]], Field(min_length=4, max_length=200)]
 
 
 class Point(StrictModel):
