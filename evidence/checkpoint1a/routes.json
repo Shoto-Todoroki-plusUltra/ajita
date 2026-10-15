@@ -95,7 +95,7 @@
   "outcome": "feasible",
   "proven_optimal": true,
   "schema_version": 1,
-  "solve_seconds": 9.845800013863482e-05,
+  "solve_seconds": 9.879099980025785e-05,
   "solver_id": "exact_tsp",
   "solver_status": "enumeration_complete",
   "tied_optima": [

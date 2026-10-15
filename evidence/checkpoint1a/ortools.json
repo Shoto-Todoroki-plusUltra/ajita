@@ -27,7 +27,7 @@
   "outcome": "feasible",
   "proven_optimal": false,
   "schema_version": 1,
-  "solve_seconds": 0.0014626249994762475,
+  "solve_seconds": 0.001255999999557389,
   "solver_id": "ortools_tsp",
   "solver_status": "1",
   "tied_optima": [],

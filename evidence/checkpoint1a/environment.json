@@ -12,7 +12,7 @@
   "peak_memory_bytes": null,
   "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
   "quantum_execution": false,
-  "recorded_at_utc": "2026-10-15T03:36:25.612059+00:00",
+  "recorded_at_utc": "2026-10-15T03:47:31.164874+00:00",
   "seed": null,
   "source_sha256": {
     "src/quantum_workload_studio/__init__.py": "01bd44623e47adcf5273c388b9ad5e9d4091b2046f3cf30d119292e459b9af54",
@@ -21,7 +21,7 @@
     "src/quantum_workload_studio/cli.py": "180406f1831c195557b646547a3acd74c839700f7647bc2a3f7e1cf055c3bb45",
     "src/quantum_workload_studio/domains/__init__.py": "3e5c9abc0c27267bb89b48dcaad84c1e46705d050133f5fd7297631febb3dfcd",
     "src/quantum_workload_studio/domains/tsp.py": "146dd88511e9aaea3fd0e655c1d7574dc1273475a2ad809f1fb5a21a6a1ca4cf",
-    "src/quantum_workload_studio/evidence.py": "558f84c976d9852c7cf0d79d3066afcdef48102f6873cd4dd47810d01f0a1be0",
+    "src/quantum_workload_studio/evidence.py": "7c4f8b57435fd046be39a8a2f43fbe6bc023f2f9f0f9694deab4e9281666b36c",
     "src/quantum_workload_studio/models/__init__.py": "428159ba51de729022c3608e7bdd6be43cedb09aefb43c058865d7601fb5c0db",
     "src/quantum_workload_studio/models/tsp.py": "c9225ed66ea8e586d2a59ba8df8d050ef61f5116b1a6025d5bd55cde314f5ec6",
     "src/quantum_workload_studio/qubo/__init__.py": "d20001122983fbfcc31ef646f08a549bfb96501cef5b6480ea640c3954841d76",

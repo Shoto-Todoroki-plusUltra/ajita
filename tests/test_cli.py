@@ -77,6 +77,7 @@ def test_evidence_artifacts(instance, tmp_path):
     assert sum(r["feasible"] for r in rows) == 6
     with (first/"assignments.csv").open() as stream:
         assert len(list(csv.DictReader(stream))) == 512
+    assert b"\r" not in (first/"assignments.csv").read_bytes()
     manifest = json.loads((first/"manifest.json").read_text())
     for name, digest in manifest["sha256"].items():
         assert hashlib.sha256((first/name).read_bytes()).hexdigest() == digest

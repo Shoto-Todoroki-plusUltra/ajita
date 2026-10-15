@@ -109,7 +109,7 @@ def generate_evidence(instance: TspInstance, output: Path) -> dict:
     with (output / "assignments.csv").open("w", newline="") as stream:
         columns = ["integer", "display_msb_first", "bits_index_order", "direct_cost", "direct_energy", "city_residuals", "position_residuals",
                    "city_penalties", "position_penalties", "qubo_energy", "ising_basis_energy", "feasible", "tour", "violations", "original_objective"]
-        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer = csv.DictWriter(stream, fieldnames=columns, lineterminator="\n")
         writer.writeheader()
         for row in records:
             writer.writerow({"integer": row["integer"], "display_msb_first": row["display_msb_first"],
