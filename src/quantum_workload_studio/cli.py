@@ -7,11 +7,17 @@ from pathlib import Path
 
 from pydantic import ValidationError
 
-from quantum_workload_studio.classical.tsp import exact_solve, ortools_solve
 from quantum_workload_studio.domains.tsp import TspProblem
 from quantum_workload_studio.evidence import generate_evidence, write_json
 from quantum_workload_studio.models.tsp import evaluate_original_objective
-from quantum_workload_studio.qubo.tsp import QuboArtifact, bits_from_display, compile_qubo, decode_assignment, verify_artifact
+from quantum_workload_studio.qubo.tsp import (
+    QuboArtifact,
+    bits_from_display,
+    compile_qubo,
+    decode_assignment,
+    verify_artifact,
+)
+from quantum_workload_studio.services.tsp import solve_classical
 
 
 def read_json(path: Path):
@@ -60,9 +66,7 @@ def main(argv=None) -> int:
             return 0
         if args.command == "solve":
             handle = problem.build_classical_model(instance, args.solver)
-            result = exact_solve(handle.instance) if handle.solver_id == "exact_tsp" else ortools_solve(
-                handle.instance, scale=args.scale, timeout_s=args.timeout_s
-            )
+            result = solve_classical(handle.instance, handle.solver_id, scale=args.scale, timeout_s=args.timeout_s)
             payload = result.model_dump()
         elif args.command == "compile":
             payload = compile_qubo(instance, penalty=args.penalty, scale=args.scale).model_dump()

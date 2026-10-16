@@ -1,0 +1,1309 @@
+{
+  "components": {
+    "schemas": {
+      "ApiError": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "details": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "title": "Details",
+            "type": "array"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ApiError",
+        "type": "object"
+      },
+      "ApiResult": {
+        "additionalProperties": false,
+        "properties": {
+          "assignment": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TspAssignment"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "effective_options": {
+            "additionalProperties": true,
+            "title": "Effective Options",
+            "type": "object"
+          },
+          "execution_status": {
+            "title": "Execution Status",
+            "type": "string"
+          },
+          "instance_hash": {
+            "title": "Instance Hash",
+            "type": "string"
+          },
+          "method": {
+            "enum": [
+              "classical",
+              "quantum_local"
+            ],
+            "title": "Method",
+            "type": "string"
+          },
+          "objective": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objective"
+          },
+          "objective_unit": {
+            "title": "Objective Unit",
+            "type": "string"
+          },
+          "outcome": {
+            "title": "Outcome",
+            "type": "string"
+          },
+          "proven_optimal": {
+            "title": "Proven Optimal",
+            "type": "boolean"
+          },
+          "quantum": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/QuantumSummary"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "schema_version": {
+            "const": 1,
+            "default": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "solver_id": {
+            "title": "Solver Id",
+            "type": "string"
+          },
+          "total_elapsed_s": {
+            "title": "Total Elapsed S",
+            "type": "number"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          },
+          "worker": {
+            "additionalProperties": true,
+            "title": "Worker",
+            "type": "object"
+          }
+        },
+        "required": [
+          "instance_hash",
+          "method",
+          "solver_id",
+          "execution_status",
+          "outcome",
+          "assignment",
+          "validation",
+          "objective",
+          "objective_unit",
+          "proven_optimal",
+          "total_elapsed_s",
+          "worker",
+          "effective_options"
+        ],
+        "title": "ApiResult",
+        "type": "object"
+      },
+      "CompileRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "instance": {
+            "$ref": "#/components/schemas/TspInstance"
+          }
+        },
+        "required": [
+          "instance"
+        ],
+        "title": "CompileRequest",
+        "type": "object"
+      },
+      "CoordinatesInput": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "const": "coordinates",
+            "title": "Kind",
+            "type": "string"
+          },
+          "metric": {
+            "const": "euclidean_2d",
+            "title": "Metric",
+            "type": "string"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/Point"
+            },
+            "maxItems": 200,
+            "minItems": 4,
+            "title": "Points",
+            "type": "array"
+          }
+        },
+        "required": [
+          "kind",
+          "metric",
+          "points"
+        ],
+        "title": "CoordinatesInput",
+        "type": "object"
+      },
+      "DecodeMap": {
+        "additionalProperties": false,
+        "properties": {
+          "active_indices": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Active Indices",
+            "type": "array"
+          },
+          "auxiliary_variables": {
+            "items": {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            "maxItems": 0,
+            "title": "Auxiliary Variables",
+            "type": "array"
+          },
+          "city_ids": {
+            "items": {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            "maxItems": 8,
+            "minItems": 4,
+            "title": "City Ids",
+            "type": "array"
+          },
+          "depot_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Depot Id",
+            "type": "string"
+          },
+          "fixed_variables": {
+            "items": {
+              "$ref": "#/components/schemas/FixedVariable"
+            },
+            "title": "Fixed Variables",
+            "type": "array"
+          }
+        },
+        "required": [
+          "city_ids",
+          "depot_id",
+          "active_indices",
+          "fixed_variables",
+          "auxiliary_variables"
+        ],
+        "title": "DecodeMap",
+        "type": "object"
+      },
+      "DomainRef": {
+        "additionalProperties": false,
+        "properties": {
+          "city_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "City Id",
+            "type": "string"
+          },
+          "position": {
+            "maximum": 7.0,
+            "minimum": 0.0,
+            "title": "Position",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "city_id",
+          "position"
+        ],
+        "title": "DomainRef",
+        "type": "object"
+      },
+      "ErrorResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ApiError"
+          }
+        },
+        "required": [
+          "error"
+        ],
+        "title": "ErrorResponse",
+        "type": "object"
+      },
+      "FixedVariable": {
+        "additionalProperties": false,
+        "properties": {
+          "domain_ref": {
+            "$ref": "#/components/schemas/DomainRef"
+          },
+          "value": {
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Value",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "domain_ref",
+          "value"
+        ],
+        "title": "FixedVariable",
+        "type": "object"
+      },
+      "InspectRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "bits": {
+            "maxLength": 49,
+            "minLength": 1,
+            "pattern": "^[01]+$",
+            "title": "Bits",
+            "type": "string"
+          },
+          "instance": {
+            "$ref": "#/components/schemas/TspInstance"
+          },
+          "qubo": {
+            "$ref": "#/components/schemas/QuboArtifact"
+          }
+        },
+        "required": [
+          "instance",
+          "qubo",
+          "bits"
+        ],
+        "title": "InspectRequest",
+        "type": "object"
+      },
+      "InspectResult": {
+        "additionalProperties": false,
+        "properties": {
+          "assignment": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TspAssignment"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "energy": {
+            "title": "Energy",
+            "type": "number"
+          },
+          "original_objective": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Objective"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          }
+        },
+        "required": [
+          "energy",
+          "assignment",
+          "validation",
+          "original_objective"
+        ],
+        "title": "InspectResult",
+        "type": "object"
+      },
+      "LocalOptions": {
+        "additionalProperties": false,
+        "properties": {
+          "backend": {
+            "default": "statevector",
+            "enum": [
+              "statevector",
+              "aer"
+            ],
+            "title": "Backend",
+            "type": "string"
+          },
+          "max_evaluations": {
+            "default": 16,
+            "maximum": 50.0,
+            "minimum": 4.0,
+            "title": "Max Evaluations",
+            "type": "integer"
+          },
+          "memory_limit_mb": {
+            "default": 1024,
+            "maximum": 4096.0,
+            "minimum": 64.0,
+            "title": "Memory Limit Mb",
+            "type": "integer"
+          },
+          "optimization_level": {
+            "default": 1,
+            "maximum": 3.0,
+            "minimum": 0.0,
+            "title": "Optimization Level",
+            "type": "integer"
+          },
+          "reps": {
+            "default": 1,
+            "maximum": 2.0,
+            "minimum": 1.0,
+            "title": "Reps",
+            "type": "integer"
+          },
+          "seed": {
+            "default": 1729,
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "title": "Seed",
+            "type": "integer"
+          },
+          "shots": {
+            "default": 256,
+            "maximum": 4096.0,
+            "minimum": 1.0,
+            "title": "Shots",
+            "type": "integer"
+          },
+          "timeout_s": {
+            "default": 60.0,
+            "exclusiveMinimum": 0.0,
+            "maximum": 60.0,
+            "title": "Timeout S",
+            "type": "number"
+          },
+          "transpiler_seed": {
+            "default": 7,
+            "maximum": 2147483647.0,
+            "minimum": 0.0,
+            "title": "Transpiler Seed",
+            "type": "integer"
+          }
+        },
+        "title": "LocalOptions",
+        "type": "object"
+      },
+      "MatrixInput": {
+        "additionalProperties": false,
+        "properties": {
+          "distances": {
+            "items": {
+              "items": {
+                "minimum": 0.0,
+                "type": "number"
+              },
+              "maxItems": 200,
+              "minItems": 4,
+              "type": "array"
+            },
+            "maxItems": 200,
+            "minItems": 4,
+            "title": "Distances",
+            "type": "array"
+          },
+          "kind": {
+            "const": "matrix",
+            "title": "Kind",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "distances"
+        ],
+        "title": "MatrixInput",
+        "type": "object"
+      },
+      "Penalty": {
+        "additionalProperties": false,
+        "properties": {
+          "adequacy_status": {
+            "enum": [
+              "sufficient_bound",
+              "unproven_experiment"
+            ],
+            "title": "Adequacy Status",
+            "type": "string"
+          },
+          "bound_basis": {
+            "const": "A > n*d_max; nonnegative cost and integer residuals",
+            "title": "Bound Basis",
+            "type": "string"
+          },
+          "constraint_family": {
+            "enum": [
+              "one_city_per_position",
+              "one_position_per_city"
+            ],
+            "title": "Constraint Family",
+            "type": "string"
+          },
+          "feasible_cost_upper_bound": {
+            "minimum": 0.0,
+            "title": "Feasible Cost Upper Bound",
+            "type": "number"
+          },
+          "weight": {
+            "minimum": 0.0,
+            "title": "Weight",
+            "type": "number"
+          }
+        },
+        "required": [
+          "constraint_family",
+          "weight",
+          "adequacy_status",
+          "bound_basis",
+          "feasible_cost_upper_bound"
+        ],
+        "title": "Penalty",
+        "type": "object"
+      },
+      "Point": {
+        "additionalProperties": false,
+        "properties": {
+          "city_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "City Id",
+            "type": "string"
+          },
+          "x": {
+            "title": "X",
+            "type": "number"
+          },
+          "y": {
+            "title": "Y",
+            "type": "number"
+          }
+        },
+        "required": [
+          "city_id",
+          "x",
+          "y"
+        ],
+        "title": "Point",
+        "type": "object"
+      },
+      "Provenance": {
+        "additionalProperties": false,
+        "properties": {
+          "converter_sequence": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 0,
+            "title": "Converter Sequence",
+            "type": "array"
+          },
+          "implementation": {
+            "const": "quantum_workload_studio.explicit_tsp",
+            "title": "Implementation",
+            "type": "string"
+          },
+          "version": {
+            "const": "0.1.0",
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "implementation",
+          "version",
+          "converter_sequence"
+        ],
+        "title": "Provenance",
+        "type": "object"
+      },
+      "QuantumSummary": {
+        "additionalProperties": false,
+        "properties": {
+          "absolute_gap": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Absolute Gap"
+          },
+          "candidate_outcome": {
+            "title": "Candidate Outcome",
+            "type": "string"
+          },
+          "evaluations": {
+            "title": "Evaluations",
+            "type": "integer"
+          },
+          "exact_reference": {
+            "title": "Exact Reference",
+            "type": "number"
+          },
+          "feasible_fraction": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Feasible Fraction"
+          },
+          "feasible_shots": {
+            "title": "Feasible Shots",
+            "type": "integer"
+          },
+          "invalid_fraction": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Invalid Fraction"
+          },
+          "invalid_shots": {
+            "title": "Invalid Shots",
+            "type": "integer"
+          },
+          "optimizer_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Optimizer Message"
+          },
+          "optimizer_success": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Optimizer Success"
+          },
+          "raw_counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "title": "Raw Counts",
+            "type": "object"
+          },
+          "raw_shots": {
+            "title": "Raw Shots",
+            "type": "integer"
+          },
+          "selection_policy": {
+            "title": "Selection Policy",
+            "type": "string"
+          }
+        },
+        "required": [
+          "raw_shots",
+          "evaluations",
+          "feasible_shots",
+          "invalid_shots",
+          "feasible_fraction",
+          "invalid_fraction",
+          "candidate_outcome",
+          "optimizer_success",
+          "optimizer_message",
+          "exact_reference",
+          "absolute_gap",
+          "raw_counts",
+          "selection_policy"
+        ],
+        "title": "QuantumSummary",
+        "type": "object"
+      },
+      "QuboArtifact": {
+        "additionalProperties": false,
+        "properties": {
+          "convention": {
+            "const": "upper_triangular",
+            "title": "Convention",
+            "type": "string"
+          },
+          "decode_map": {
+            "$ref": "#/components/schemas/DecodeMap"
+          },
+          "encoding_id": {
+            "const": "tsp_position_depot_fixed",
+            "title": "Encoding Id",
+            "type": "string"
+          },
+          "encoding_version": {
+            "const": 1,
+            "title": "Encoding Version",
+            "type": "integer"
+          },
+          "energy_unit": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Energy Unit",
+            "type": "string"
+          },
+          "offset": {
+            "title": "Offset",
+            "type": "number"
+          },
+          "penalties": {
+            "items": {
+              "$ref": "#/components/schemas/Penalty"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "title": "Penalties",
+            "type": "array"
+          },
+          "provenance": {
+            "$ref": "#/components/schemas/Provenance"
+          },
+          "scale": {
+            "exclusiveMinimum": 0.0,
+            "title": "Scale",
+            "type": "number"
+          },
+          "schema_version": {
+            "const": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "sense": {
+            "const": "minimize",
+            "title": "Sense",
+            "type": "string"
+          },
+          "source_instance_hash": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Source Instance Hash",
+            "type": "string"
+          },
+          "terms": {
+            "items": {
+              "$ref": "#/components/schemas/Term"
+            },
+            "maxItems": 1225,
+            "title": "Terms",
+            "type": "array"
+          },
+          "variables": {
+            "items": {
+              "$ref": "#/components/schemas/Variable"
+            },
+            "maxItems": 49,
+            "minItems": 9,
+            "title": "Variables",
+            "type": "array"
+          }
+        },
+        "required": [
+          "schema_version",
+          "convention",
+          "sense",
+          "variables",
+          "terms",
+          "offset",
+          "energy_unit",
+          "scale",
+          "source_instance_hash",
+          "encoding_id",
+          "encoding_version",
+          "penalties",
+          "decode_map",
+          "provenance"
+        ],
+        "title": "QuboArtifact",
+        "type": "object"
+      },
+      "SolveRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "instance": {
+            "$ref": "#/components/schemas/TspInstance"
+          },
+          "memory_limit_mb": {
+            "default": 512,
+            "maximum": 1024.0,
+            "minimum": 64.0,
+            "title": "Memory Limit Mb",
+            "type": "integer"
+          },
+          "method": {
+            "default": "classical",
+            "enum": [
+              "classical",
+              "quantum_local"
+            ],
+            "title": "Method",
+            "type": "string"
+          },
+          "quantum": {
+            "$ref": "#/components/schemas/LocalOptions"
+          },
+          "scale": {
+            "default": 1000,
+            "maximum": 1000000000.0,
+            "minimum": 1.0,
+            "title": "Scale",
+            "type": "integer"
+          },
+          "solver": {
+            "default": "ortools_tsp",
+            "enum": [
+              "exact_tsp",
+              "ortools_tsp"
+            ],
+            "title": "Solver",
+            "type": "string"
+          },
+          "timeout_s": {
+            "default": 10.0,
+            "exclusiveMinimum": 0.0,
+            "maximum": 60.0,
+            "title": "Timeout S",
+            "type": "number"
+          }
+        },
+        "required": [
+          "instance"
+        ],
+        "title": "SolveRequest",
+        "type": "object"
+      },
+      "Term": {
+        "additionalProperties": false,
+        "properties": {
+          "coefficient": {
+            "title": "Coefficient",
+            "type": "number"
+          },
+          "i": {
+            "maximum": 48.0,
+            "minimum": 0.0,
+            "title": "I",
+            "type": "integer"
+          },
+          "j": {
+            "maximum": 48.0,
+            "minimum": 0.0,
+            "title": "J",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "i",
+          "j",
+          "coefficient"
+        ],
+        "title": "Term",
+        "type": "object"
+      },
+      "TspAssignment": {
+        "additionalProperties": false,
+        "properties": {
+          "tour": {
+            "items": {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            "maxItems": 201,
+            "title": "Tour",
+            "type": "array"
+          }
+        },
+        "required": [
+          "tour"
+        ],
+        "title": "TspAssignment",
+        "type": "object"
+      },
+      "TspInstance": {
+        "additionalProperties": false,
+        "properties": {
+          "city_ids": {
+            "items": {
+              "maxLength": 128,
+              "minLength": 1,
+              "type": "string"
+            },
+            "maxItems": 200,
+            "minItems": 4,
+            "title": "City Ids",
+            "type": "array"
+          },
+          "depot_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Depot Id",
+            "type": "string"
+          },
+          "distance_unit": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Distance Unit",
+            "type": "string"
+          },
+          "geometry": {
+            "discriminator": {
+              "mapping": {
+                "coordinates": "#/components/schemas/CoordinatesInput",
+                "matrix": "#/components/schemas/MatrixInput"
+              },
+              "propertyName": "kind"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MatrixInput"
+              },
+              {
+                "$ref": "#/components/schemas/CoordinatesInput"
+              }
+            ],
+            "title": "Geometry"
+          },
+          "instance_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Instance Id",
+            "type": "string"
+          },
+          "kind": {
+            "const": "tsp",
+            "title": "Kind",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "instance_id",
+          "city_ids",
+          "depot_id",
+          "distance_unit",
+          "geometry"
+        ],
+        "title": "TspInstance",
+        "type": "object"
+      },
+      "ValidationReport": {
+        "additionalProperties": false,
+        "properties": {
+          "checked": {
+            "title": "Checked",
+            "type": "boolean"
+          },
+          "feasible": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Feasible"
+          },
+          "violations": {
+            "items": {
+              "$ref": "#/components/schemas/Violation"
+            },
+            "title": "Violations",
+            "type": "array"
+          }
+        },
+        "required": [
+          "checked",
+          "feasible",
+          "violations"
+        ],
+        "title": "ValidationReport",
+        "type": "object"
+      },
+      "Variable": {
+        "additionalProperties": false,
+        "properties": {
+          "domain_ref": {
+            "$ref": "#/components/schemas/DomainRef"
+          },
+          "index": {
+            "maximum": 48.0,
+            "minimum": 0.0,
+            "title": "Index",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "index",
+          "name",
+          "domain_ref"
+        ],
+        "title": "Variable",
+        "type": "object"
+      },
+      "Violation": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "entity_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Entity Ids",
+            "type": "array"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "entity_ids",
+          "message"
+        ],
+        "title": "Violation",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "Quantum Workload Studio \u2014 local TSP",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/health": {
+      "get": {
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Health"
+      }
+    },
+    "/api/problems/tsp/solve": {
+      "post": {
+        "operationId": "solve_api_problems_tsp_solve_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SolveRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Solve"
+      }
+    },
+    "/api/qubo/compile": {
+      "post": {
+        "operationId": "compile_api_qubo_compile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuboArtifact"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Compile"
+      }
+    },
+    "/api/qubo/inspect": {
+      "post": {
+        "operationId": "inspect_api_qubo_inspect_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InspectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InspectResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Inspect"
+      }
+    }
+  }
+}

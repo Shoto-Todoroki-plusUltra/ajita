@@ -8,5 +8,11 @@ __pycache__/
 build/
 dist/
 .env
+.tools/
+node_modules/
+frontend/playwright-report/
+frontend/test-results/
+review-snapshots/
+.ruff_cache/
 .env.*
 !.env.example

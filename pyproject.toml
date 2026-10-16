@@ -5,11 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "quantum-workload-studio"
 version = "0.1.0"
-description = "Checkpoint 1A: independently verified classical TSP and explicit QUBO"
+description = "Locally verified TSP, optional QUBO and bounded quantum simulation"
 requires-python = ">=3.11,<3.13"
 dependencies = ["pydantic==2.14.1", "ortools==9.15.6755"]
 
 [project.optional-dependencies]
+api = ["fastapi==0.143.2", "uvicorn==0.54.0", "psutil==7.2.2"]
 quantum = ["qiskit==2.5.2", "scipy==1.18.0", "psutil==7.2.2"]
 aer = ["qiskit-aer==0.17.2"]
 

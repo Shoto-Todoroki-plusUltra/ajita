@@ -231,11 +231,14 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
     finally:
         compute_elapsed = time.monotonic()-started
         cleanup_start = time.monotonic()
+        forced_cleanup = False
         # A completed message does not excuse a worker which remains alive.
         if status != "completed" and worker.is_alive():
+            forced_cleanup = True
             worker.terminate()
         worker.join(timeout=0.25)
         if worker.is_alive():
+            forced_cleanup = True
             worker.kill()
             worker.join(timeout=0.75)
         alive = worker.is_alive()
@@ -246,11 +249,13 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
         cleanup_elapsed = time.monotonic()-cleanup_start
     if alive:
         status = "cleanup_failed"
+    elif status == "completed" and (forced_cleanup or exitcode != 0):
+        status = "unclean_worker_exit"
     return {"execution_status": status or "worker_failed", "events": events,
             "observed_peak_worker_rss_bytes": peak or None,
             "monitor_error": monitor_error, "worker_pid": pid, "worker_exitcode": exitcode,
             "max_observed_watchdog_interval_s": max_check_interval,
-            "worker_alive_after_cleanup": alive, "compute_elapsed_s": compute_elapsed,
+            "worker_alive_after_cleanup": alive, "forced_cleanup": forced_cleanup, "compute_elapsed_s": compute_elapsed,
             "cleanup_elapsed_s": cleanup_elapsed, "supervisor_elapsed_s": time.monotonic()-started}
 
 
