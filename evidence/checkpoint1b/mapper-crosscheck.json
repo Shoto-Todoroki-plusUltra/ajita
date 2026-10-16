@@ -1,0 +1,3663 @@
+{
+  "status": "passed",
+  "mapper_release": "0.1.0",
+  "explicit_penalty": 16,
+  "canonical_coefficients_and_offset_equal": true,
+  "variable_order": [
+    "x_0_1",
+    "x_0_2",
+    "x_0_3",
+    "x_1_1",
+    "x_1_2",
+    "x_1_3",
+    "x_2_1",
+    "x_2_2",
+    "x_2_3"
+  ],
+  "variable_count": 9,
+  "slack_variables": 0,
+  "records": [
+    {
+      "integer": 0,
+      "reference": 96.0,
+      "mapper_energy": 96.0,
+      "mapper_operator_plus_offset": 96.0,
+      "feasible": false
+    },
+    {
+      "integer": 1,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 2,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 3,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 4,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 5,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 6,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 7,
+      "reference": 98.0,
+      "mapper_energy": 98.0,
+      "mapper_operator_plus_offset": 98.0,
+      "feasible": false
+    },
+    {
+      "integer": 8,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 9,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 10,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 11,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 12,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 13,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 14,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 15,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 16,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 17,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 18,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 19,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 20,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 21,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 22,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 23,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 24,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 25,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 26,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 27,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 28,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 29,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 30,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 31,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 32,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 33,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 34,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 35,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 36,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 37,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 38,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 39,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 40,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 41,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 42,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 43,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 44,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 45,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 46,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 47,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 48,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 49,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 50,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 51,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 52,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 53,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 54,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 55,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 56,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 57,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 58,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 59,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 60,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 61,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 62,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 63,
+      "reference": 202.0,
+      "mapper_energy": 202.0,
+      "mapper_operator_plus_offset": 202.0,
+      "feasible": false
+    },
+    {
+      "integer": 64,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 65,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 66,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 67,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 68,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 69,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 70,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 71,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 72,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 73,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 74,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 75,
+      "reference": 103.0,
+      "mapper_energy": 103.0,
+      "mapper_operator_plus_offset": 103.0,
+      "feasible": false
+    },
+    {
+      "integer": 76,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 77,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 78,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 79,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 80,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 81,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 82,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 83,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 84,
+      "reference": 4.0,
+      "mapper_energy": 4.0,
+      "mapper_operator_plus_offset": 4.0,
+      "feasible": true
+    },
+    {
+      "integer": 85,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 86,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 87,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 88,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 89,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 90,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 91,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 92,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 93,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 94,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 95,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 96,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 97,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 98,
+      "reference": 6.0,
+      "mapper_energy": 6.0,
+      "mapper_operator_plus_offset": 6.0,
+      "feasible": true
+    },
+    {
+      "integer": 99,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 100,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 101,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 102,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 103,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 104,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 105,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 106,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 107,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 108,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 109,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 110,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 111,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 112,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 113,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 114,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 115,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 116,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 117,
+      "reference": 72.0,
+      "mapper_energy": 72.0,
+      "mapper_operator_plus_offset": 72.0,
+      "feasible": false
+    },
+    {
+      "integer": 118,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 119,
+      "reference": 139.0,
+      "mapper_energy": 139.0,
+      "mapper_operator_plus_offset": 139.0,
+      "feasible": false
+    },
+    {
+      "integer": 120,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 121,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 122,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 123,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 124,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 125,
+      "reference": 170.0,
+      "mapper_energy": 170.0,
+      "mapper_operator_plus_offset": 170.0,
+      "feasible": false
+    },
+    {
+      "integer": 126,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 127,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 128,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 129,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 130,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 131,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 132,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 133,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 134,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 135,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 136,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 137,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 138,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 139,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 140,
+      "reference": 6.0,
+      "mapper_energy": 6.0,
+      "mapper_operator_plus_offset": 6.0,
+      "feasible": true
+    },
+    {
+      "integer": 141,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 142,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 143,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 144,
+      "reference": 64.0,
+      "mapper_energy": 64.0,
+      "mapper_operator_plus_offset": 64.0,
+      "feasible": false
+    },
+    {
+      "integer": 145,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 146,
+      "reference": 96.0,
+      "mapper_energy": 96.0,
+      "mapper_operator_plus_offset": 96.0,
+      "feasible": false
+    },
+    {
+      "integer": 147,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 148,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 149,
+      "reference": 40.0,
+      "mapper_energy": 40.0,
+      "mapper_operator_plus_offset": 40.0,
+      "feasible": false
+    },
+    {
+      "integer": 150,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 151,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 152,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 153,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 154,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 155,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 156,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 157,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 158,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 159,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 160,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 161,
+      "reference": 6.0,
+      "mapper_energy": 6.0,
+      "mapper_operator_plus_offset": 6.0,
+      "feasible": true
+    },
+    {
+      "integer": 162,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 163,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 164,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 165,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 166,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 167,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 168,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 169,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 170,
+      "reference": 40.0,
+      "mapper_energy": 40.0,
+      "mapper_operator_plus_offset": 40.0,
+      "feasible": false
+    },
+    {
+      "integer": 171,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 172,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 173,
+      "reference": 76.0,
+      "mapper_energy": 76.0,
+      "mapper_operator_plus_offset": 76.0,
+      "feasible": false
+    },
+    {
+      "integer": 174,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 175,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 176,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 177,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 178,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 179,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 180,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 181,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 182,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 183,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 184,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 185,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 186,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 187,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 188,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 189,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 190,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 191,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 192,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 193,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 194,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 195,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 196,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 197,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 198,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 199,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 200,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 201,
+      "reference": 103.0,
+      "mapper_energy": 103.0,
+      "mapper_operator_plus_offset": 103.0,
+      "feasible": false
+    },
+    {
+      "integer": 202,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 203,
+      "reference": 138.0,
+      "mapper_energy": 138.0,
+      "mapper_operator_plus_offset": 138.0,
+      "feasible": false
+    },
+    {
+      "integer": 204,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 205,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 206,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 207,
+      "reference": 173.0,
+      "mapper_energy": 173.0,
+      "mapper_operator_plus_offset": 173.0,
+      "feasible": false
+    },
+    {
+      "integer": 208,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 209,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 210,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 211,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 212,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 213,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 214,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 215,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 216,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 217,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 218,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 219,
+      "reference": 204.0,
+      "mapper_energy": 204.0,
+      "mapper_operator_plus_offset": 204.0,
+      "feasible": false
+    },
+    {
+      "integer": 220,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 221,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 222,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 223,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 224,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 225,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 226,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 227,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 228,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 229,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 230,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 231,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 232,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 233,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 234,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 235,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 236,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 237,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 238,
+      "reference": 110.0,
+      "mapper_energy": 110.0,
+      "mapper_operator_plus_offset": 110.0,
+      "feasible": false
+    },
+    {
+      "integer": 239,
+      "reference": 209.0,
+      "mapper_energy": 209.0,
+      "mapper_operator_plus_offset": 209.0,
+      "feasible": false
+    },
+    {
+      "integer": 240,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 241,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 242,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 243,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 244,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 245,
+      "reference": 109.0,
+      "mapper_energy": 109.0,
+      "mapper_operator_plus_offset": 109.0,
+      "feasible": false
+    },
+    {
+      "integer": 246,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 247,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 248,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 249,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 250,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 251,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 252,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 253,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 254,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 255,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 256,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 257,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 258,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 259,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 260,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 261,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 262,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 263,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 264,
+      "reference": 35.0,
+      "mapper_energy": 35.0,
+      "mapper_operator_plus_offset": 35.0,
+      "feasible": false
+    },
+    {
+      "integer": 265,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 266,
+      "reference": 6.0,
+      "mapper_energy": 6.0,
+      "mapper_operator_plus_offset": 6.0,
+      "feasible": true
+    },
+    {
+      "integer": 267,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 268,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 269,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 270,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 271,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 272,
+      "reference": 34.0,
+      "mapper_energy": 34.0,
+      "mapper_operator_plus_offset": 34.0,
+      "feasible": false
+    },
+    {
+      "integer": 273,
+      "reference": 4.0,
+      "mapper_energy": 4.0,
+      "mapper_operator_plus_offset": 4.0,
+      "feasible": true
+    },
+    {
+      "integer": 274,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 275,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 276,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 277,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 278,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 279,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 280,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 281,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 282,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 283,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 284,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 285,
+      "reference": 72.0,
+      "mapper_energy": 72.0,
+      "mapper_operator_plus_offset": 72.0,
+      "feasible": false
+    },
+    {
+      "integer": 286,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 287,
+      "reference": 139.0,
+      "mapper_energy": 139.0,
+      "mapper_operator_plus_offset": 139.0,
+      "feasible": false
+    },
+    {
+      "integer": 288,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 289,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 290,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 291,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 292,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 293,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 294,
+      "reference": 103.0,
+      "mapper_energy": 103.0,
+      "mapper_operator_plus_offset": 103.0,
+      "feasible": false
+    },
+    {
+      "integer": 295,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 296,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 297,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 298,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 299,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 300,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 301,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 302,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 303,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 304,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 305,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 306,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 307,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 308,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 309,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 310,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 311,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 312,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 313,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 314,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 315,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 316,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 317,
+      "reference": 170.0,
+      "mapper_energy": 170.0,
+      "mapper_operator_plus_offset": 170.0,
+      "feasible": false
+    },
+    {
+      "integer": 318,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 319,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 320,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 321,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 322,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 323,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 324,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 325,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 326,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 327,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 328,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 329,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 330,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 331,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 332,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 333,
+      "reference": 134.0,
+      "mapper_energy": 134.0,
+      "mapper_operator_plus_offset": 134.0,
+      "feasible": false
+    },
+    {
+      "integer": 334,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 335,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 336,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 337,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 338,
+      "reference": 40.0,
+      "mapper_energy": 40.0,
+      "mapper_operator_plus_offset": 40.0,
+      "feasible": false
+    },
+    {
+      "integer": 339,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 340,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 341,
+      "reference": 72.0,
+      "mapper_energy": 72.0,
+      "mapper_operator_plus_offset": 72.0,
+      "feasible": false
+    },
+    {
+      "integer": 342,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 343,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 344,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 345,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 346,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 347,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 348,
+      "reference": 72.0,
+      "mapper_energy": 72.0,
+      "mapper_operator_plus_offset": 72.0,
+      "feasible": false
+    },
+    {
+      "integer": 349,
+      "reference": 138.0,
+      "mapper_energy": 138.0,
+      "mapper_operator_plus_offset": 138.0,
+      "feasible": false
+    },
+    {
+      "integer": 350,
+      "reference": 109.0,
+      "mapper_energy": 109.0,
+      "mapper_operator_plus_offset": 109.0,
+      "feasible": false
+    },
+    {
+      "integer": 351,
+      "reference": 207.0,
+      "mapper_energy": 207.0,
+      "mapper_operator_plus_offset": 207.0,
+      "feasible": false
+    },
+    {
+      "integer": 352,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 353,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 354,
+      "reference": 41.0,
+      "mapper_energy": 41.0,
+      "mapper_operator_plus_offset": 41.0,
+      "feasible": false
+    },
+    {
+      "integer": 355,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 356,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 357,
+      "reference": 134.0,
+      "mapper_energy": 134.0,
+      "mapper_operator_plus_offset": 134.0,
+      "feasible": false
+    },
+    {
+      "integer": 358,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 359,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 360,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 361,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 362,
+      "reference": 76.0,
+      "mapper_energy": 76.0,
+      "mapper_operator_plus_offset": 76.0,
+      "feasible": false
+    },
+    {
+      "integer": 363,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 364,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 365,
+      "reference": 200.0,
+      "mapper_energy": 200.0,
+      "mapper_operator_plus_offset": 200.0,
+      "feasible": false
+    },
+    {
+      "integer": 366,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 367,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 368,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 369,
+      "reference": 72.0,
+      "mapper_energy": 72.0,
+      "mapper_operator_plus_offset": 72.0,
+      "feasible": false
+    },
+    {
+      "integer": 370,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 371,
+      "reference": 109.0,
+      "mapper_energy": 109.0,
+      "mapper_operator_plus_offset": 109.0,
+      "feasible": false
+    },
+    {
+      "integer": 372,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 373,
+      "reference": 138.0,
+      "mapper_energy": 138.0,
+      "mapper_operator_plus_offset": 138.0,
+      "feasible": false
+    },
+    {
+      "integer": 374,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 375,
+      "reference": 207.0,
+      "mapper_energy": 207.0,
+      "mapper_operator_plus_offset": 207.0,
+      "feasible": false
+    },
+    {
+      "integer": 376,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 377,
+      "reference": 170.0,
+      "mapper_energy": 170.0,
+      "mapper_operator_plus_offset": 170.0,
+      "feasible": false
+    },
+    {
+      "integer": 378,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 379,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 380,
+      "reference": 170.0,
+      "mapper_energy": 170.0,
+      "mapper_operator_plus_offset": 170.0,
+      "feasible": false
+    },
+    {
+      "integer": 381,
+      "reference": 236.0,
+      "mapper_energy": 236.0,
+      "mapper_operator_plus_offset": 236.0,
+      "feasible": false
+    },
+    {
+      "integer": 382,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 383,
+      "reference": 306.0,
+      "mapper_energy": 306.0,
+      "mapper_operator_plus_offset": 306.0,
+      "feasible": false
+    },
+    {
+      "integer": 384,
+      "reference": 65.0,
+      "mapper_energy": 65.0,
+      "mapper_operator_plus_offset": 65.0,
+      "feasible": false
+    },
+    {
+      "integer": 385,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 386,
+      "reference": 67.0,
+      "mapper_energy": 67.0,
+      "mapper_operator_plus_offset": 67.0,
+      "feasible": false
+    },
+    {
+      "integer": 387,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 388,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 389,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 390,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 391,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 392,
+      "reference": 36.0,
+      "mapper_energy": 36.0,
+      "mapper_operator_plus_offset": 36.0,
+      "feasible": false
+    },
+    {
+      "integer": 393,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 394,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 395,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 396,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 397,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 398,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 399,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 400,
+      "reference": 66.0,
+      "mapper_energy": 66.0,
+      "mapper_operator_plus_offset": 66.0,
+      "feasible": false
+    },
+    {
+      "integer": 401,
+      "reference": 38.0,
+      "mapper_energy": 38.0,
+      "mapper_operator_plus_offset": 38.0,
+      "feasible": false
+    },
+    {
+      "integer": 402,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 403,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 404,
+      "reference": 70.0,
+      "mapper_energy": 70.0,
+      "mapper_operator_plus_offset": 70.0,
+      "feasible": false
+    },
+    {
+      "integer": 405,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 406,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 407,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 408,
+      "reference": 69.0,
+      "mapper_energy": 69.0,
+      "mapper_operator_plus_offset": 69.0,
+      "feasible": false
+    },
+    {
+      "integer": 409,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 410,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 411,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 412,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 413,
+      "reference": 109.0,
+      "mapper_energy": 109.0,
+      "mapper_operator_plus_offset": 109.0,
+      "feasible": false
+    },
+    {
+      "integer": 414,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 415,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 416,
+      "reference": 68.0,
+      "mapper_energy": 68.0,
+      "mapper_operator_plus_offset": 68.0,
+      "feasible": false
+    },
+    {
+      "integer": 417,
+      "reference": 39.0,
+      "mapper_energy": 39.0,
+      "mapper_operator_plus_offset": 39.0,
+      "feasible": false
+    },
+    {
+      "integer": 418,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 419,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 420,
+      "reference": 103.0,
+      "mapper_energy": 103.0,
+      "mapper_operator_plus_offset": 103.0,
+      "feasible": false
+    },
+    {
+      "integer": 421,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 422,
+      "reference": 138.0,
+      "mapper_energy": 138.0,
+      "mapper_operator_plus_offset": 138.0,
+      "feasible": false
+    },
+    {
+      "integer": 423,
+      "reference": 173.0,
+      "mapper_energy": 173.0,
+      "mapper_operator_plus_offset": 173.0,
+      "feasible": false
+    },
+    {
+      "integer": 424,
+      "reference": 71.0,
+      "mapper_energy": 71.0,
+      "mapper_operator_plus_offset": 71.0,
+      "feasible": false
+    },
+    {
+      "integer": 425,
+      "reference": 74.0,
+      "mapper_energy": 74.0,
+      "mapper_operator_plus_offset": 74.0,
+      "feasible": false
+    },
+    {
+      "integer": 426,
+      "reference": 75.0,
+      "mapper_energy": 75.0,
+      "mapper_operator_plus_offset": 75.0,
+      "feasible": false
+    },
+    {
+      "integer": 427,
+      "reference": 110.0,
+      "mapper_energy": 110.0,
+      "mapper_operator_plus_offset": 110.0,
+      "feasible": false
+    },
+    {
+      "integer": 428,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 429,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 430,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 431,
+      "reference": 209.0,
+      "mapper_energy": 209.0,
+      "mapper_operator_plus_offset": 209.0,
+      "feasible": false
+    },
+    {
+      "integer": 432,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 433,
+      "reference": 73.0,
+      "mapper_energy": 73.0,
+      "mapper_operator_plus_offset": 73.0,
+      "feasible": false
+    },
+    {
+      "integer": 434,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 435,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 436,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 437,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 438,
+      "reference": 204.0,
+      "mapper_energy": 204.0,
+      "mapper_operator_plus_offset": 204.0,
+      "feasible": false
+    },
+    {
+      "integer": 439,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 440,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 441,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 442,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 443,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 444,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 445,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 446,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 447,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 448,
+      "reference": 98.0,
+      "mapper_energy": 98.0,
+      "mapper_operator_plus_offset": 98.0,
+      "feasible": false
+    },
+    {
+      "integer": 449,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 450,
+      "reference": 102.0,
+      "mapper_energy": 102.0,
+      "mapper_operator_plus_offset": 102.0,
+      "feasible": false
+    },
+    {
+      "integer": 451,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 452,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 453,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 454,
+      "reference": 137.0,
+      "mapper_energy": 137.0,
+      "mapper_operator_plus_offset": 137.0,
+      "feasible": false
+    },
+    {
+      "integer": 455,
+      "reference": 204.0,
+      "mapper_energy": 204.0,
+      "mapper_operator_plus_offset": 204.0,
+      "feasible": false
+    },
+    {
+      "integer": 456,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 457,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 458,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 459,
+      "reference": 173.0,
+      "mapper_energy": 173.0,
+      "mapper_operator_plus_offset": 173.0,
+      "feasible": false
+    },
+    {
+      "integer": 460,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 461,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 462,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 463,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 464,
+      "reference": 100.0,
+      "mapper_energy": 100.0,
+      "mapper_operator_plus_offset": 100.0,
+      "feasible": false
+    },
+    {
+      "integer": 465,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 466,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 467,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 468,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 469,
+      "reference": 140.0,
+      "mapper_energy": 140.0,
+      "mapper_operator_plus_offset": 140.0,
+      "feasible": false
+    },
+    {
+      "integer": 470,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 471,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 472,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 473,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 474,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 475,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 476,
+      "reference": 139.0,
+      "mapper_energy": 139.0,
+      "mapper_operator_plus_offset": 139.0,
+      "feasible": false
+    },
+    {
+      "integer": 477,
+      "reference": 207.0,
+      "mapper_energy": 207.0,
+      "mapper_operator_plus_offset": 207.0,
+      "feasible": false
+    },
+    {
+      "integer": 478,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 479,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 480,
+      "reference": 101.0,
+      "mapper_energy": 101.0,
+      "mapper_operator_plus_offset": 101.0,
+      "feasible": false
+    },
+    {
+      "integer": 481,
+      "reference": 104.0,
+      "mapper_energy": 104.0,
+      "mapper_operator_plus_offset": 104.0,
+      "feasible": false
+    },
+    {
+      "integer": 482,
+      "reference": 106.0,
+      "mapper_energy": 106.0,
+      "mapper_operator_plus_offset": 106.0,
+      "feasible": false
+    },
+    {
+      "integer": 483,
+      "reference": 141.0,
+      "mapper_energy": 141.0,
+      "mapper_operator_plus_offset": 141.0,
+      "feasible": false
+    },
+    {
+      "integer": 484,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 485,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 486,
+      "reference": 173.0,
+      "mapper_energy": 173.0,
+      "mapper_operator_plus_offset": 173.0,
+      "feasible": false
+    },
+    {
+      "integer": 487,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 488,
+      "reference": 136.0,
+      "mapper_energy": 136.0,
+      "mapper_operator_plus_offset": 136.0,
+      "feasible": false
+    },
+    {
+      "integer": 489,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 490,
+      "reference": 142.0,
+      "mapper_energy": 142.0,
+      "mapper_operator_plus_offset": 142.0,
+      "feasible": false
+    },
+    {
+      "integer": 491,
+      "reference": 209.0,
+      "mapper_energy": 209.0,
+      "mapper_operator_plus_offset": 209.0,
+      "feasible": false
+    },
+    {
+      "integer": 492,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 493,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 494,
+      "reference": 209.0,
+      "mapper_energy": 209.0,
+      "mapper_operator_plus_offset": 209.0,
+      "feasible": false
+    },
+    {
+      "integer": 495,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 496,
+      "reference": 135.0,
+      "mapper_energy": 135.0,
+      "mapper_operator_plus_offset": 135.0,
+      "feasible": false
+    },
+    {
+      "integer": 497,
+      "reference": 139.0,
+      "mapper_energy": 139.0,
+      "mapper_operator_plus_offset": 139.0,
+      "feasible": false
+    },
+    {
+      "integer": 498,
+      "reference": 172.0,
+      "mapper_energy": 172.0,
+      "mapper_operator_plus_offset": 172.0,
+      "feasible": false
+    },
+    {
+      "integer": 499,
+      "reference": 208.0,
+      "mapper_energy": 208.0,
+      "mapper_operator_plus_offset": 208.0,
+      "feasible": false
+    },
+    {
+      "integer": 500,
+      "reference": 171.0,
+      "mapper_energy": 171.0,
+      "mapper_operator_plus_offset": 171.0,
+      "feasible": false
+    },
+    {
+      "integer": 501,
+      "reference": 207.0,
+      "mapper_energy": 207.0,
+      "mapper_operator_plus_offset": 207.0,
+      "feasible": false
+    },
+    {
+      "integer": 502,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 503,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 504,
+      "reference": 202.0,
+      "mapper_energy": 202.0,
+      "mapper_operator_plus_offset": 202.0,
+      "feasible": false
+    },
+    {
+      "integer": 505,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 506,
+      "reference": 240.0,
+      "mapper_energy": 240.0,
+      "mapper_operator_plus_offset": 240.0,
+      "feasible": false
+    },
+    {
+      "integer": 507,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 508,
+      "reference": 238.0,
+      "mapper_energy": 238.0,
+      "mapper_operator_plus_offset": 238.0,
+      "feasible": false
+    },
+    {
+      "integer": 509,
+      "reference": 306.0,
+      "mapper_energy": 306.0,
+      "mapper_operator_plus_offset": 306.0,
+      "feasible": false
+    },
+    {
+      "integer": 510,
+      "reference": 308.0,
+      "mapper_energy": 308.0,
+      "mapper_operator_plus_offset": 308.0,
+      "feasible": false
+    },
+    {
+      "integer": 511,
+      "reference": 408.0,
+      "mapper_energy": 408.0,
+      "mapper_operator_plus_offset": 408.0,
+      "feasible": false
+    }
+  ],
+  "max_absolute_energy_error": 0.0,
+  "feasible_count": 6,
+  "offset": 104.0,
+  "elapsed_s": 0.2646634159991663,
+  "compute_budget_s": 30,
+  "input_qubo_sha256": "ec15905574d91b015036582d8efb340f8d6e184fb783370707bcf4f571b4af31",
+  "packages": {
+    "pip-tools": "7.6.2",
+    "highspy": "1.15.1",
+    "cloudpickle": "3.1.2",
+    "rustworkx": "0.18.1",
+    "click": "8.5.0",
+    "packaging": "26.3",
+    "networkx": "3.7",
+    "joblib": "1.6.0",
+    "osqp": "1.1.3",
+    "Pygments": "2.21.0",
+    "qiskit": "2.5.2",
+    "stevedore": "5.9.1",
+    "iniconfig": "2.3.1",
+    "build": "1.6.1",
+    "numpy": "2.5.4",
+    "wheel": "0.48.0",
+    "clarabel": "0.11.1",
+    "immutabledict": "4.3.1",
+    "pytest": "9.1.1",
+    "setuptools": "84.0.0",
+    "protobuf": "6.33.6",
+    "pydantic_core": "2.50.1",
+    "pyproject_hooks": "1.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "cffi": "2.1.1",
+    "sparsediffpy": "0.6.1",
+    "scipy": "1.18.0",
+    "Jinja2": "3.1.6",
+    "annotated-types": "0.8.0",
+    "pycparser": "3.11",
+    "pip": "26.1",
+    "typing-inspection": "0.4.4",
+    "pandas": "3.0.6",
+    "absl-py": "2.5.1",
+    "pluggy": "1.6.0",
+    "quantum-workload-studio": "0.1.0",
+    "docplex": "2.32.264",
+    "qiskit-addon-opt-mapper": "0.1.0",
+    "typing_extensions": "4.16.0",
+    "MarkupSafe": "3.0.4",
+    "pydantic": "2.14.1",
+    "psutil": "7.2.2",
+    "qdldl": "0.1.9.post1",
+    "scs": "3.3.1",
+    "ortools": "9.15.6755",
+    "cvxpy": "1.9.3",
+    "qiskit-aer": "0.17.2",
+    "six": "1.17.0",
+    "dill": "0.4.1"
+  },
+  "note": "Cross-check only; direct core still executes QAOA. No CPLEX/Gurobi job invoked."
+}

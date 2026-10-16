@@ -1,4 +1,52 @@
-# Checkpoint 1A implementation report
+# Implementation report — checkpoint 1B
+
+15 October 2026. Authorized scope: tasks 1.6–1.8 only. **1C, Phase 2, cloud and product integration remain unauthorized.** The original 1A core/tests/artifacts/classical lock are unchanged. The user reported external review of that core and a reviewer-side OR-Tools limitation; no source behavior was changed to accommodate the review environment. Codex authored the new local adapter/tests/scripts. Independent human review of 1B remains pending. No practical quantum speedup or novelty demonstrated.
+
+## 1B results
+
+| Check | Actual outcome |
+| --- | --- |
+| Optional native environment | Qiskit 2.5.2, Aer 0.17.2, SciPy 1.18.0, psutil 7.2.2; separate hash lock, hash-verified reinstall and `pip check` passed. Classical environment unchanged. |
+| SDK operator versus independent 1A reference | All 512 `Statevector.expectation_value(SparsePauliOp)` values plus identity offset match; maximum observed error 0, absolute tolerance 1e-10/relative 1e-12. QUBO offset is 96; Ising identity offset is 104. |
+| Index/sign/layout | Tests cover x=(1-Z)/2, x0 at rightmost Pauli/display character, negative single-bit cost change, permuted logical/classical measurement wiring and reversed physical layout, with a non-palindromic feasible nine-bit fixture. Both V2 samplers pass. |
+| Original 1A Mac suite | **568 passed, zero failures/errors/skips**, three upstream SWIG warnings; run in original `.venv`. |
+| Full quantum-environment suite | **1,103 passed, zero failures/errors/skips**, same three SWIG warnings; includes all 1A tests, 512 SDK basis tests, lifecycle/invalid-sample/reproducibility checks, independent 4–6-city dynamic-program oracle comparison, five-city encoding properties and rounding diagnostics. |
+| Mapper 0.1.0 | Separate environment; explicit A=16, same nine variables/order, canonical coefficients and QUBO constant match, all 512 energies/Ising expectations and six feasible assignments agree. No slack variables or automatic penalties. |
+
+Controlled p=1, 16-evaluation, 256-shots/evaluation, seed-1729 experiments (transpiler seed 7, level 1, all-to-all `u/cx` basis):
+
+| Local sampler | Raw shots | Feasible / invalid shots | Best feasible original cost / gap | Total recorded elapsed | Sampled worker RSS maximum |
+| --- | --- | --- | --- | --- | --- |
+| StatevectorSampler V2 | 4,096 | 61 / 4,035 (1.4893% / 98.5107%) | 4 / 0 | 0.7480 s | 123,240,448 bytes |
+| Aer SamplerV2 | 4,096 | 54 / 4,042 (1.3184% / 98.6816%) | 4 / 0 | 0.5065 s | 127,926,272 bytes |
+
+These are single local research runs, not performance benchmarks or evidence that one sampler is better. Each optimizer completed its specified budget; COBYLA's **success flag is false** because MAXFUN was reached, not convergence. Best feasible quality is selected from genuine shots across all optimization evaluations, not a classical fallback, repaired route or claim about the final parameter distribution. Every measured displayed key in every evaluation is decoded and independently original-validated, weighted by its observed count. Invalid shots remain in the denominator. No-feasible outcomes have null best objective/gap. The exact oracle supplies only the reference scalar. The full statevector repeat reproduced all raw counts, parameter paths and decoded outcomes exactly on this environment.
+
+Compiled resource counts: nine logical/simulator qubits; pre-transpilation depth 18 with 30 RZZ terms; post-transpilation depth 49, 60 CX, 57 single-qubit `u`, nine measurements. These are circuit/compiler properties, not measured hardware resources. No device/noise model or calibration was used. Memory preflight's 8,192-byte state amplitude lower bound and ~256 MiB workspace/import allowance are analytical/modeled; the RSS column is a sampled process observation, not that model or an exact peak.
+
+## Resource enforcement and honest failure reporting
+
+One spawned worker per experiment; cap 16 variables, p<=2, 50 evaluations, 4096 shots/evaluation, 60 seconds. Preflight checks the modeled allocation against budget and budget against half observed available RAM. Imports/numerics use one requested thread; Aer is explicitly single-threaded. The parent checks elapsed time, cancellation and worker RSS with a 10ms polling wait plus per-event validation/OS scheduling latency; the maximum observed watchdog interval is recorded. Monitoring denial fails closed. Termination is followed by kill if necessary and bounded joins (0.25+0.75 seconds); tests verify no surviving worker. The total compute budget includes preflight/reference, spawn/import, compilation, sampling and original validation. Cleanup grace, report serialization and OS scheduling overhead are distinct; **these are software polling limits, not hard real-time or kernel hard memory caps**. RSS can overshoot between observations. Do not present sampled RSS as an exact peak or claim an absolute allocation guarantee.
+
+[Worker probes](../evidence/checkpoint1b/worker-limits.json) record actual 0.01-second timeout and cancellation of the real worker, zero sampled candidates in those probes, no surviving workers and refusal of 25-variable input before allocation. Tests also exercise an uncooperative SIGTERM-ignoring worker, memory excess, unavailable monitoring, validation failure with raw event retention and injected worker error. Injected lifecycle targets are explicitly test fixtures, never experiment candidate sources. Timeout/error/cancelled execution is never relabeled successful because a feasible sample exists. No paid job, credentials, IBM Runtime, FastAPI, React, timetable or vehicle-routing implementation was used.
+
+Observed development failures: initial operator-test fixture path was wrong (7 passed, 512 setup errors); fixed and rerun to 519 passing operator tests. Mapper's wheel-only dry-run failed on source-only Docplex; one 180-second install attempt permitting pure-Python source succeeded in 23.66 seconds. Its cross-check computation took ~0.26 seconds against a 30-second budget. Mapper was neither skipped nor substituted for direct-core solving. No Qiskit/Aer API breakage or unresolved failing test was observed. Previously recorded 1A tooling failures remain in the historical section below.
+
+## Reproducibility, sources and review package
+
+Exact commands are in [commands.md](../evidence/checkpoint1b/commands.md). Native locks: [quantum](../requirements/quantum-macos-arm64-py312.lock), [Mapper](../requirements/mapper-macos-arm64-py312.lock), plus exact Mapper snapshot. The Mapper lock includes hashed Docplex source; build tools are preinstalled/pinned and `--no-build-isolation` is required. Original classical lock/artifacts remain byte-for-byte unchanged. Mapper and quantum `pip check` passed; Mapper lock's offline hash-mode resolution was verified separately. All library versions in the actual run environments are saved in experiment provenance.
+
+Primary current references: [Qiskit V2 primitives](https://quantum.cloud.ibm.com/docs/en/api/qiskit/primitives), [SparsePauliOp](https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.quantum_info.SparsePauliOp), [qaoa_ansatz](https://quantum.cloud.ibm.com/docs/en/api/qiskit/qiskit.circuit.library.qaoa_ansatz), [bit ordering](https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering), [Aer SamplerV2](https://qiskit.github.io/qiskit-aer/stubs/qiskit_aer.primitives.SamplerV2.html), [SciPy COBYLA budget semantics](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-cobyla.html), [Mapper migration](https://qiskit.github.io/qiskit-addon-opt-mapper/how_tos/00_migrate_from_qiskit_optimization.html) and [converter API](https://qiskit.github.io/qiskit-addon-opt-mapper/stubs/qiskit_addon_opt_mapper.converters.OptimizationProblemToQubo.html). Initial SDK class URLs without the `qiskit.` prefix failed and were corrected. No archived Optimization package was installed.
+
+Evidence: [512-state operator certificate](../evidence/checkpoint1b/operator-basis.json), [statevector run](../evidence/checkpoint1b/qaoa-statevector.json), [repeat](../evidence/checkpoint1b/qaoa-statevector-repeat.json), [Aer run](../evidence/checkpoint1b/qaoa-aer.json), [Mapper cross-check](../evidence/checkpoint1b/mapper-crosscheck.json), [full test XML](../evidence/checkpoint1b/full-quantum-environment-tests.xml), [original regressions XML](../evidence/checkpoint1b/1a-regressions.xml), [manifest](../evidence/checkpoint1b/manifest.json) and [file inventory](../evidence/checkpoint1b/file-inventory.txt). Run provenance includes source/lock hashes, seeds, options, every raw sampler count, circuit properties, timing, guard observations and optimizer termination. No claim of reproducibility on other platforms/releases is made.
+
+Git milestone `7573898` locks/verifies environment and operator. The final tested local-execution/Mapper/report commit is identified by `git log` to avoid self-referential commit hashes. A pre-existing untracked `ajita.zip` was left untouched and is not committed. New code is confined to `execution/{operator,local}.py`, the research-only `local_cli.py`, supporting scripts and quantum tests; optional requirements, README/report and evidence were added/updated. Work stops for 1B review and explicit approval of 1C.
+
+---
+
+# Historical checkpoint 1A report
+
+The following records the 1A completion state; its statement that 1B was unauthorized was subsequently superseded by the user's explicit 1B-only approval.
 
 Date: 15 October 2026. Scope: user-approved tasks 1.1–1.5 only. **Checkpoint 1B and the rest of Phase 1 are not authorized.** Implementation, reproducible evidence and development/clean-install verification are complete. This is a mathematical checkpoint, not full Phase 1 product acceptance.
 

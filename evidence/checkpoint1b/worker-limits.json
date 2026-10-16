@@ -1,0 +1,128 @@
+{
+  "timeout": {
+    "schema_version": 1,
+    "method": "quantum_local",
+    "backend": "statevector",
+    "candidate_source": "V2 sampler shots only; no classical fallback or repair",
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "options": {
+      "backend": "statevector",
+      "seed": 1729,
+      "transpiler_seed": 7,
+      "shots": 256,
+      "reps": 1,
+      "max_evaluations": 16,
+      "timeout_s": 0.01,
+      "memory_limit_mb": 1024,
+      "optimization_level": 1
+    },
+    "preflight": {
+      "amplitude_lower_bound_bytes": 8192,
+      "modeled_allowance_bytes": 268500992,
+      "available_bytes_observed": 5584338944,
+      "rss_limit_bytes": 1073741824,
+      "enforcement": "10ms polling wait plus per-event validation and OS scheduling; may overshoot, not a kernel hard cap"
+    },
+    "execution_status": "timeout",
+    "events": [],
+    "observed_peak_worker_rss_bytes": null,
+    "monitor_error": null,
+    "worker_pid": 6386,
+    "worker_exitcode": -15,
+    "max_observed_watchdog_interval_s": 0.0,
+    "worker_alive_after_cleanup": false,
+    "compute_elapsed_s": 0.009576458000083221,
+    "cleanup_elapsed_s": 0.00013833299999532755,
+    "supervisor_elapsed_s": 0.009715125001093838,
+    "sample_evaluations": [],
+    "samples": {
+      "raw_counts": {},
+      "raw_shots": 0,
+      "feasible_shots": 0,
+      "invalid_shots": 0,
+      "feasible_fraction": null,
+      "invalid_fraction": null,
+      "candidate_outcome": "no_feasible_sample",
+      "best_feasible": null,
+      "decoded_unique_samples": []
+    },
+    "failures": [],
+    "selection_policy": "best verified feasible objective across all optimization shots; no repair, fallback or separate final-parameter quality claim",
+    "reference": {
+      "solver": "independent exact_tsp",
+      "objective": 4.0,
+      "seconds": 8.183300087694079e-05
+    },
+    "absolute_optimality_gap": null,
+    "relative_optimality_gap": null,
+    "total_elapsed_including_post_validation_s": 0.015190000000075088,
+    "deadline_scope": "preflight/reference plus spawn/import/compile/solve and parent validation; cleanup grace <=1s separately reported; scheduling/poll overshoot possible",
+    "no_practical_quantum_speedup_demonstrated": true
+  },
+  "cancellation": {
+    "schema_version": 1,
+    "method": "quantum_local",
+    "backend": "statevector",
+    "candidate_source": "V2 sampler shots only; no classical fallback or repair",
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "options": {
+      "backend": "statevector",
+      "seed": 1729,
+      "transpiler_seed": 7,
+      "shots": 256,
+      "reps": 1,
+      "max_evaluations": 16,
+      "timeout_s": 60.0,
+      "memory_limit_mb": 1024,
+      "optimization_level": 1
+    },
+    "preflight": {
+      "amplitude_lower_bound_bytes": 8192,
+      "modeled_allowance_bytes": 268500992,
+      "available_bytes_observed": 5578457088,
+      "rss_limit_bytes": 1073741824,
+      "enforcement": "10ms polling wait plus per-event validation and OS scheduling; may overshoot, not a kernel hard cap"
+    },
+    "execution_status": "cancelled",
+    "events": [],
+    "observed_peak_worker_rss_bytes": 17481728,
+    "monitor_error": null,
+    "worker_pid": 6387,
+    "worker_exitcode": -15,
+    "max_observed_watchdog_interval_s": 0.011151874999995925,
+    "worker_alive_after_cleanup": false,
+    "compute_elapsed_s": 0.034128792000046815,
+    "cleanup_elapsed_s": 0.0005308330000843853,
+    "supervisor_elapsed_s": 0.03466012500030047,
+    "sample_evaluations": [],
+    "samples": {
+      "raw_counts": {},
+      "raw_shots": 0,
+      "feasible_shots": 0,
+      "invalid_shots": 0,
+      "feasible_fraction": null,
+      "invalid_fraction": null,
+      "candidate_outcome": "no_feasible_sample",
+      "best_feasible": null,
+      "decoded_unique_samples": []
+    },
+    "failures": [],
+    "selection_policy": "best verified feasible objective across all optimization shots; no repair, fallback or separate final-parameter quality claim",
+    "reference": {
+      "solver": "independent exact_tsp",
+      "objective": 4.0,
+      "seconds": 6.958300036785658e-05
+    },
+    "absolute_optimality_gap": null,
+    "relative_optimality_gap": null,
+    "total_elapsed_including_post_validation_s": 0.03484849999949802,
+    "deadline_scope": "preflight/reference plus spawn/import/compile/solve and parent validation; cleanup grace <=1s separately reported; scheduling/poll overshoot possible",
+    "no_practical_quantum_speedup_demonstrated": true
+  },
+  "oversized": {
+    "active_variables": 25,
+    "error": "local statevector mode limited to 16 active variables",
+    "worker_spawned": false
+  },
+  "note": "Intentional lifecycle probes, not successful QAOA experiments."
+}

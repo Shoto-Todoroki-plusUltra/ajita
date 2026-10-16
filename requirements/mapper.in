@@ -1,0 +1,3 @@
+# Optional cross-check environment only; not a runtime solver dependency.
+-r quantum.in
+qiskit-addon-opt-mapper==0.1.0

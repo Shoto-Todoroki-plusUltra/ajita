@@ -1,0 +1,85 @@
+Collecting qiskit-addon-opt-mapper==0.1.0
+  Using cached qiskit_addon_opt_mapper-0.1.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: qiskit==2.5.2 in ./.venv-mapper/lib/python3.12/site-packages (2.5.2)
+Requirement already satisfied: numpy==2.5.4 in ./.venv-mapper/lib/python3.12/site-packages (2.5.4)
+Requirement already satisfied: scipy==1.18.0 in ./.venv-mapper/lib/python3.12/site-packages (1.18.0)
+Collecting cvxpy (from qiskit-addon-opt-mapper==0.1.0)
+  Using cached cvxpy-1.9.3-cp312-cp312-macosx_10_13_universal2.whl.metadata (9.7 kB)
+Collecting docplex (from qiskit-addon-opt-mapper==0.1.0)
+  Downloading docplex-2.32.264.tar.gz (663 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.0/664.0 kB 579.5 kB/s  0:00:01
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting networkx (from qiskit-addon-opt-mapper==0.1.0)
+  Downloading networkx-3.7-py3-none-any.whl.metadata (6.7 kB)
+Requirement already satisfied: rustworkx in ./.venv-mapper/lib/python3.12/site-packages (from qiskit-addon-opt-mapper==0.1.0) (0.18.1)
+Requirement already satisfied: dill>=0.3 in ./.venv-mapper/lib/python3.12/site-packages (from qiskit==2.5.2) (0.4.1)
+Requirement already satisfied: stevedore>=3.0.0 in ./.venv-mapper/lib/python3.12/site-packages (from qiskit==2.5.2) (5.9.1)
+Requirement already satisfied: typing-extensions in ./.venv-mapper/lib/python3.12/site-packages (from qiskit==2.5.2) (4.16.0)
+Collecting osqp>=1.0.0 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading osqp-1.1.3-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.2 kB)
+Collecting clarabel>=0.5.0 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading clarabel-0.11.1-cp39-abi3-macosx_11_0_arm64.whl.metadata (4.8 kB)
+Collecting scs>=3.2.4.post1 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading scs-3.3.1-cp312-cp312-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Collecting highspy>=1.14.0 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading highspy-1.15.1-cp312-cp312-macosx_11_0_arm64.whl.metadata (12 kB)
+Collecting qdldl>=0.1.7.post0 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading qdldl-0.1.9.post1-cp312-cp312-macosx_11_0_arm64.whl.metadata (1.9 kB)
+Collecting sparsediffpy<0.7.0,>=0.6.0 (from cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading sparsediffpy-0.6.1-cp312-cp312-macosx_10_13_universal2.whl.metadata (581 bytes)
+Collecting cffi (from clarabel>=0.5.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading cffi-2.1.1-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.5 kB)
+Collecting jinja2 (from osqp>=1.0.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: setuptools in ./.venv-mapper/lib/python3.12/site-packages (from osqp>=1.0.0->cvxpy->qiskit-addon-opt-mapper==0.1.0) (84.0.0)
+Collecting joblib (from osqp>=1.0.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting pycparser (from cffi->clarabel>=0.5.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading pycparser-3.11-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: six in ./.venv-mapper/lib/python3.12/site-packages (from docplex->qiskit-addon-opt-mapper==0.1.0) (1.17.0)
+Collecting MarkupSafe>=2.0 (from jinja2->osqp>=1.0.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting cloudpickle>=3.0 (from joblib->osqp>=1.0.0->cvxpy->qiskit-addon-opt-mapper==0.1.0)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Downloading qiskit_addon_opt_mapper-0.1.0-py3-none-any.whl (127 kB)
+Downloading cvxpy-1.9.3-cp312-cp312-macosx_10_13_universal2.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 920.9 kB/s  0:00:01
+Downloading sparsediffpy-0.6.1-cp312-cp312-macosx_10_13_universal2.whl (249 kB)
+Downloading clarabel-0.11.1-cp39-abi3-macosx_11_0_arm64.whl (935 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 935.1/935.1 kB 1.2 MB/s  0:00:00
+Downloading highspy-1.15.1-cp312-cp312-macosx_11_0_arm64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 2.1 MB/s  0:00:02
+Downloading osqp-1.1.3-cp312-cp312-macosx_11_0_arm64.whl (308 kB)
+Downloading qdldl-0.1.9.post1-cp312-cp312-macosx_11_0_arm64.whl (117 kB)
+Downloading scs-3.3.1-cp312-cp312-macosx_11_0_arm64.whl (235 kB)
+Downloading cffi-2.1.1-cp312-cp312-macosx_11_0_arm64.whl (184 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl (12 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 1.6 MB/s  0:00:01
+Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+Building wheels for collected packages: docplex
+  Building wheel for docplex (pyproject.toml): started
+  Building wheel for docplex (pyproject.toml): finished with status 'done'
+  Created wheel for docplex: filename=docplex-2.32.264-py3-none-any.whl size=703859 sha256=ea2a815514ef84816742bd44d1a3fee3a4bcce53623a8cd64c4a60604d4df4b0
+  Stored in directory: /Users/pradumnkapil/Library/Caches/pip/wheels/97/b5/26/18406a8f08f4c096c3ee64caedd446a4b0b5ea9675c4a214f0
+Successfully built docplex
+Installing collected packages: sparsediffpy, pycparser, networkx, MarkupSafe, highspy, docplex, cloudpickle, scs, qdldl, joblib, jinja2, cffi, osqp, clarabel, cvxpy, qiskit-addon-opt-mapper
+
+Successfully installed MarkupSafe-3.0.4 cffi-2.1.1 clarabel-0.11.1 cloudpickle-3.1.2 cvxpy-1.9.3 docplex-2.32.264 highspy-1.15.1 jinja2-3.1.6 joblib-1.6.0 networkx-3.7 osqp-1.1.3 pycparser-3.11 qdldl-0.1.9.post1 qiskit-addon-opt-mapper-0.1.0 scs-3.3.1 sparsediffpy-0.6.1
+WARNING: Cache entry deserialization failed, entry ignored
+WARNING: Cache entry deserialization failed, entry ignored
+WARNING: Cache entry deserialization failed, entry ignored
+WARNING: Cache entry deserialization failed, entry ignored
+WARNING: Cache entry deserialization failed, entry ignored
+WARNING: Cache entry deserialization failed, entry ignored
+
+[notice] A new release of pip is available: 26.1 -> 26.2.1
+[notice] To update, run: /Users/pradumnkapil/proj/ajita/.venv-mapper/bin/python -m pip install --upgrade pip
