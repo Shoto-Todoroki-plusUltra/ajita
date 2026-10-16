@@ -1,0 +1,62 @@
+{
+  "status": 200,
+  "body": {
+    "schema_version": 1,
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "method": "quantum_local",
+    "solver_id": "statevector",
+    "execution_status": "completed",
+    "outcome": "no_feasible_sample",
+    "assignment": null,
+    "validation": {
+      "checked": false,
+      "feasible": null,
+      "violations": []
+    },
+    "objective": null,
+    "objective_unit": "synthetic_cost",
+    "proven_optimal": false,
+    "total_elapsed_s": 0.4121759170011501,
+    "quantum": {
+      "raw_shots": 4,
+      "evaluations": 4,
+      "feasible_shots": 0,
+      "invalid_shots": 4,
+      "feasible_fraction": 0,
+      "invalid_fraction": 1,
+      "candidate_outcome": "no_feasible_sample",
+      "optimizer_success": false,
+      "optimizer_message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+      "exact_reference": 4,
+      "absolute_gap": null,
+      "raw_counts": {
+        "101010111": 1,
+        "000001111": 1,
+        "001111011": 1,
+        "000011010": 1
+      },
+      "selection_policy": "best verified feasible objective across all optimization shots; no repair, fallback or separate final-parameter quality claim"
+    },
+    "worker": {
+      "worker_pid": 17718,
+      "worker_exitcode": 0,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "observed_peak_worker_rss_bytes": 116211712,
+      "cleanup_elapsed_s": 0.04053208300319966,
+      "max_observed_watchdog_interval_s": 0.011165165997226723,
+      "failures": []
+    },
+    "effective_options": {
+      "backend": "statevector",
+      "seed": 1729,
+      "transpiler_seed": 7,
+      "shots": 1,
+      "reps": 1,
+      "max_evaluations": 4,
+      "timeout_s": 20,
+      "memory_limit_mb": 512,
+      "optimization_level": 1
+    }
+  }
+}

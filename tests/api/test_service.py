@@ -82,6 +82,21 @@ def test_health_and_opt_in(body):
         assert r.status_code == 400 and r.json()["error"]["code"] == "unsupported"
 
 
+def test_parent_trace_work_is_bounded_before_spawning(body):
+    app = create_app(enable_quantum=True)
+    with TestClient(app) as client:
+        r = client.post(
+            "/api/problems/tsp/solve",
+            json={
+                **body,
+                "method": "quantum_local",
+                "quantum": {"shots": 4096, "max_evaluations": 50},
+            },
+        )
+        assert r.status_code == 400 and r.json()["error"]["code"] == "resource_limit"
+        assert app.state.last_worker is None and not app.state.busy
+
+
 def test_strict_payloads_and_origins(body):
     with TestClient(create_app()) as c:
         endpoint = "/api/problems/tsp/solve"

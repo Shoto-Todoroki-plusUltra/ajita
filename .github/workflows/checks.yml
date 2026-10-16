@@ -1,0 +1,28 @@
+name: Local TSP checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  classical-and-ui:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: frontend/.nvmrc
+      - run: npm install --global npm@11.19.1
+      # Mac wheel hashes are deliberately not presented as Linux wheel hashes.
+      # This job pins all versions via the snapshot; only local Mac hashes were certified.
+      - run: python -m pip install -r requirements/api-macos-arm64-py312-snapshot.txt
+      - run: python -m pip install --no-deps --no-build-isolation -e .
+      - run: python -m pytest tests/test_classical.py tests/test_qubo.py tests/test_cli.py tests/api -q
+      - run: npm ci --prefix frontend
+      - run: QWS_PYTHON=python sh scripts/check_quality.sh
+      - run: npm --prefix frontend test
+      - run: npm --prefix frontend run build
+      # No remote execution has occurred; quantum/Chromium acceptance is recorded
+      # separately on the actual Mac. No credentials, deployment or publishing.

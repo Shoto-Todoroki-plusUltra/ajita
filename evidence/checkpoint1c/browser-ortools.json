@@ -1,0 +1,53 @@
+{
+  "status": 200,
+  "body": {
+    "schema_version": 1,
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "method": "classical",
+    "solver_id": "ortools_tsp",
+    "execution_status": "completed",
+    "outcome": "feasible",
+    "assignment": {
+      "tour": [
+        "A",
+        "D",
+        "C",
+        "B",
+        "A"
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "objective": 4,
+    "objective_unit": "synthetic_cost",
+    "proven_optimal": false,
+    "total_elapsed_s": 0.25237899999774527,
+    "quantum": null,
+    "worker": {
+      "execution_status": "completed",
+      "observed_peak_worker_rss_bytes": 55803904,
+      "monitor_error": null,
+      "worker_pid": 17707,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.011304833999020047,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.23986004200560274,
+      "cleanup_elapsed_s": 0.012450750000425614,
+      "supervisor_elapsed_s": 0.25231191700004274
+    },
+    "effective_options": {
+      "scale": 1000,
+      "rounding": "nearest_ties_to_even",
+      "timeout_s": 20,
+      "strategy": "PATH_CHEAPEST_ARC",
+      "search": "GREEDY_DESCENT",
+      "seed": null,
+      "integer_objective": 4000,
+      "tour_rounding_error_bound": 0.002
+    }
+  }
+}

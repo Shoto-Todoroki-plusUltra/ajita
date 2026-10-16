@@ -33,6 +33,7 @@ from quantum_workload_studio.qubo.tsp import (
 from quantum_workload_studio.services.tsp import classical_worker
 
 MAX_BODY = 2 * 1024**2
+MAX_API_SHOTS = 8192  # bounds retained/decoded HTTP trace work in the parent too
 ORIGINS = {"http://127.0.0.1:5173", "http://localhost:5173"}
 
 
@@ -193,6 +194,13 @@ def create_app(*, enable_quantum=None):
                 "unsupported",
                 "Local quantum requires server opt-in QWS_ENABLE_LOCAL_QUANTUM=1",
                 400,
+            )
+        if (
+            data.method == "quantum_local"
+            and data.quantum.shots * data.quantum.max_evaluations > MAX_API_SHOTS
+        ):
+            return error(
+                "resource_limit", "API trace budget is at most 8192 total requested shots", 400
             )
         if data.method == "quantum_local" and importlib.util.find_spec("qiskit") is None:
             return error(

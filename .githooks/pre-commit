@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+# Install explicitly with git config core.hooksPath .githooks.
+exec sh scripts/check_quality.sh
