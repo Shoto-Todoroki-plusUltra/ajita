@@ -231,3 +231,36 @@ footer {
     font-size: 3rem;
   }
 }
+
+.module-nav {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 0 1.25rem;
+}
+.module-nav button[aria-pressed="true"] {
+  background: #143c45;
+  color: white;
+}
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+th,
+td {
+  border: 1px solid #b8cfcb;
+  padding: 0.75rem;
+  text-align: left;
+}
+pre {
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

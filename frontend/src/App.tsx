@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { components } from "./api.generated";
+import { Timetable } from "./Timetable";
 
 type Instance = components["schemas"]["TspInstance"];
 export type Result = components["schemas"]["ApiResult"];
@@ -320,7 +321,7 @@ export function Results({ result }: { result: Result }) {
   );
 }
 
-export function App() {
+function TspApp() {
   const [input, setInput] = useState(JSON.stringify(preset, null, 2));
   const [method, setMethod] = useState("ortools_tsp");
   const [shots, setShots] = useState(256),
@@ -332,6 +333,7 @@ export function App() {
     [result, setResult] = useState<Result | null>(null),
     [solvedInstance, setSolvedInstance] = useState<Instance>(preset);
   const controller = useRef<AbortController | null>(null);
+  useEffect(() => () => controller.current?.abort(), []);
   const quantum = method === "quantum_local";
   function changeInput(value: string) {
     setInput(value);
@@ -598,5 +600,28 @@ export function App() {
         owner decision. No cloud hardware or external routing services.
       </footer>
     </main>
+  );
+}
+
+export function App() {
+  const [module, setModule] = useState("tsp");
+  return (
+    <>
+      <nav aria-label="Problem module" className="module-nav">
+        <button
+          aria-pressed={module === "tsp"}
+          onClick={() => setModule("tsp")}
+        >
+          TSP
+        </button>
+        <button
+          aria-pressed={module === "timetable"}
+          onClick={() => setModule("timetable")}
+        >
+          Classroom timetable
+        </button>
+      </nav>
+      {module === "tsp" ? <TspApp /> : <Timetable />}
+    </>
   );
 }
