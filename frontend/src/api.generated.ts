@@ -657,7 +657,6 @@ export interface components {
       encoding_id: "b1_capacity_assignment_v1";
       /**
        * Encoding Version
-       * @default 1
        * @constant
        */
       encoding_version: 1;
@@ -689,7 +688,6 @@ export interface components {
       scale: number;
       /**
        * Schema Version
-       * @default 1
        * @constant
        */
       schema_version: 1;

@@ -246,3 +246,33 @@ def test_native_unknown_is_not_a_proof():
     assert answer.assignment is None and answer.objective is None
     assert not answer.proven_optimal and not answer.proven_infeasible
     assert answer.best_objective_bound is not None
+
+
+@pytest.mark.parametrize("field", ["schema_version", "encoding_version"])
+@pytest.mark.parametrize("value", [True, 1.0, "1", 2, None])
+def test_qubo_versions_are_strict(field, value):
+    data = compile_qubo(instance()).model_dump()
+    data[field] = value
+    with pytest.raises(ValidationError):
+        TimetableQubo.model_validate(data)
+    data.pop(field)
+    with pytest.raises(ValidationError):
+        TimetableQubo.model_validate(data)
+
+
+def test_actual_native_feasible_is_not_optimal(monkeypatch):
+    from ortools.sat.python import cp_model
+
+    constructor = cp_model.CpSolver
+
+    def first_solution_solver():
+        solver = constructor()
+        solver.parameters.cp_model_presolve = False
+        solver.parameters.stop_after_first_solution = True
+        return solver
+
+    monkeypatch.setattr(cp_model, "CpSolver", first_solution_solver)
+    answer = cp_sat_solve(instance())
+    assert answer.native_status == "FEASIBLE"
+    assert answer.validation.feasible and not answer.proven_optimal
+    assert answer.best_objective_bound <= answer.objective

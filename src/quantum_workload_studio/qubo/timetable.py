@@ -25,9 +25,9 @@ class Variable(Placement):
 
 
 class TimetableQubo(StrictModel):
-    schema_version: Literal[1] = 1
+    schema_version: Literal[1]
     encoding_id: Literal["b1_capacity_assignment_v1"] = "b1_capacity_assignment_v1"
-    encoding_version: Literal[1] = 1
+    encoding_version: Literal[1]
     provenance: Literal["explicit_b1_v1; no external converter"] = (
         "explicit_b1_v1; no external converter"
     )
@@ -52,12 +52,10 @@ class TimetableQubo(StrictModel):
     @model_validator(mode="before")
     @classmethod
     def version(cls, value):
-        if (
-            isinstance(value, dict)
-            and "schema_version" in value
-            and type(value["schema_version"]) is not int
+        if isinstance(value, dict) and any(
+            type(value.get(k)) is not int for k in ("schema_version", "encoding_version")
         ):
-            raise ValueError("schema_version must be integer 1")
+            raise ValueError("schema and encoding versions must be explicit integer 1")
         return value
 
     @model_validator(mode="after")
@@ -156,6 +154,8 @@ def compile_qubo(
     for i, j in conflict_pairs(instance, variables):
         add(i, j, a)
     return TimetableQubo(
+        schema_version=1,
+        encoding_version=1,
         source_instance_hash=instance.instance_hash(),
         variables=variables,
         terms=[

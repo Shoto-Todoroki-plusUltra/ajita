@@ -1331,7 +1331,6 @@
           },
           "encoding_version": {
             "const": 1,
-            "default": 1,
             "title": "Encoding Version",
             "type": "integer"
           },
@@ -1375,7 +1374,6 @@
           },
           "schema_version": {
             "const": 1,
-            "default": 1,
             "title": "Schema Version",
             "type": "integer"
           },
@@ -1414,6 +1412,8 @@
           }
         },
         "required": [
+          "schema_version",
+          "encoding_version",
           "source_instance_hash",
           "variables",
           "terms",
