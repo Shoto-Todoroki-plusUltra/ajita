@@ -1,0 +1,628 @@
+{
+  "scope": "Bounded reliability audit only; no root cause proved; no timeout increase or solver tuning",
+  "request_deadline_s": 20,
+  "fresh_servers": 3,
+  "api_calls": 6,
+  "api_http_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "first_observed_request": {
+    "label": "first request/fresh worker",
+    "http_status": 200,
+    "response": {
+      "schema_version": 1,
+      "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+      "method": "classical",
+      "solver_id": "ortools_tsp",
+      "execution_status": "completed",
+      "outcome": "feasible",
+      "assignment": {
+        "tour": [
+          "A",
+          "D",
+          "C",
+          "B",
+          "A"
+        ]
+      },
+      "validation": {
+        "checked": true,
+        "feasible": true,
+        "violations": []
+      },
+      "objective": 4.0,
+      "objective_unit": "synthetic_cost",
+      "proven_optimal": false,
+      "total_elapsed_s": 0.5725173749999612,
+      "quantum": null,
+      "worker": {
+        "execution_status": "completed",
+        "process_start_call_s": 0.010208041999931083,
+        "first_worker_event_elapsed_s": 0.07985187500003121,
+        "observed_peak_worker_rss_bytes": 57475072,
+        "monitor_error": null,
+        "worker_pid": 2663,
+        "worker_exitcode": 0,
+        "max_observed_watchdog_interval_s": 0.011590707999857841,
+        "worker_alive_after_cleanup": false,
+        "forced_cleanup": false,
+        "compute_elapsed_s": 0.5478782079999291,
+        "cleanup_elapsed_s": 0.01162987499992596,
+        "supervisor_elapsed_s": 0.5595091249999768,
+        "stage_timings": {
+          "ortools_import_s": 0.45329549999996743,
+          "dispatch_validation_model_solver_s": 0.01464070800011541,
+          "native_solver_s": 0.005217915999992329,
+          "worker_entry_to_result_s": 0.46800454200001695
+        },
+        "phase_events": [
+          {
+            "kind": "worker_entry",
+            "monotonic_s": 1851.570221208
+          },
+          {
+            "kind": "import_started",
+            "monotonic_s": 1851.570246625
+          },
+          {
+            "kind": "imports_complete",
+            "import_seconds": 0.45329549999996743
+          }
+        ]
+      },
+      "effective_options": {
+        "scale": 1000,
+        "rounding": "nearest_ties_to_even",
+        "timeout_s": 20.0,
+        "strategy": "PATH_CHEAPEST_ARC",
+        "search": "GREEDY_DESCENT",
+        "seed": null,
+        "integer_objective": 4000,
+        "tour_rounding_error_bound": 0.002
+      }
+    },
+    "driver_http_wall_s": 0.57550720800009
+  },
+  "api_startup_to_health_s": [
+    0.2354803749999519,
+    0.1925246660000539,
+    0.19004904199982775
+  ],
+  "native_import_range_s": [
+    0.03983674999994946,
+    0.45329549999996743
+  ],
+  "process_start_call_range_s": [
+    0.0009910420001233433,
+    0.010208041999931083
+  ],
+  "spawn_bootstrap_imports_ipc_first_event_range_s": [
+    0.07063829200001237,
+    0.07985187500003121
+  ],
+  "native_solver_range_s": [
+    0.0006416249998437706,
+    0.005217915999992329
+  ],
+  "worker_cleanup_range_s": [
+    0.010533082999927501,
+    0.01162987499992596
+  ],
+  "standalone_statuses": [
+    "completed",
+    "completed",
+    "completed"
+  ],
+  "cold_cache_caveat": "Fresh processes; no OS-cache flush or fresh install; not first-ever import. Scheduling differences and small sample cannot rule out future initial delay.",
+  "pytest_contexts": {
+    "pytest-isolated": [
+      {
+        "file": "pytest-scheduling-0.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.23627024999996138,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.004584334000128365,
+            "first_worker_event_elapsed_s": 0.07671600000003309,
+            "observed_peak_worker_rss_bytes": 57049088,
+            "monitor_error": null,
+            "worker_pid": 2734,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.011160000000018044,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.2211256670000239,
+            "cleanup_elapsed_s": 0.010573000000022148,
+            "supervisor_elapsed_s": 0.23169941700007257,
+            "stage_timings": {
+              "ortools_import_s": 0.12794224999993276,
+              "dispatch_validation_model_solver_s": 0.01644120900004964,
+              "native_solver_s": 0.00769629100000202,
+              "worker_entry_to_result_s": 0.1444243749999714
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 1908.302578708
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 1908.302604333
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.12794224999993276
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      },
+      {
+        "file": "pytest-scheduling-1.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.1265140830000746,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.0010873329999867565,
+            "first_worker_event_elapsed_s": 0.07070454199993037,
+            "observed_peak_worker_rss_bytes": 53133312,
+            "monitor_error": null,
+            "worker_pid": 2735,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.011134583000057319,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.11608612499981064,
+            "cleanup_elapsed_s": 0.010385792000079164,
+            "supervisor_elapsed_s": 0.12647262499990575,
+            "stage_timings": {
+              "ortools_import_s": 0.04295329199999287,
+              "dispatch_validation_model_solver_s": 0.0023968329999206617,
+              "native_solver_s": 0.0006838750000497384,
+              "worker_entry_to_result_s": 0.045387500000060754
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 1908.536589583
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 1908.536612583
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.04295329199999287
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      },
+      {
+        "file": "pytest-scheduling-2.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.12448608299996522,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.0009963749998860294,
+            "first_worker_event_elapsed_s": 0.0700117080000382,
+            "observed_peak_worker_rss_bytes": 53477376,
+            "monitor_error": null,
+            "worker_pid": 2736,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.011163375000023734,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.1144857920000959,
+            "cleanup_elapsed_s": 0.009965792000002693,
+            "supervisor_elapsed_s": 0.12445195800000874,
+            "stage_timings": {
+              "ortools_import_s": 0.04215129199997136,
+              "dispatch_validation_model_solver_s": 0.0022899169998709112,
+              "native_solver_s": 0.0006551250000939035,
+              "worker_entry_to_result_s": 0.04448191599999518
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 1908.668035375
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 1908.668060041
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.04215129199997136
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      }
+    ],
+    "pytest-full": [
+      {
+        "file": "pytest-scheduling-0.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.12829162500020175,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.0013069999999970605,
+            "first_worker_event_elapsed_s": 0.0726996670000517,
+            "observed_peak_worker_rss_bytes": 53149696,
+            "monitor_error": null,
+            "worker_pid": 3091,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.01119974999983242,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.11789620799982004,
+            "cleanup_elapsed_s": 0.010353209000186325,
+            "supervisor_elapsed_s": 0.1282498749997103,
+            "stage_timings": {
+              "ortools_import_s": 0.04283049999958166,
+              "dispatch_validation_model_solver_s": 0.002374249999775202,
+              "native_solver_s": 0.0006485829999292037,
+              "worker_entry_to_result_s": 0.045244500000080734
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 2093.667357208
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 2093.667382333
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.04283049999958166
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      },
+      {
+        "file": "pytest-scheduling-1.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.13240041699964422,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.0013450840001496545,
+            "first_worker_event_elapsed_s": 0.07392187499999636,
+            "observed_peak_worker_rss_bytes": 53018624,
+            "monitor_error": null,
+            "worker_pid": 3092,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.011159833999954571,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.12136395800007449,
+            "cleanup_elapsed_s": 0.010993458000029932,
+            "supervisor_elapsed_s": 0.1323578749997978,
+            "stage_timings": {
+              "ortools_import_s": 0.04490908399975524,
+              "dispatch_validation_model_solver_s": 0.0025335000000268337,
+              "native_solver_s": 0.0006896670001879102,
+              "worker_entry_to_result_s": 0.047486165999998775
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 2093.803478125
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 2093.803504166
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.04490908399975524
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      },
+      {
+        "file": "pytest-scheduling-2.json",
+        "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+        "http_status": 200,
+        "response": {
+          "schema_version": 1,
+          "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+          "method": "classical",
+          "solver_id": "ortools_tsp",
+          "execution_status": "completed",
+          "outcome": "feasible",
+          "assignment": {
+            "tour": [
+              "A",
+              "D",
+              "C",
+              "B",
+              "A"
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 4.0,
+          "objective_unit": "synthetic_cost",
+          "proven_optimal": false,
+          "total_elapsed_s": 0.1271203329997661,
+          "quantum": null,
+          "worker": {
+            "execution_status": "completed",
+            "process_start_call_s": 0.0015337919999183214,
+            "first_worker_event_elapsed_s": 0.07225049999988187,
+            "observed_peak_worker_rss_bytes": 53067776,
+            "monitor_error": null,
+            "worker_pid": 3093,
+            "worker_exitcode": 0,
+            "max_observed_watchdog_interval_s": 0.0111803750000945,
+            "worker_alive_after_cleanup": false,
+            "forced_cleanup": false,
+            "compute_elapsed_s": 0.11701533299992661,
+            "cleanup_elapsed_s": 0.010066042000289599,
+            "supervisor_elapsed_s": 0.12708174999988842,
+            "stage_timings": {
+              "ortools_import_s": 0.04243262499994671,
+              "dispatch_validation_model_solver_s": 0.002336042000024463,
+              "native_solver_s": 0.0006444579998969857,
+              "worker_entry_to_result_s": 0.04480612499992276
+            },
+            "phase_events": [
+              {
+                "kind": "worker_entry",
+                "monotonic_s": 2093.93977275
+              },
+              {
+                "kind": "import_started",
+                "monotonic_s": 2093.939795708
+              },
+              {
+                "kind": "imports_complete",
+                "import_seconds": 0.04243262499994671
+              }
+            ]
+          },
+          "effective_options": {
+            "scale": 1000,
+            "rounding": "nearest_ties_to_even",
+            "timeout_s": 20.0,
+            "strategy": "PATH_CHEAPEST_ARC",
+            "search": "GREEDY_DESCENT",
+            "seed": null,
+            "integer_objective": 4000,
+            "tour_rounding_error_bound": 0.002
+          }
+        }
+      }
+    ]
+  },
+  "tests": {
+    "python-full.xml": {
+      "tests": 1125,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "python-classical.xml": {
+      "tests": 590,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "vitest.xml": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "playwright.xml": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest-isolated.xml": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "archive-tests.xml": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

@@ -31,6 +31,78 @@ export function uniformReference(shots: number) {
     atLeastOneFeasible: -Math.expm1(shots * Math.log1p(-6 / 512)),
   };
 }
+
+function sameJson(a: unknown, b: unknown): boolean {
+  if (a === b) return true;
+  if (Array.isArray(a) && Array.isArray(b))
+    return (
+      a.length === b.length && a.every((value, i) => sameJson(value, b[i]))
+    );
+  if (
+    a &&
+    b &&
+    typeof a === "object" &&
+    typeof b === "object" &&
+    !Array.isArray(a) &&
+    !Array.isArray(b)
+  ) {
+    const x = a as Record<string, unknown>,
+      y = b as Record<string, unknown>;
+    return (
+      Object.keys(x).length === Object.keys(y).length &&
+      Object.keys(x).every(
+        (key) => Object.hasOwn(y, key) && sameJson(x[key], y[key]),
+      )
+    );
+  }
+  return false;
+}
+
+export function isOriginalPreset(input: string): boolean {
+  try {
+    return sameJson(JSON.parse(input), preset);
+  } catch {
+    return false;
+  }
+}
+
+export function AnalyticalReference({
+  input,
+  shots,
+}: {
+  input: string;
+  shots: number;
+}) {
+  if (!isOriginalPreset(input))
+    return (
+      <aside aria-label="Analytical sampling reference">
+        <p>
+          No analytical uniform baseline has been calculated for the selected
+          instance.
+        </p>
+      </aside>
+    );
+  const ref = uniformReference(shots);
+  return (
+    <aside aria-label="Analytical sampling reference">
+      <p className="eyebrow">
+        ANALYTICAL SANITY REFERENCE · UNCHANGED ORIGINAL PRESET ONLY
+      </p>
+      <h3>Uniform random nine-bit sampling</h3>
+      <p>
+        Of 512 equally likely assignments, six are feasible (1.171875%) and two
+        attain cost 4 (0.390625%). With {shots} independent draws, the expected
+        feasible count is {ref.expectedFeasible.toFixed(3)} and the expected
+        optimal count is {ref.expectedOptimal.toFixed(3)}.
+      </p>
+      <p>
+        This is an analytical sampling calculation for the unchanged original
+        preset, not an executed random run or a quantum benchmark. It excludes
+        optimization and compute costs.
+      </p>
+    </aside>
+  );
+}
 const percent = (value: number | null) =>
   value === null ? "Unavailable" : `${(value * 100).toFixed(4)}%`;
 
@@ -162,7 +234,7 @@ export function Results({ result }: { result: Result }) {
           </dd>
         </div>
         <div>
-          <dt>Total elapsed work (including cleanup)</dt>
+          <dt>Backend computation elapsed (including cleanup)</dt>
           <dd>
             {result.total_elapsed_s.toFixed(4)} <small>seconds</small>
           </dd>
@@ -182,6 +254,10 @@ export function Results({ result }: { result: Result }) {
           <dd>{result.solver_id}</dd>
         </div>
       </dl>
+      <p className="muted">
+        HTTP, network and browser latency are not included in backend
+        computation elapsed.
+      </p>
       {q && (
         <>
           <p className="notice">
@@ -257,9 +333,6 @@ export function App() {
     [solvedInstance, setSolvedInstance] = useState<Instance>(preset);
   const controller = useRef<AbortController | null>(null);
   const quantum = method === "quantum_local";
-  const ref = uniformReference(
-    result?.quantum?.raw_shots ?? shots * evaluations,
-  );
   function changeInput(value: string) {
     setInput(value);
     setResult(null);
@@ -496,7 +569,16 @@ export function App() {
         </section>
         <section className="answer">
           <h2>3. Inspect the result</h2>
-          <Tour instance={solvedInstance} result={result} />
+          {result ? (
+            <Tour instance={solvedInstance} result={result} />
+          ) : isOriginalPreset(input) ? (
+            <Tour instance={preset} result={null} />
+          ) : (
+            <p>
+              No previous tour is shown. Solve the selected instance to draw its
+              route.
+            </p>
+          )}
           {result ? (
             <Results result={result} />
           ) : (
@@ -505,26 +587,10 @@ export function App() {
               result. No solution is prefilled.
             </p>
           )}
-          <aside>
-            <p className="eyebrow">
-              ANALYTICAL SANITY REFERENCE · SUPPLIED MATRIX ONLY
-            </p>
-            <h3>Uniform random nine-bit sampling</h3>
-            <p>
-              Of 512 equally likely assignments, six are feasible (1.171875%)
-              and two attain cost 4 (0.390625%). With{" "}
-              {result?.quantum?.raw_shots ?? shots * evaluations} independent
-              draws, the expected feasible count is{" "}
-              {ref.expectedFeasible.toFixed(3)} and the expected optimal count
-              is {ref.expectedOptimal.toFixed(3)}.
-            </p>
-            <p>
-              This is an analytical sampling calculation for the supplied
-              preset, not an executed random run, a quantum benchmark, or a
-              claim about other instances. It excludes optimization and compute
-              costs.
-            </p>
-          </aside>
+          <AnalyticalReference
+            input={input}
+            shots={result?.quantum?.raw_shots ?? shots * evaluations}
+          />
         </section>
       </div>
       <footer>

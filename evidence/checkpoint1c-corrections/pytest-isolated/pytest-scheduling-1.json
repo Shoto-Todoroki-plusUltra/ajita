@@ -1,0 +1,76 @@
+{
+  "context": "pytest/TestClient scheduling; fresh spawned worker; 20-second unchanged cap",
+  "http_status": 200,
+  "response": {
+    "schema_version": 1,
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "method": "classical",
+    "solver_id": "ortools_tsp",
+    "execution_status": "completed",
+    "outcome": "feasible",
+    "assignment": {
+      "tour": [
+        "A",
+        "D",
+        "C",
+        "B",
+        "A"
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "objective": 4.0,
+    "objective_unit": "synthetic_cost",
+    "proven_optimal": false,
+    "total_elapsed_s": 0.1265140830000746,
+    "quantum": null,
+    "worker": {
+      "execution_status": "completed",
+      "process_start_call_s": 0.0010873329999867565,
+      "first_worker_event_elapsed_s": 0.07070454199993037,
+      "observed_peak_worker_rss_bytes": 53133312,
+      "monitor_error": null,
+      "worker_pid": 2735,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.011134583000057319,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.11608612499981064,
+      "cleanup_elapsed_s": 0.010385792000079164,
+      "supervisor_elapsed_s": 0.12647262499990575,
+      "stage_timings": {
+        "ortools_import_s": 0.04295329199999287,
+        "dispatch_validation_model_solver_s": 0.0023968329999206617,
+        "native_solver_s": 0.0006838750000497384,
+        "worker_entry_to_result_s": 0.045387500000060754
+      },
+      "phase_events": [
+        {
+          "kind": "worker_entry",
+          "monotonic_s": 1908.536589583
+        },
+        {
+          "kind": "import_started",
+          "monotonic_s": 1908.536612583
+        },
+        {
+          "kind": "imports_complete",
+          "import_seconds": 0.04295329199999287
+        }
+      ]
+    },
+    "effective_options": {
+      "scale": 1000,
+      "rounding": "nearest_ties_to_even",
+      "timeout_s": 20.0,
+      "strategy": "PATH_CHEAPEST_ARC",
+      "search": "GREEDY_DESCENT",
+      "seed": null,
+      "integer_objective": 4000,
+      "tour_rounding_error_bound": 0.002
+    }
+  }
+}

@@ -8,6 +8,6 @@ export default defineConfig({
     setupFiles: ["./tests/setup.ts"],
     include: ["tests/*.test.tsx"],
     reporters: ["default", "junit"],
-    outputFile: "../evidence/checkpoint1c/vitest.xml",
+    outputFile: `${process.env.QWS_EVIDENCE_DIR ?? "../evidence/checkpoint1c"}/vitest.xml`,
   },
 });

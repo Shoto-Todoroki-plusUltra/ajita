@@ -1,0 +1,18 @@
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="6.0422709999999995">
+<testsuite name="tsp.spec.ts" timestamp="2026-10-18T06:26:31.128Z" hostname="chromium-mac" tests="7" failures="0" skipped="0" time="4.781" errors="0">
+<testcase name="real classical preset and coordinate flows" classname="tsp.spec.ts" time="1.05">
+</testcase>
+<testcase name="real local QAOA with trace honesty fields" classname="tsp.spec.ts" time="0.974">
+</testcase>
+<testcase name="real no-feasible-sample and timeout states" classname="tsp.spec.ts" time="0.671">
+</testcase>
+<testcase name="invalid and oversized instances have no fabricated route" classname="tsp.spec.ts" time="0.292">
+</testcase>
+<testcase name="small viewport remains usable" classname="tsp.spec.ts" time="0.219">
+</testcase>
+<testcase name="real cancellation releases admission after worker cleanup" classname="tsp.spec.ts" time="0.488">
+</testcase>
+<testcase name="fixture reference follows current input, not its ID or previous solve" classname="tsp.spec.ts" time="1.087">
+</testcase>
+</testsuite>
+</testsuites>

@@ -2,6 +2,7 @@ import { test, expect, type Page } from "@playwright/test";
 import fs from "node:fs/promises";
 import os from "node:os";
 import { preset } from "../../src/App";
+const evidenceDir = process.env.QWS_EVIDENCE_DIR ?? "../evidence/checkpoint1c";
 
 async function solve(page: Page, name: string) {
   const pending = page.waitForResponse(
@@ -12,7 +13,7 @@ async function solve(page: Page, name: string) {
   await page.getByRole("button", { name: "Solve and verify" }).click();
   const response = await pending;
   await fs.writeFile(
-    `../evidence/checkpoint1c/browser-${name}.json`,
+    `${evidenceDir}/browser-${name}.json`,
     JSON.stringify(
       { status: response.status(), body: await response.json() },
       null,
@@ -26,7 +27,7 @@ test.beforeEach(async ({ page }) => {
 });
 test.beforeAll(async ({ browser }) => {
   await fs.writeFile(
-    "../evidence/checkpoint1c/browser-environment.json",
+    `${evidenceDir}/browser-environment.json`,
     JSON.stringify(
       {
         browser_version: browser.version(),
@@ -52,7 +53,7 @@ test("real classical preset and coordinate flows", async ({ page }) => {
   ).toBeVisible();
   expect((await response.json()).objective).toBe(4);
   await page.screenshot({
-    path: "../evidence/checkpoint1c/classical-desktop.png",
+    path: `${evidenceDir}/classical-desktop.png`,
     fullPage: true,
   });
   await page.getByLabel("Solver method").selectOption("ortools_tsp");
@@ -81,7 +82,7 @@ test("real local QAOA with trace honesty fields", async ({ page }) => {
     page.getByText(/not a claim about sampling at final optimizer parameters/),
   ).toBeVisible();
   await page.screenshot({
-    path: "../evidence/checkpoint1c/quantum-desktop.png",
+    path: `${evidenceDir}/quantum-desktop.png`,
     fullPage: true,
   });
 });
@@ -137,7 +138,7 @@ test("small viewport remains usable", async ({ page }) => {
     ),
   ).toBe(true);
   await page.screenshot({
-    path: "../evidence/checkpoint1c/mobile-layout.png",
+    path: `${evidenceDir}/mobile-layout.png`,
     fullPage: true,
   });
 });
@@ -173,7 +174,7 @@ test("real cancellation releases admission after worker cleanup", async ({
   const r = await recovered.json();
   expect(r.worker.worker_alive_after_cleanup).toBe(false);
   await fs.writeFile(
-    "../evidence/checkpoint1c/browser-cancellation.json",
+    `${evidenceDir}/browser-cancellation.json`,
     JSON.stringify(
       {
         refused_status: refused.status(),
@@ -185,4 +186,66 @@ test("real cancellation releases admission after worker cleanup", async ({
       2,
     ) + "\n",
   );
+});
+
+test("fixture reference follows current input, not its ID or previous solve", async ({
+  page,
+}) => {
+  await expect(
+    page.getByRole("heading", { name: "Uniform random nine-bit sampling" }),
+  ).toBeVisible();
+  await page.getByLabel("Solver method").selectOption("quantum_local");
+  await page.getByLabel("Shots per evaluation").fill("1");
+  await page.getByLabel("Optimizer evaluations").fill("4");
+  expect((await solve(page, "baseline-preset")).status()).toBe(200);
+  await expect(page.getByText(/With 4 independent draws/)).toBeVisible();
+  const edited = structuredClone(preset);
+  if (edited.geometry.kind === "matrix") {
+    edited.geometry.distances[0][1] = 3;
+    edited.geometry.distances[1][0] = 3;
+  }
+  await page.getByLabel(/Instance JSON/).fill(JSON.stringify(edited));
+  await expect(page.getByText(/No analytical uniform baseline/)).toBeVisible();
+  await expect(
+    page.getByText(
+      /512 equally likely|two attain cost 4|With 4 independent draws/,
+    ),
+  ).toHaveCount(0);
+  await expect(page.getByRole("region", { name: "Solve result" })).toHaveCount(
+    0,
+  );
+  await page.getByLabel("Solver method").selectOption("exact_tsp");
+  expect((await solve(page, "baseline-edited-same-id")).status()).toBe(200);
+  await expect(
+    page.getByRole("heading", { name: "Uniform random nine-bit sampling" }),
+  ).toHaveCount(0);
+  await page.getByRole("button", { name: "Planar coordinate example" }).click();
+  await expect(page.getByText(/No analytical uniform baseline/)).toBeVisible();
+  expect((await solve(page, "baseline-coordinates")).status()).toBe(200);
+  await expect(
+    page.getByText(/512 equally likely|two attain cost 4/),
+  ).toHaveCount(0);
+  const ids = ["A", "B", "C", "D", "E"];
+  const five = {
+    ...preset,
+    city_ids: ids,
+    geometry: {
+      kind: "matrix",
+      distances: ids.map((_, i) => ids.map((_, j) => (i === j ? 0 : 1))),
+    },
+  };
+  await page.getByLabel(/Instance JSON/).fill(JSON.stringify(five));
+  expect((await solve(page, "baseline-five-city")).status()).toBe(200);
+  await expect(page.getByText(/No analytical uniform baseline/)).toBeVisible();
+  await expect(
+    page.getByText(/512 equally likely|two attain cost 4/),
+  ).toHaveCount(0);
+  await page.screenshot({
+    path: `${evidenceDir}/baseline-neutral.png`,
+    fullPage: true,
+  });
+  await page.getByRole("button", { name: "Four-city matrix preset" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Uniform random nine-bit sampling" }),
+  ).toBeVisible();
 });

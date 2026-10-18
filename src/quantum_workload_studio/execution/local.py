@@ -181,7 +181,10 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
     worker = context.Process(target=target or _qaoa_worker, args=(send, payload))
     events, peak, status, monitor_error = [], 0, None, None
     previous_check, max_check_interval = None, 0.0
+    spawn_start = time.monotonic()
     worker.start()
+    process_start_call_s = time.monotonic()-spawn_start
+    first_worker_event_s = None
     send.close()
     try:
         process = psutil.Process(worker.pid)
@@ -215,6 +218,8 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
                 except EOFError:
                     break
                 events.append(event)
+                if first_worker_event_s is None:
+                    first_worker_event_s = time.monotonic()-started
                 if on_event is not None:
                     try:
                         on_event(event)  # original validation is inside the supervised deadline
@@ -252,6 +257,8 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
     elif status == "completed" and (forced_cleanup or exitcode != 0):
         status = "unclean_worker_exit"
     return {"execution_status": status or "worker_failed", "events": events,
+            "process_start_call_s": process_start_call_s,
+            "first_worker_event_elapsed_s": first_worker_event_s,
             "observed_peak_worker_rss_bytes": peak or None,
             "monitor_error": monitor_error, "worker_pid": pid, "worker_exitcode": exitcode,
             "max_observed_watchdog_interval_s": max_check_interval,

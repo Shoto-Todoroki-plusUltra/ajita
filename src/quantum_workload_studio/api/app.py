@@ -318,9 +318,24 @@ def create_app(*, enable_quantum=None):
                             raw["execution_status"],
                             "Local worker did not finish cleanly",
                             504 if raw["execution_status"] == "timeout" else 503,
-                            [app.state.last_worker],
+                            [
+                                {
+                                    **app.state.last_worker,
+                                    "process_start_call_s": raw["process_start_call_s"],
+                                    "first_worker_event_elapsed_s": raw[
+                                        "first_worker_event_elapsed_s"
+                                    ],
+                                    "cleanup_elapsed_s": raw["cleanup_elapsed_s"],
+                                    "phase_events": raw["events"],
+                                }
+                            ],
                         )
                     solved = next(e["result"] for e in raw["events"] if e["kind"] == "completed")
+                    worker_timings = next(
+                        e.get("worker_timings", {})
+                        for e in raw["events"]
+                        if e["kind"] == "completed"
+                    )
                     result = ApiResult(
                         instance_hash=solved["instance_hash"],
                         method=data.method,
@@ -333,7 +348,11 @@ def create_app(*, enable_quantum=None):
                         objective_unit=solved["objective_unit"],
                         proven_optimal=solved["proven_optimal"],
                         total_elapsed_s=time.monotonic() - start,
-                        worker={k: v for k, v in raw.items() if k != "events"},
+                        worker={
+                            **{k: v for k, v in raw.items() if k != "events"},
+                            "stage_timings": worker_timings,
+                            "phase_events": [e for e in raw["events"] if e["kind"] != "completed"],
+                        },
                         effective_options=solved["options"],
                     )
                 return result

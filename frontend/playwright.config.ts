@@ -8,7 +8,12 @@ export default defineConfig({
   retries: 0,
   reporter: [
     ["list"],
-    ["junit", { outputFile: "../evidence/checkpoint1c/playwright.xml" }],
+    [
+      "junit",
+      {
+        outputFile: `${process.env.QWS_EVIDENCE_DIR ?? "../evidence/checkpoint1c"}/playwright.xml`,
+      },
+    ],
   ],
   use: { baseURL: "http://127.0.0.1:5173", trace: "retain-on-failure" },
   projects: [{ name: "chromium-mac", use: { ...devices["Desktop Chrome"] } }],
