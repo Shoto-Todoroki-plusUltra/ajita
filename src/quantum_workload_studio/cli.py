@@ -39,6 +39,11 @@ def read_json(path: Path):
 
 
 def main(argv=None) -> int:
+    arguments = sys.argv[1:] if argv is None else argv
+    if arguments and arguments[0] == "timetable":
+        from quantum_workload_studio.timetable_cli import main as timetable_main
+
+        return timetable_main(arguments[1:])
     parser = argparse.ArgumentParser(description="Checkpoint 1A: classical mathematical core only")
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ("solve", "compile", "inspect", "evidence"):

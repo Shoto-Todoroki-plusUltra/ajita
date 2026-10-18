@@ -21,6 +21,74 @@ export interface paths {
     patch?: never;
     trace?: never;
   };
+  "/api/problems/timetable/compile": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    /** Compile */
+    post: operations["compile_api_problems_timetable_compile_post"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/api/problems/timetable/inspect": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    /** Inspect */
+    post: operations["inspect_api_problems_timetable_inspect_post"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/api/problems/timetable/solve": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    /** Solve */
+    post: operations["solve_api_problems_timetable_solve_post"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
+  "/api/problems/timetable/validate": {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    get?: never;
+    put?: never;
+    /** Validate */
+    post: operations["validate_api_problems_timetable_validate_post"];
+    delete?: never;
+    options?: never;
+    head?: never;
+    patch?: never;
+    trace?: never;
+  };
   "/api/problems/tsp/solve": {
     parameters: {
       query?: never;
@@ -128,6 +196,17 @@ export interface components {
         [key: string]: unknown;
       };
     };
+    /** Compile */
+    Compile: {
+      instance: components["schemas"]["TimetableInstance"];
+      /** Penalty */
+      penalty?: number | null;
+      /**
+       * Scale
+       * @default 1
+       */
+      scale: number;
+    };
     /** CompileRequest */
     CompileRequest: {
       instance: components["schemas"]["TspInstance"];
@@ -146,6 +225,17 @@ export interface components {
       metric: "euclidean_2d";
       /** Points */
       points: components["schemas"]["Point"][];
+    };
+    /** Course */
+    Course: {
+      /** Cohort Ids */
+      cohort_ids: string[];
+      /** Enrollment */
+      enrollment: number;
+      /** Id */
+      id: string;
+      /** Lecturer Id */
+      lecturer_id: string;
     };
     /** DecodeMap */
     DecodeMap: {
@@ -177,6 +267,13 @@ export interface components {
       /** Value */
       value: number;
     };
+    /** Inspect */
+    Inspect: {
+      /** Bits */
+      bits: string;
+      instance: components["schemas"]["TimetableInstance"];
+      qubo: components["schemas"]["TimetableQubo"];
+    };
     /** InspectRequest */
     InspectRequest: {
       /** Bits */
@@ -187,6 +284,15 @@ export interface components {
     /** InspectResult */
     InspectResult: {
       assignment: components["schemas"]["TspAssignment"] | null;
+      /** Energy */
+      energy: number;
+      /** Original Objective */
+      original_objective: number | null;
+      validation: components["schemas"]["ValidationReport"];
+    };
+    /** Inspection */
+    Inspection: {
+      assignment: components["schemas"]["TimetableAssignment"];
       /** Energy */
       energy: number;
       /** Original Objective */
@@ -274,6 +380,15 @@ export interface components {
       /** Weight */
       weight: number;
     };
+    /** Placement */
+    Placement: {
+      /** Course Id */
+      course_id: string;
+      /** Room Id */
+      room_id: string;
+      /** Slot Id */
+      slot_id: string;
+    };
     /** Point */
     Point: {
       /** City Id */
@@ -282,6 +397,17 @@ export interface components {
       x: number;
       /** Y */
       y: number;
+    };
+    /** Preference */
+    Preference: {
+      /** Course Id */
+      course_id: string;
+      /** Penalty */
+      penalty: number;
+      /** Room Id */
+      room_id: string;
+      /** Slot Id */
+      slot_id: string;
     };
     /** Provenance */
     Provenance: {
@@ -371,7 +497,70 @@ export interface components {
       /** Terms */
       terms: components["schemas"]["Term"][];
       /** Variables */
-      variables: components["schemas"]["Variable"][];
+      variables: components["schemas"]["quantum_workload_studio__qubo__tsp__Variable"][];
+    };
+    /** Result */
+    Result: {
+      /** Backend Computation Elapsed S */
+      backend_computation_elapsed_s: number;
+      /**
+       * Execution Status
+       * @default completed
+       * @constant
+       */
+      execution_status: "completed";
+      result: components["schemas"]["TimetableResult"];
+      /** Worker */
+      worker: {
+        [key: string]: unknown;
+      };
+    };
+    /** Room */
+    Room: {
+      /** Capacity */
+      capacity: number;
+      /** Id */
+      id: string;
+    };
+    /** Slot */
+    Slot: {
+      /** Id */
+      id: string;
+      /** Label */
+      label: string;
+      /** Order */
+      order: number;
+    };
+    /** Solve */
+    Solve: {
+      instance: components["schemas"]["TimetableInstance"];
+      /**
+       * Memory Limit Mb
+       * @default 512
+       */
+      memory_limit_mb: number;
+      /**
+       * Method
+       * @default classical
+       * @constant
+       */
+      method: "classical";
+      /**
+       * Seed
+       * @default 1729
+       */
+      seed: number;
+      /**
+       * Solver
+       * @default cp_sat
+       * @enum {string}
+       */
+      solver: "cp_sat" | "enumeration";
+      /**
+       * Timeout S
+       * @default 10
+       */
+      timeout_s: number;
     };
     /** SolveRequest */
     SolveRequest: {
@@ -414,6 +603,165 @@ export interface components {
       /** J */
       j: number;
     };
+    /** TimetableAssignment */
+    TimetableAssignment: {
+      /** Assignments */
+      assignments: components["schemas"]["Placement"][];
+    };
+    /** TimetableInstance */
+    TimetableInstance: {
+      /** Cohort Ids */
+      cohort_ids: string[];
+      /** Courses */
+      courses: components["schemas"]["Course"][];
+      /** Instance Id */
+      instance_id: string;
+      /**
+       * Kind
+       * @constant
+       */
+      kind: "timetable";
+      /** Lecturer Ids */
+      lecturer_ids: string[];
+      /** Preferences */
+      preferences?: components["schemas"]["Preference"][];
+      /** Rooms */
+      rooms: components["schemas"]["Room"][];
+      /**
+       * Schema Version
+       * @constant
+       */
+      schema_version: 1;
+      /** Slots */
+      slots: components["schemas"]["Slot"][];
+    };
+    /** TimetableQubo */
+    TimetableQubo: {
+      /**
+       * Bit Order
+       * @default bits[i] maps variables[i]; display left-to-right is index order
+       * @constant
+       */
+      bit_order: "bits[i] maps variables[i]; display left-to-right is index order";
+      /**
+       * Convention
+       * @default upper_triangular
+       * @constant
+       */
+      convention: "upper_triangular";
+      /**
+       * Encoding Id
+       * @default b1_capacity_assignment_v1
+       * @constant
+       */
+      encoding_id: "b1_capacity_assignment_v1";
+      /**
+       * Encoding Version
+       * @default 1
+       * @constant
+       */
+      encoding_version: 1;
+      /**
+       * Energy Unit
+       * @default scaled_preference_penalty
+       * @constant
+       */
+      energy_unit: "scaled_preference_penalty";
+      /** Offset */
+      offset: number;
+      /** Penalty */
+      penalty: number;
+      /**
+       * Penalty Bound Basis
+       * @default A > sum of maximum admissible preference per course
+       * @constant
+       */
+      penalty_bound_basis: "A > sum of maximum admissible preference per course";
+      /** Penalty Sufficient */
+      penalty_sufficient: boolean;
+      /**
+       * Provenance
+       * @default explicit_b1_v1; no external converter
+       * @constant
+       */
+      provenance: "explicit_b1_v1; no external converter";
+      /** Scale */
+      scale: number;
+      /**
+       * Schema Version
+       * @default 1
+       * @constant
+       */
+      schema_version: 1;
+      /**
+       * Sense
+       * @default minimize
+       * @constant
+       */
+      sense: "minimize";
+      /** Soft Upper Bound */
+      soft_upper_bound: number;
+      /** Source Instance Hash */
+      source_instance_hash: string;
+      /** Terms */
+      terms: components["schemas"]["Term"][];
+      /** Variables */
+      variables: components["schemas"]["quantum_workload_studio__qubo__timetable__Variable"][];
+    };
+    /** TimetableResult */
+    TimetableResult: {
+      assignment: components["schemas"]["TimetableAssignment"] | null;
+      /** Best Objective Bound */
+      best_objective_bound: number | null;
+      /** Enumerated Assignments */
+      enumerated_assignments?: number | null;
+      /** Instance Hash */
+      instance_hash: string;
+      /**
+       * Kind
+       * @default timetable
+       * @constant
+       */
+      kind: "timetable";
+      /**
+       * Method
+       * @default classical
+       * @constant
+       */
+      method: "classical";
+      /** Native Status */
+      native_status: string;
+      /** Objective */
+      objective: number | null;
+      /**
+       * Objective Unit
+       * @default preference_penalty
+       * @constant
+       */
+      objective_unit: "preference_penalty";
+      /** Options */
+      options?: {
+        [key: string]: unknown;
+      };
+      /** Proven Infeasible */
+      proven_infeasible: boolean;
+      /** Proven Optimal */
+      proven_optimal: boolean;
+      /**
+       * Schema Version
+       * @default 1
+       * @constant
+       */
+      schema_version: 1;
+      /** Solver Elapsed S */
+      solver_elapsed_s: number;
+      /**
+       * Solver Id
+       * @enum {string}
+       */
+      solver_id: "cp_sat" | "enumeration";
+      validation: components["schemas"]["ValidationReport"];
+    };
     /** TspAssignment */
     TspAssignment: {
       /** Tour */
@@ -444,6 +792,17 @@ export interface components {
        */
       schema_version: 1;
     };
+    /** Validate */
+    Validate: {
+      assignment: components["schemas"]["TimetableAssignment"];
+      instance: components["schemas"]["TimetableInstance"];
+    };
+    /** Validation */
+    Validation: {
+      /** Original Objective */
+      original_objective: number | null;
+      validation: components["schemas"]["ValidationReport"];
+    };
     /** ValidationReport */
     ValidationReport: {
       /** Checked */
@@ -453,14 +812,6 @@ export interface components {
       /** Violations */
       violations: components["schemas"]["Violation"][];
     };
-    /** Variable */
-    Variable: {
-      domain_ref: components["schemas"]["DomainRef"];
-      /** Index */
-      index: number;
-      /** Name */
-      name: string;
-    };
     /** Violation */
     Violation: {
       /** Code */
@@ -469,6 +820,27 @@ export interface components {
       entity_ids: string[];
       /** Message */
       message: string;
+    };
+    /** Variable */
+    quantum_workload_studio__qubo__timetable__Variable: {
+      /** Course Id */
+      course_id: string;
+      /** Index */
+      index: number;
+      /** Name */
+      name: string;
+      /** Room Id */
+      room_id: string;
+      /** Slot Id */
+      slot_id: string;
+    };
+    /** Variable */
+    quantum_workload_studio__qubo__tsp__Variable: {
+      domain_ref: components["schemas"]["DomainRef"];
+      /** Index */
+      index: number;
+      /** Name */
+      name: string;
     };
   };
   responses: never;
@@ -495,6 +867,246 @@ export interface operations {
         };
         content: {
           "application/json": unknown;
+        };
+      };
+      /** @description Bad Request */
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Unprocessable Entity */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Service Unavailable */
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Gateway Timeout */
+      504: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+    };
+  };
+  compile_api_problems_timetable_compile_post: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["Compile"];
+      };
+    };
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["TimetableQubo"];
+        };
+      };
+      /** @description Bad Request */
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Unprocessable Entity */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Service Unavailable */
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Gateway Timeout */
+      504: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+    };
+  };
+  inspect_api_problems_timetable_inspect_post: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["Inspect"];
+      };
+    };
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Inspection"];
+        };
+      };
+      /** @description Bad Request */
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Unprocessable Entity */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Service Unavailable */
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Gateway Timeout */
+      504: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+    };
+  };
+  solve_api_problems_timetable_solve_post: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["Solve"];
+      };
+    };
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Result"];
+        };
+      };
+      /** @description Bad Request */
+      400: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Unprocessable Entity */
+      422: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Service Unavailable */
+      503: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+      /** @description Gateway Timeout */
+      504: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["ErrorResponse"];
+        };
+      };
+    };
+  };
+  validate_api_problems_timetable_validate_post: {
+    parameters: {
+      query?: never;
+      header?: never;
+      path?: never;
+      cookie?: never;
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["Validate"];
+      };
+    };
+    responses: {
+      /** @description Successful Response */
+      200: {
+        headers: {
+          [name: string]: unknown;
+        };
+        content: {
+          "application/json": components["schemas"]["Validation"];
         };
       };
       /** @description Bad Request */

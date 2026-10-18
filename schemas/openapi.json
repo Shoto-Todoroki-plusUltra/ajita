@@ -136,6 +136,39 @@
         "title": "ApiResult",
         "type": "object"
       },
+      "Compile": {
+        "additionalProperties": false,
+        "properties": {
+          "instance": {
+            "$ref": "#/components/schemas/TimetableInstance"
+          },
+          "penalty": {
+            "anyOf": [
+              {
+                "maximum": 50000001.0,
+                "minimum": 1.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Penalty"
+          },
+          "scale": {
+            "default": 1.0,
+            "exclusiveMinimum": 0.0,
+            "maximum": 1000000.0,
+            "title": "Scale",
+            "type": "number"
+          }
+        },
+        "required": [
+          "instance"
+        ],
+        "title": "Compile",
+        "type": "object"
+      },
       "CompileRequest": {
         "additionalProperties": false,
         "properties": {
@@ -178,6 +211,50 @@
           "points"
         ],
         "title": "CoordinatesInput",
+        "type": "object"
+      },
+      "Course": {
+        "additionalProperties": false,
+        "properties": {
+          "cohort_ids": {
+            "items": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^\\S+$",
+              "type": "string"
+            },
+            "maxItems": 50,
+            "title": "Cohort Ids",
+            "type": "array"
+          },
+          "enrollment": {
+            "maximum": 1000000.0,
+            "minimum": 1.0,
+            "title": "Enrollment",
+            "type": "integer"
+          },
+          "id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Id",
+            "type": "string"
+          },
+          "lecturer_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Lecturer Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "lecturer_id",
+          "cohort_ids",
+          "enrollment"
+        ],
+        "title": "Course",
         "type": "object"
       },
       "DecodeMap": {
@@ -291,6 +368,30 @@
         "title": "FixedVariable",
         "type": "object"
       },
+      "Inspect": {
+        "additionalProperties": false,
+        "properties": {
+          "bits": {
+            "maxLength": 16,
+            "pattern": "^[01]*$",
+            "title": "Bits",
+            "type": "string"
+          },
+          "instance": {
+            "$ref": "#/components/schemas/TimetableInstance"
+          },
+          "qubo": {
+            "$ref": "#/components/schemas/TimetableQubo"
+          }
+        },
+        "required": [
+          "instance",
+          "qubo",
+          "bits"
+        ],
+        "title": "Inspect",
+        "type": "object"
+      },
       "InspectRequest": {
         "additionalProperties": false,
         "properties": {
@@ -355,6 +456,40 @@
           "original_objective"
         ],
         "title": "InspectResult",
+        "type": "object"
+      },
+      "Inspection": {
+        "additionalProperties": false,
+        "properties": {
+          "assignment": {
+            "$ref": "#/components/schemas/TimetableAssignment"
+          },
+          "energy": {
+            "title": "Energy",
+            "type": "number"
+          },
+          "original_objective": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Objective"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          }
+        },
+        "required": [
+          "assignment",
+          "validation",
+          "original_objective",
+          "energy"
+        ],
+        "title": "Inspection",
         "type": "object"
       },
       "LocalOptions": {
@@ -505,6 +640,39 @@
         "title": "Penalty",
         "type": "object"
       },
+      "Placement": {
+        "additionalProperties": false,
+        "properties": {
+          "course_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Course Id",
+            "type": "string"
+          },
+          "room_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Room Id",
+            "type": "string"
+          },
+          "slot_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Slot Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_id",
+          "room_id",
+          "slot_id"
+        ],
+        "title": "Placement",
+        "type": "object"
+      },
       "Point": {
         "additionalProperties": false,
         "properties": {
@@ -529,6 +697,46 @@
           "y"
         ],
         "title": "Point",
+        "type": "object"
+      },
+      "Preference": {
+        "additionalProperties": false,
+        "properties": {
+          "course_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Course Id",
+            "type": "string"
+          },
+          "penalty": {
+            "maximum": 1000000.0,
+            "minimum": 0.0,
+            "title": "Penalty",
+            "type": "integer"
+          },
+          "room_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Room Id",
+            "type": "string"
+          },
+          "slot_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Slot Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_id",
+          "room_id",
+          "slot_id",
+          "penalty"
+        ],
+        "title": "Preference",
         "type": "object"
       },
       "Provenance": {
@@ -746,7 +954,7 @@
           },
           "variables": {
             "items": {
-              "$ref": "#/components/schemas/Variable"
+              "$ref": "#/components/schemas/quantum_workload_studio__qubo__tsp__Variable"
             },
             "maxItems": 49,
             "minItems": 9,
@@ -771,6 +979,140 @@
           "provenance"
         ],
         "title": "QuboArtifact",
+        "type": "object"
+      },
+      "Result": {
+        "additionalProperties": false,
+        "properties": {
+          "backend_computation_elapsed_s": {
+            "title": "Backend Computation Elapsed S",
+            "type": "number"
+          },
+          "execution_status": {
+            "const": "completed",
+            "default": "completed",
+            "title": "Execution Status",
+            "type": "string"
+          },
+          "result": {
+            "$ref": "#/components/schemas/TimetableResult"
+          },
+          "worker": {
+            "additionalProperties": true,
+            "title": "Worker",
+            "type": "object"
+          }
+        },
+        "required": [
+          "result",
+          "backend_computation_elapsed_s",
+          "worker"
+        ],
+        "title": "Result",
+        "type": "object"
+      },
+      "Room": {
+        "additionalProperties": false,
+        "properties": {
+          "capacity": {
+            "maximum": 1000000.0,
+            "minimum": 0.0,
+            "title": "Capacity",
+            "type": "integer"
+          },
+          "id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "capacity"
+        ],
+        "title": "Room",
+        "type": "object"
+      },
+      "Slot": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Label",
+            "type": "string"
+          },
+          "order": {
+            "maximum": 1000000.0,
+            "minimum": 0.0,
+            "title": "Order",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "order"
+        ],
+        "title": "Slot",
+        "type": "object"
+      },
+      "Solve": {
+        "additionalProperties": false,
+        "properties": {
+          "instance": {
+            "$ref": "#/components/schemas/TimetableInstance"
+          },
+          "memory_limit_mb": {
+            "default": 512,
+            "maximum": 1024.0,
+            "minimum": 64.0,
+            "title": "Memory Limit Mb",
+            "type": "integer"
+          },
+          "method": {
+            "const": "classical",
+            "default": "classical",
+            "title": "Method",
+            "type": "string"
+          },
+          "seed": {
+            "default": 1729,
+            "exclusiveMaximum": 2147483648.0,
+            "minimum": 0.0,
+            "title": "Seed",
+            "type": "integer"
+          },
+          "solver": {
+            "default": "cp_sat",
+            "enum": [
+              "cp_sat",
+              "enumeration"
+            ],
+            "title": "Solver",
+            "type": "string"
+          },
+          "timeout_s": {
+            "default": 10.0,
+            "exclusiveMinimum": 0.0,
+            "maximum": 60.0,
+            "title": "Timeout S",
+            "type": "number"
+          }
+        },
+        "required": [
+          "instance"
+        ],
+        "title": "Solve",
         "type": "object"
       },
       "SolveRequest": {
@@ -854,6 +1196,356 @@
           "coefficient"
         ],
         "title": "Term",
+        "type": "object"
+      },
+      "TimetableAssignment": {
+        "additionalProperties": false,
+        "properties": {
+          "assignments": {
+            "items": {
+              "$ref": "#/components/schemas/Placement"
+            },
+            "maxItems": 256,
+            "title": "Assignments",
+            "type": "array"
+          }
+        },
+        "required": [
+          "assignments"
+        ],
+        "title": "TimetableAssignment",
+        "type": "object"
+      },
+      "TimetableInstance": {
+        "additionalProperties": false,
+        "properties": {
+          "cohort_ids": {
+            "items": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^\\S+$",
+              "type": "string"
+            },
+            "maxItems": 50,
+            "title": "Cohort Ids",
+            "type": "array"
+          },
+          "courses": {
+            "items": {
+              "$ref": "#/components/schemas/Course"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Courses",
+            "type": "array"
+          },
+          "instance_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Instance Id",
+            "type": "string"
+          },
+          "kind": {
+            "const": "timetable",
+            "title": "Kind",
+            "type": "string"
+          },
+          "lecturer_ids": {
+            "items": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^\\S+$",
+              "type": "string"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "title": "Lecturer Ids",
+            "type": "array"
+          },
+          "preferences": {
+            "items": {
+              "$ref": "#/components/schemas/Preference"
+            },
+            "maxItems": 20000,
+            "title": "Preferences",
+            "type": "array"
+          },
+          "rooms": {
+            "items": {
+              "$ref": "#/components/schemas/Room"
+            },
+            "maxItems": 20,
+            "minItems": 1,
+            "title": "Rooms",
+            "type": "array"
+          },
+          "schema_version": {
+            "const": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "slots": {
+            "items": {
+              "$ref": "#/components/schemas/Slot"
+            },
+            "maxItems": 40,
+            "minItems": 1,
+            "title": "Slots",
+            "type": "array"
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "instance_id",
+          "rooms",
+          "slots",
+          "lecturer_ids",
+          "cohort_ids",
+          "courses"
+        ],
+        "title": "TimetableInstance",
+        "type": "object"
+      },
+      "TimetableQubo": {
+        "additionalProperties": false,
+        "properties": {
+          "bit_order": {
+            "const": "bits[i] maps variables[i]; display left-to-right is index order",
+            "default": "bits[i] maps variables[i]; display left-to-right is index order",
+            "title": "Bit Order",
+            "type": "string"
+          },
+          "convention": {
+            "const": "upper_triangular",
+            "default": "upper_triangular",
+            "title": "Convention",
+            "type": "string"
+          },
+          "encoding_id": {
+            "const": "b1_capacity_assignment_v1",
+            "default": "b1_capacity_assignment_v1",
+            "title": "Encoding Id",
+            "type": "string"
+          },
+          "encoding_version": {
+            "const": 1,
+            "default": 1,
+            "title": "Encoding Version",
+            "type": "integer"
+          },
+          "energy_unit": {
+            "const": "scaled_preference_penalty",
+            "default": "scaled_preference_penalty",
+            "title": "Energy Unit",
+            "type": "string"
+          },
+          "offset": {
+            "title": "Offset",
+            "type": "number"
+          },
+          "penalty": {
+            "maximum": 50000001.0,
+            "minimum": 1.0,
+            "title": "Penalty",
+            "type": "integer"
+          },
+          "penalty_bound_basis": {
+            "const": "A > sum of maximum admissible preference per course",
+            "default": "A > sum of maximum admissible preference per course",
+            "title": "Penalty Bound Basis",
+            "type": "string"
+          },
+          "penalty_sufficient": {
+            "title": "Penalty Sufficient",
+            "type": "boolean"
+          },
+          "provenance": {
+            "const": "explicit_b1_v1; no external converter",
+            "default": "explicit_b1_v1; no external converter",
+            "title": "Provenance",
+            "type": "string"
+          },
+          "scale": {
+            "exclusiveMinimum": 0.0,
+            "maximum": 1000000.0,
+            "title": "Scale",
+            "type": "number"
+          },
+          "schema_version": {
+            "const": 1,
+            "default": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "sense": {
+            "const": "minimize",
+            "default": "minimize",
+            "title": "Sense",
+            "type": "string"
+          },
+          "soft_upper_bound": {
+            "maximum": 50000000.0,
+            "minimum": 0.0,
+            "title": "Soft Upper Bound",
+            "type": "integer"
+          },
+          "source_instance_hash": {
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Source Instance Hash",
+            "type": "string"
+          },
+          "terms": {
+            "items": {
+              "$ref": "#/components/schemas/Term"
+            },
+            "maxItems": 136,
+            "title": "Terms",
+            "type": "array"
+          },
+          "variables": {
+            "items": {
+              "$ref": "#/components/schemas/quantum_workload_studio__qubo__timetable__Variable"
+            },
+            "maxItems": 16,
+            "title": "Variables",
+            "type": "array"
+          }
+        },
+        "required": [
+          "source_instance_hash",
+          "variables",
+          "terms",
+          "offset",
+          "scale",
+          "penalty",
+          "soft_upper_bound",
+          "penalty_sufficient"
+        ],
+        "title": "TimetableQubo",
+        "type": "object"
+      },
+      "TimetableResult": {
+        "additionalProperties": false,
+        "properties": {
+          "assignment": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TimetableAssignment"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "best_objective_bound": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Best Objective Bound"
+          },
+          "enumerated_assignments": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Enumerated Assignments"
+          },
+          "instance_hash": {
+            "title": "Instance Hash",
+            "type": "string"
+          },
+          "kind": {
+            "const": "timetable",
+            "default": "timetable",
+            "title": "Kind",
+            "type": "string"
+          },
+          "method": {
+            "const": "classical",
+            "default": "classical",
+            "title": "Method",
+            "type": "string"
+          },
+          "native_status": {
+            "title": "Native Status",
+            "type": "string"
+          },
+          "objective": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objective"
+          },
+          "objective_unit": {
+            "const": "preference_penalty",
+            "default": "preference_penalty",
+            "title": "Objective Unit",
+            "type": "string"
+          },
+          "options": {
+            "additionalProperties": true,
+            "title": "Options",
+            "type": "object"
+          },
+          "proven_infeasible": {
+            "title": "Proven Infeasible",
+            "type": "boolean"
+          },
+          "proven_optimal": {
+            "title": "Proven Optimal",
+            "type": "boolean"
+          },
+          "schema_version": {
+            "const": 1,
+            "default": 1,
+            "title": "Schema Version",
+            "type": "integer"
+          },
+          "solver_elapsed_s": {
+            "title": "Solver Elapsed S",
+            "type": "number"
+          },
+          "solver_id": {
+            "enum": [
+              "cp_sat",
+              "enumeration"
+            ],
+            "title": "Solver Id",
+            "type": "string"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          }
+        },
+        "required": [
+          "instance_hash",
+          "solver_id",
+          "native_status",
+          "assignment",
+          "validation",
+          "objective",
+          "best_objective_bound",
+          "proven_optimal",
+          "proven_infeasible",
+          "solver_elapsed_s"
+        ],
+        "title": "TimetableResult",
         "type": "object"
       },
       "TspAssignment": {
@@ -949,6 +1641,48 @@
         "title": "TspInstance",
         "type": "object"
       },
+      "Validate": {
+        "additionalProperties": false,
+        "properties": {
+          "assignment": {
+            "$ref": "#/components/schemas/TimetableAssignment"
+          },
+          "instance": {
+            "$ref": "#/components/schemas/TimetableInstance"
+          }
+        },
+        "required": [
+          "instance",
+          "assignment"
+        ],
+        "title": "Validate",
+        "type": "object"
+      },
+      "Validation": {
+        "additionalProperties": false,
+        "properties": {
+          "original_objective": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Objective"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          }
+        },
+        "required": [
+          "validation",
+          "original_objective"
+        ],
+        "title": "Validation",
+        "type": "object"
+      },
       "ValidationReport": {
         "additionalProperties": false,
         "properties": {
@@ -983,33 +1717,6 @@
         "title": "ValidationReport",
         "type": "object"
       },
-      "Variable": {
-        "additionalProperties": false,
-        "properties": {
-          "domain_ref": {
-            "$ref": "#/components/schemas/DomainRef"
-          },
-          "index": {
-            "maximum": 48.0,
-            "minimum": 0.0,
-            "title": "Index",
-            "type": "integer"
-          },
-          "name": {
-            "maxLength": 128,
-            "minLength": 1,
-            "title": "Name",
-            "type": "string"
-          }
-        },
-        "required": [
-          "index",
-          "name",
-          "domain_ref"
-        ],
-        "title": "Variable",
-        "type": "object"
-      },
       "Violation": {
         "additionalProperties": false,
         "properties": {
@@ -1036,11 +1743,83 @@
         ],
         "title": "Violation",
         "type": "object"
+      },
+      "quantum_workload_studio__qubo__timetable__Variable": {
+        "additionalProperties": false,
+        "properties": {
+          "course_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Course Id",
+            "type": "string"
+          },
+          "index": {
+            "maximum": 15.0,
+            "minimum": 0.0,
+            "title": "Index",
+            "type": "integer"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "room_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Room Id",
+            "type": "string"
+          },
+          "slot_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^\\S+$",
+            "title": "Slot Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_id",
+          "room_id",
+          "slot_id",
+          "index",
+          "name"
+        ],
+        "title": "Variable",
+        "type": "object"
+      },
+      "quantum_workload_studio__qubo__tsp__Variable": {
+        "additionalProperties": false,
+        "properties": {
+          "domain_ref": {
+            "$ref": "#/components/schemas/DomainRef"
+          },
+          "index": {
+            "maximum": 48.0,
+            "minimum": 0.0,
+            "title": "Index",
+            "type": "integer"
+          },
+          "name": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "index",
+          "name",
+          "domain_ref"
+        ],
+        "title": "Variable",
+        "type": "object"
       }
     }
   },
   "info": {
-    "title": "Quantum Workload Studio \u2014 local TSP",
+    "title": "Quantum Workload Studio \u2014 local TSP and B1 timetable",
     "version": "0.1.0"
   },
   "openapi": "3.1.0",
@@ -1099,6 +1878,278 @@
           }
         },
         "summary": "Health"
+      }
+    },
+    "/api/problems/timetable/compile": {
+      "post": {
+        "operationId": "compile_api_problems_timetable_compile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Compile"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimetableQubo"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Compile"
+      }
+    },
+    "/api/problems/timetable/inspect": {
+      "post": {
+        "operationId": "inspect_api_problems_timetable_inspect_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Inspect"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Inspection"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Inspect"
+      }
+    },
+    "/api/problems/timetable/solve": {
+      "post": {
+        "operationId": "solve_api_problems_timetable_solve_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Solve"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Solve"
+      }
+    },
+    "/api/problems/timetable/validate": {
+      "post": {
+        "operationId": "validate_api_problems_timetable_validate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Validate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Validation"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bad Request"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Entity"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Validate"
       }
     },
     "/api/problems/tsp/solve": {

@@ -121,7 +121,7 @@ def create_app(*, enable_quantum=None):
         else enable_quantum
     )
     app = FastAPI(
-        title="Quantum Workload Studio — local TSP",
+        title="Quantum Workload Studio — local TSP and B1 timetable",
         version="0.1.0",
         responses={
             400: {"model": ErrorResponse},
@@ -394,6 +394,9 @@ def create_app(*, enable_quantum=None):
         except (ValueError, OverflowError) as exc:
             return error("invalid_qubo", str(exc), 422)
 
+    from quantum_workload_studio.api.timetable import register
+
+    register(app, bounded, error)
     return app
 
 
