@@ -22,7 +22,7 @@ def classical_worker(send, payload):
         send.send({"kind": "import_started"})
         if payload["solver"] == "cp_sat":
             from ortools.sat.python import cp_model  # noqa: F401
-        imports = time.monotonic() - before
+        imports = time.monotonic() - before if payload["solver"] == "cp_sat" else None
         send.send({"kind": "imports_complete", "import_s": imports})
         answer = solve_classical(
             TimetableInstance.model_validate(payload["instance"]),

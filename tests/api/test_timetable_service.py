@@ -35,6 +35,8 @@ def test_real_solver(solver):
     assert answer["result"]["best_objective_bound"] == 1
     assert answer["worker"]["worker_exitcode"] == 0
     assert not answer["worker"]["worker_alive_after_cleanup"]
+    import_time = answer["worker"]["stage_timings"]["ortools_import_s"]
+    assert (import_time is None) == (solver == "enumeration")
 
 
 def test_qubo_inspection_and_validation():

@@ -220,7 +220,11 @@ export function Timetable() {
                   <dd>{result.result.objective ?? "Unavailable"}</dd>
                 </div>
                 <div>
-                  <dt>Native best objective bound</dt>
+                  <dt>
+                    {result.result.solver_id === "cp_sat"
+                      ? "Native best objective bound"
+                      : "Exhaustive oracle bound"}
+                  </dt>
                   <dd>{result.result.best_objective_bound ?? "Unavailable"}</dd>
                 </div>
                 <div>
