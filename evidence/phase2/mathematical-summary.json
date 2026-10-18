@@ -1,0 +1,44 @@
+{
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "packages": {
+    "ortools": "9.15.6755",
+    "pydantic": "2.14.1",
+    "fastapi": "0.143.2",
+    "pytest": "9.1.1",
+    "psutil": "7.2.2"
+  },
+  "seed": 1729,
+  "cp_sat_search_workers": 1,
+  "fixtures": [
+    {
+      "fixture": "feasible",
+      "assignments_checked": 16,
+      "feasible_binary_assignments": 2,
+      "objective": 1,
+      "native_status": "OPTIMAL"
+    },
+    {
+      "fixture": "shared-slot-infeasible",
+      "assignments_checked": 4,
+      "feasible_binary_assignments": 0,
+      "objective": null,
+      "native_status": "INFEASIBLE"
+    },
+    {
+      "fixture": "capacity-infeasible",
+      "assignments_checked": 1,
+      "feasible_binary_assignments": 0,
+      "objective": null,
+      "native_status": "INFEASIBLE"
+    },
+    {
+      "fixture": "ties",
+      "assignments_checked": 16,
+      "feasible_binary_assignments": 2,
+      "objective": 0,
+      "native_status": "OPTIMAL"
+    }
+  ]
+}

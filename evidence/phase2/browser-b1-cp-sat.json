@@ -1,0 +1,67 @@
+{
+  "status": 200,
+  "body": {
+    "execution_status": "completed",
+    "result": {
+      "schema_version": 1,
+      "kind": "timetable",
+      "method": "classical",
+      "objective_unit": "preference_penalty",
+      "instance_hash": "6f43e19230ce7c09e2950ccb974a9d6d436a623a91a710a4a770a5a1ac130922",
+      "solver_id": "cp_sat",
+      "native_status": "OPTIMAL",
+      "assignment": {
+        "assignments": [
+          {
+            "course_id": "Math",
+            "room_id": "R1",
+            "slot_id": "S1"
+          },
+          {
+            "course_id": "Physics",
+            "room_id": "R1",
+            "slot_id": "S2"
+          }
+        ]
+      },
+      "validation": {
+        "checked": true,
+        "feasible": true,
+        "violations": []
+      },
+      "objective": 1,
+      "best_objective_bound": 1,
+      "proven_optimal": true,
+      "proven_infeasible": false,
+      "solver_elapsed_s": 0.001927874999978485,
+      "enumerated_assignments": null,
+      "options": {
+        "timeout_s": 20,
+        "seed": 1729,
+        "num_search_workers": 1,
+        "native_wall_time_s": 0.000867
+      }
+    },
+    "backend_computation_elapsed_s": 0.3031234159999485,
+    "worker": {
+      "execution_status": "completed",
+      "process_start_call_s": 0.0029808329999241323,
+      "first_worker_event_elapsed_s": 0.08312108300003729,
+      "observed_peak_worker_rss_bytes": 95764480,
+      "monitor_error": null,
+      "worker_pid": 4007,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.012098792000074354,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.27257366700007424,
+      "cleanup_elapsed_s": 0.027186958000015693,
+      "supervisor_elapsed_s": 0.2997614580000345,
+      "stage_timings": {
+        "ortools_import_s": 0.18730029200003173,
+        "model_and_solver_s": 0.001927874999978485,
+        "worker_entry_to_result_s": 0.18945912499998485
+      }
+    }
+  }
+}

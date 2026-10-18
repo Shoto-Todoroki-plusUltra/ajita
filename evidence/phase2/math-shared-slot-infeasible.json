@@ -1,0 +1,297 @@
+{
+  "instance": {
+    "schema_version": 1,
+    "kind": "timetable",
+    "instance_id": "b1-two-courses",
+    "rooms": [
+      {
+        "id": "R1",
+        "capacity": 30
+      }
+    ],
+    "slots": [
+      {
+        "id": "S1",
+        "label": "Monday 09:00",
+        "order": 0
+      }
+    ],
+    "lecturer_ids": [
+      "L1"
+    ],
+    "cohort_ids": [
+      "G1"
+    ],
+    "courses": [
+      {
+        "id": "Math",
+        "lecturer_id": "L1",
+        "cohort_ids": [
+          "G1"
+        ],
+        "enrollment": 20
+      },
+      {
+        "id": "Physics",
+        "lecturer_id": "L1",
+        "cohort_ids": [
+          "G1"
+        ],
+        "enrollment": 25
+      }
+    ],
+    "preferences": []
+  },
+  "oracle": {
+    "schema_version": 1,
+    "kind": "timetable",
+    "method": "classical",
+    "objective_unit": "preference_penalty",
+    "instance_hash": "a6a545a237568a580b9ae9e92a83f09026f5f2bfa3c24dc26180d46ba418531b",
+    "solver_id": "enumeration",
+    "native_status": "INFEASIBLE",
+    "assignment": null,
+    "validation": {
+      "checked": false,
+      "feasible": null,
+      "violations": []
+    },
+    "objective": null,
+    "best_objective_bound": null,
+    "proven_optimal": false,
+    "proven_infeasible": true,
+    "solver_elapsed_s": 1.5291000011075084e-05,
+    "enumerated_assignments": 1,
+    "options": {}
+  },
+  "cp_sat": {
+    "schema_version": 1,
+    "kind": "timetable",
+    "method": "classical",
+    "objective_unit": "preference_penalty",
+    "instance_hash": "a6a545a237568a580b9ae9e92a83f09026f5f2bfa3c24dc26180d46ba418531b",
+    "solver_id": "cp_sat",
+    "native_status": "INFEASIBLE",
+    "assignment": null,
+    "validation": {
+      "checked": false,
+      "feasible": null,
+      "violations": []
+    },
+    "objective": null,
+    "best_objective_bound": null,
+    "proven_optimal": false,
+    "proven_infeasible": true,
+    "solver_elapsed_s": 0.00016737499998953353,
+    "enumerated_assignments": null,
+    "options": {
+      "timeout_s": 10.0,
+      "seed": 1729,
+      "num_search_workers": 1,
+      "native_wall_time_s": 1.8e-05
+    }
+  },
+  "qubo": {
+    "schema_version": 1,
+    "encoding_id": "b1_capacity_assignment_v1",
+    "encoding_version": 1,
+    "provenance": "explicit_b1_v1; no external converter",
+    "penalty_bound_basis": "A > sum of maximum admissible preference per course",
+    "convention": "upper_triangular",
+    "sense": "minimize",
+    "source_instance_hash": "a6a545a237568a580b9ae9e92a83f09026f5f2bfa3c24dc26180d46ba418531b",
+    "variables": [
+      {
+        "course_id": "Math",
+        "room_id": "R1",
+        "slot_id": "S1",
+        "index": 0,
+        "name": "x_0"
+      },
+      {
+        "course_id": "Physics",
+        "room_id": "R1",
+        "slot_id": "S1",
+        "index": 1,
+        "name": "x_1"
+      }
+    ],
+    "terms": [
+      {
+        "i": 0,
+        "j": 0,
+        "coefficient": -1.0
+      },
+      {
+        "i": 0,
+        "j": 1,
+        "coefficient": 1.0
+      },
+      {
+        "i": 1,
+        "j": 1,
+        "coefficient": -1.0
+      }
+    ],
+    "offset": 2.0,
+    "scale": 1.0,
+    "penalty": 1,
+    "soft_upper_bound": 0,
+    "penalty_sufficient": true,
+    "bit_order": "bits[i] maps variables[i]; display left-to-right is index order",
+    "energy_unit": "scaled_preference_penalty"
+  },
+  "all_binary_assignments": [
+    {
+      "bits_index_order": [
+        0,
+        0
+      ],
+      "expanded_energy": 2.0,
+      "direct_expression_energy": 2.0,
+      "assignment": {
+        "assignments": []
+      },
+      "validation": {
+        "checked": true,
+        "feasible": false,
+        "violations": [
+          {
+            "code": "course_count",
+            "entity_ids": [
+              "Math"
+            ],
+            "message": "expected one event, got 0"
+          },
+          {
+            "code": "course_count",
+            "entity_ids": [
+              "Physics"
+            ],
+            "message": "expected one event, got 0"
+          }
+        ]
+      },
+      "original_objective": null
+    },
+    {
+      "bits_index_order": [
+        0,
+        1
+      ],
+      "expanded_energy": 1.0,
+      "direct_expression_energy": 1.0,
+      "assignment": {
+        "assignments": [
+          {
+            "course_id": "Physics",
+            "room_id": "R1",
+            "slot_id": "S1"
+          }
+        ]
+      },
+      "validation": {
+        "checked": true,
+        "feasible": false,
+        "violations": [
+          {
+            "code": "course_count",
+            "entity_ids": [
+              "Math"
+            ],
+            "message": "expected one event, got 0"
+          }
+        ]
+      },
+      "original_objective": null
+    },
+    {
+      "bits_index_order": [
+        1,
+        0
+      ],
+      "expanded_energy": 1.0,
+      "direct_expression_energy": 1.0,
+      "assignment": {
+        "assignments": [
+          {
+            "course_id": "Math",
+            "room_id": "R1",
+            "slot_id": "S1"
+          }
+        ]
+      },
+      "validation": {
+        "checked": true,
+        "feasible": false,
+        "violations": [
+          {
+            "code": "course_count",
+            "entity_ids": [
+              "Physics"
+            ],
+            "message": "expected one event, got 0"
+          }
+        ]
+      },
+      "original_objective": null
+    },
+    {
+      "bits_index_order": [
+        1,
+        1
+      ],
+      "expanded_energy": 1.0,
+      "direct_expression_energy": 1.0,
+      "assignment": {
+        "assignments": [
+          {
+            "course_id": "Math",
+            "room_id": "R1",
+            "slot_id": "S1"
+          },
+          {
+            "course_id": "Physics",
+            "room_id": "R1",
+            "slot_id": "S1"
+          }
+        ]
+      },
+      "validation": {
+        "checked": true,
+        "feasible": false,
+        "violations": [
+          {
+            "code": "room_conflict",
+            "entity_ids": [
+              "Math",
+              "Physics",
+              "S1"
+            ],
+            "message": "room used twice in one slot"
+          },
+          {
+            "code": "lecturer_conflict",
+            "entity_ids": [
+              "Math",
+              "Physics",
+              "S1"
+            ],
+            "message": "lecturer has simultaneous events"
+          },
+          {
+            "code": "cohort_conflict",
+            "entity_ids": [
+              "Math",
+              "Physics",
+              "S1"
+            ],
+            "message": "cohort has simultaneous events"
+          }
+        ]
+      },
+      "original_objective": null
+    }
+  ],
+  "absolute_energy_tolerance": 1e-12
+}

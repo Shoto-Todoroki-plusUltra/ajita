@@ -1,0 +1,10 @@
+{
+  "status": 400,
+  "body": {
+    "error": {
+      "code": "unsupported_size",
+      "message": "Exact mode supports <=8 cities; local quantum <=16 active bits",
+      "details": []
+    }
+  }
+}

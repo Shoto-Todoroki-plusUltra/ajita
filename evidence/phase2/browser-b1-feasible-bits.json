@@ -1,0 +1,26 @@
+{
+  "status": 200,
+  "body": {
+    "assignment": {
+      "assignments": [
+        {
+          "course_id": "Math",
+          "room_id": "R1",
+          "slot_id": "S1"
+        },
+        {
+          "course_id": "Physics",
+          "room_id": "R1",
+          "slot_id": "S2"
+        }
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "original_objective": 1,
+    "energy": 1
+  }
+}

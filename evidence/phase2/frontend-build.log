@@ -1,0 +1,14 @@
+
+> quantum-workload-studio-local-ui@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 17 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.41 kB │ gzip:  0.28 kB
+dist/assets/index-7jmjedfi.css    3.14 kB │ gzip:  1.25 kB
+dist/assets/index-B_HlkC5K.js   240.92 kB │ gzip: 75.17 kB
+
+✓ built in 50ms

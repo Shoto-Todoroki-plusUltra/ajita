@@ -1,0 +1,71 @@
+{
+  "status": 200,
+  "body": {
+    "schema_version": 1,
+    "instance_hash": "5bb0f1f9e73fef44d97645d196d8a2514bb8beede99bd8c24c893af461468b00",
+    "method": "classical",
+    "solver_id": "exact_tsp",
+    "execution_status": "completed",
+    "outcome": "feasible",
+    "assignment": {
+      "tour": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "A"
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "objective": 5,
+    "objective_unit": "synthetic_cost",
+    "proven_optimal": true,
+    "total_elapsed_s": 0.08143270799996571,
+    "quantum": null,
+    "worker": {
+      "execution_status": "completed",
+      "process_start_call_s": 0.0012431669999841688,
+      "first_worker_event_elapsed_s": 0.07282604200008791,
+      "observed_peak_worker_rss_bytes": 34324480,
+      "monitor_error": null,
+      "worker_pid": 4104,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.012200125000049411,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.07306291700001566,
+      "cleanup_elapsed_s": 0.008303041999965899,
+      "supervisor_elapsed_s": 0.08136629200009793,
+      "stage_timings": {
+        "ortools_import_s": null,
+        "dispatch_validation_model_solver_s": 0.00021670900002845883,
+        "native_solver_s": null,
+        "worker_entry_to_result_s": 0.0002517909999824042
+      },
+      "phase_events": [
+        {
+          "kind": "worker_entry",
+          "monotonic_s": 928.730206875
+        },
+        {
+          "kind": "import_started",
+          "monotonic_s": 928.730232916
+        },
+        {
+          "kind": "imports_complete",
+          "import_seconds": 0.0000056669999821679085
+        }
+      ]
+    },
+    "effective_options": {
+      "depot_fixed": true,
+      "tie_break": "input_city_order",
+      "seed": null
+    }
+  }
+}

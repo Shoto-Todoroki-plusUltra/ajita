@@ -1,0 +1,28 @@
+<testsuites id="" name="" tests="11" failures="0" skipped="0" errors="0" time="7.53627">
+<testsuite name="timetable.spec.ts" timestamp="2026-10-18T13:40:34.258Z" hostname="chromium-mac" tests="4" failures="0" skipped="0" time="2.076" errors="0">
+<testcase name="real CP-SAT and exhaustive oracle grid" classname="timetable.spec.ts" time="0.772">
+</testcase>
+<testcase name="real QUBO feasible and invalid candidates with conflict reasons" classname="timetable.spec.ts" time="0.342">
+</testcase>
+<testcase name="real infeasible, invalid, timeout and unsupported states" classname="timetable.spec.ts" time="0.687">
+</testcase>
+<testcase name="small B1 viewport and module switch" classname="timetable.spec.ts" time="0.275">
+</testcase>
+</testsuite>
+<testsuite name="tsp.spec.ts" timestamp="2026-10-18T13:40:34.258Z" hostname="chromium-mac" tests="7" failures="0" skipped="0" time="4.32" errors="0">
+<testcase name="real classical preset and coordinate flows" classname="tsp.spec.ts" time="0.773">
+</testcase>
+<testcase name="real local QAOA with trace honesty fields" classname="tsp.spec.ts" time="0.78">
+</testcase>
+<testcase name="real no-feasible-sample and timeout states" classname="tsp.spec.ts" time="0.705">
+</testcase>
+<testcase name="invalid and oversized instances have no fabricated route" classname="tsp.spec.ts" time="0.289">
+</testcase>
+<testcase name="small viewport remains usable" classname="tsp.spec.ts" time="0.218">
+</testcase>
+<testcase name="real cancellation releases admission after worker cleanup" classname="tsp.spec.ts" time="0.467">
+</testcase>
+<testcase name="fixture reference follows current input, not its ID or previous solve" classname="tsp.spec.ts" time="1.088">
+</testcase>
+</testsuite>
+</testsuites>

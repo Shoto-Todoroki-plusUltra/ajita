@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="11" time="4.226" timestamp="2026-10-18T18:59:16.056882+05:30" hostname="Pradumns-MacBook-Air.local"><testcase classname="tests.api.test_timetable" name="test_real_solver[cp_sat]" time="0.498" /><testcase classname="tests.api.test_timetable" name="test_real_solver[enumeration]" time="0.086" /><testcase classname="tests.api.test_timetable" name="test_qubo_inspection_and_validation" time="0.008" /><testcase classname="tests.api.test_timetable" name="test_infeasible_and_size" time="0.294" /><testcase classname="tests.api.test_timetable" name="test_worker_cleanup[_error-error]" time="0.193" /><testcase classname="tests.api.test_timetable" name="test_worker_cleanup[_memory-memory_limit]" time="0.195" /><testcase classname="tests.api.test_timetable" name="test_worker_cleanup[_completed_then_hang-unclean_worker_exit]" time="0.454" /><testcase classname="tests.api.test_timetable" name="test_worker_cleanup[_sleep-timeout]" time="1.523" /><testcase classname="tests.api.test_timetable" name="test_cross_domain_admission_disconnect_and_cancellation[False]" time="0.029"><failure message="ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x10879b170&gt;
+cancel_task = False
+
+    @pytest.mark.parametrize("cancel_task", [False, True])
+    def test_cross_domain_admission_disconnect_and_cancellation(monkeypatch, cancel_task):
+        import httpx
+    
+        module = importlib.import_module("quantum_workload_studio.api.timetable")
+        monkeypatch.setattr(module, "classical_worker", _sleep)
+        app = create_app()
+    
+        async def scenario():
+            queue = asyncio.Queue()
+            await queue.put(
+                {
+                    "type": "http.request",
+                    "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+                }
+            )
+    
+            async def send(message):
+                pass
+    
+            scope = {
+                "type": "http",
+                "asgi": {"version": "3.0"},
+                "http_version": "1.1",
+                "method": "POST",
+                "scheme": "http",
+                "path": "/api/problems/timetable/solve",
+                "raw_path": b"/api/problems/timetable/solve",
+                "query_string": b"",
+                "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+                "client": ("127.0.0.1", 1),
+                "server": ("127.0.0.1", 8000),
+            }
+            task = asyncio.create_task(app(scope, queue.get, send))
+            for _ in range(100):
+                if app.state.busy:
+                    break
+                await asyncio.sleep(0.01)
+            assert app.state.busy
+            from quantum_workload_studio.evidence import default_instance
+    
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://localhost"
+            ) as c:
+                # Any valid TSP request must share the timetable admission gate.
+                r = await c.post(
+                    "/api/problems/tsp/solve",
+                    json={"instance": default_instance().model_dump(), "solver": "exact_tsp"},
+                )
+                assert r.status_code == 503 and r.json()["error"]["code"] == "busy"
+            if cancel_task:
+                task.cancel()
+                with pytest.raises(asyncio.CancelledError):
+                    await asyncio.wait_for(task, 3)
+            else:
+                await queue.put({"type": "http.disconnect"})
+                await asyncio.wait_for(task, 3)
+            assert not app.state.busy and not app.state.last_worker["worker_alive_after_cleanup"]
+    
+&gt;       asyncio.run(scenario())
+
+tests/api/test_timetable.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    async def scenario():
+        queue = asyncio.Queue()
+        await queue.put(
+            {
+                "type": "http.request",
+                "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+            }
+        )
+    
+        async def send(message):
+            pass
+    
+        scope = {
+            "type": "http",
+            "asgi": {"version": "3.0"},
+            "http_version": "1.1",
+            "method": "POST",
+            "scheme": "http",
+            "path": "/api/problems/timetable/solve",
+            "raw_path": b"/api/problems/timetable/solve",
+            "query_string": b"",
+            "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+            "client": ("127.0.0.1", 1),
+            "server": ("127.0.0.1", 8000),
+        }
+        task = asyncio.create_task(app(scope, queue.get, send))
+        for _ in range(100):
+            if app.state.busy:
+                break
+            await asyncio.sleep(0.01)
+        assert app.state.busy
+&gt;       from quantum_workload_studio.evidence import default_instance
+E       ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)
+
+tests/api/test_timetable.py:175: ImportError</failure></testcase><testcase classname="tests.api.test_timetable" name="test_cross_domain_admission_disconnect_and_cancellation[True]" time="0.018"><failure message="ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x1087f1cd0&gt;
+cancel_task = True
+
+    @pytest.mark.parametrize("cancel_task", [False, True])
+    def test_cross_domain_admission_disconnect_and_cancellation(monkeypatch, cancel_task):
+        import httpx
+    
+        module = importlib.import_module("quantum_workload_studio.api.timetable")
+        monkeypatch.setattr(module, "classical_worker", _sleep)
+        app = create_app()
+    
+        async def scenario():
+            queue = asyncio.Queue()
+            await queue.put(
+                {
+                    "type": "http.request",
+                    "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+                }
+            )
+    
+            async def send(message):
+                pass
+    
+            scope = {
+                "type": "http",
+                "asgi": {"version": "3.0"},
+                "http_version": "1.1",
+                "method": "POST",
+                "scheme": "http",
+                "path": "/api/problems/timetable/solve",
+                "raw_path": b"/api/problems/timetable/solve",
+                "query_string": b"",
+                "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+                "client": ("127.0.0.1", 1),
+                "server": ("127.0.0.1", 8000),
+            }
+            task = asyncio.create_task(app(scope, queue.get, send))
+            for _ in range(100):
+                if app.state.busy:
+                    break
+                await asyncio.sleep(0.01)
+            assert app.state.busy
+            from quantum_workload_studio.evidence import default_instance
+    
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://localhost"
+            ) as c:
+                # Any valid TSP request must share the timetable admission gate.
+                r = await c.post(
+                    "/api/problems/tsp/solve",
+                    json={"instance": default_instance().model_dump(), "solver": "exact_tsp"},
+                )
+                assert r.status_code == 503 and r.json()["error"]["code"] == "busy"
+            if cancel_task:
+                task.cancel()
+                with pytest.raises(asyncio.CancelledError):
+                    await asyncio.wait_for(task, 3)
+            else:
+                await queue.put({"type": "http.disconnect"})
+                await asyncio.wait_for(task, 3)
+            assert not app.state.busy and not app.state.last_worker["worker_alive_after_cleanup"]
+    
+&gt;       asyncio.run(scenario())
+
+tests/api/test_timetable.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    async def scenario():
+        queue = asyncio.Queue()
+        await queue.put(
+            {
+                "type": "http.request",
+                "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+            }
+        )
+    
+        async def send(message):
+            pass
+    
+        scope = {
+            "type": "http",
+            "asgi": {"version": "3.0"},
+            "http_version": "1.1",
+            "method": "POST",
+            "scheme": "http",
+            "path": "/api/problems/timetable/solve",
+            "raw_path": b"/api/problems/timetable/solve",
+            "query_string": b"",
+            "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+            "client": ("127.0.0.1", 1),
+            "server": ("127.0.0.1", 8000),
+        }
+        task = asyncio.create_task(app(scope, queue.get, send))
+        for _ in range(100):
+            if app.state.busy:
+                break
+            await asyncio.sleep(0.01)
+        assert app.state.busy
+&gt;       from quantum_workload_studio.evidence import default_instance
+E       ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)
+
+tests/api/test_timetable.py:175: ImportError</failure></testcase><testcase classname="tests.api.test_timetable" name="test_cli_and_quantum_free_import" time="0.713" /></testsuite></testsuites>

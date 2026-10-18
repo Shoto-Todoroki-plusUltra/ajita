@@ -1,5 +1,7 @@
 # Phase plan and acceptance gates
 
+Current authorization (18 October 2026): targeted 1C corrections accepted; **Phase 2 B1 only** subsequently approved and now awaiting independent acceptance. Historical authorization notes below remain dated design records. No Phase 3–4 execution is authorized.
+
 Revised 14 October 2026 after critical review. Architecture is provisionally accepted; **only Phase 0 document revisions are authorized**. The tasks below are executable plans, not work performed or approval to begin. Pause for user review after each phase and intermediate checkpoint under [PROJECT_BRIEF.md](../PROJECT_BRIEF.md) and the user's revised scope. No promised benchmark results or calendar-based success claims.
 
 ## Phase 0 — revised design, implementation authorization pending
@@ -140,3 +142,12 @@ This revision used `cat PROJECT_BRIEF.md` (full brief), `cat` for the four desig
 ## Review items before starting Phase 1
 
 Review the revised explicit-reference/optional-Mapper/core-execution boundaries and 1A/1B/1C checkpoints. Future authorization must specify 1A-only or full staged Phase 1; no implementation is authorized now. Resolve RAM/CPU information before increasing resource caps; license/Intel policy before release. Published Mapper metadata, native dependency compatibility, current SDK execution and later Node/Vite pairing remain untested. Stop after this Phase 0 revision.
+
+
+## Phase 2 completion gate (18 October 2026)
+
+Implementation covers tasks 2.1–2.4: strict original-domain checks; independently enumerated tiny proofs; CP-SAT native statuses/bounds with independently recomputed integer costs; <=16-variable optional B1 QUBO, sufficient/weak penalties, exhaustive certificates and canonical inspect; shared bounded API/CLI workers and a minimal React editor/grid/conflict view. Real FEASIBLE/UNKNOWN solver tests distinguish candidate quality from proof. TSP and local QAOA remain unchanged apart from module navigation/unmount cleanup. See the implementation report for final counts and authentic raw evidence, including initial test/tool failures.
+
+Before accepting Phase 2, independently review the source archive/manifest, reproduce full Python regressions in the pinned optional environment, run the separate classical selection, build/Vitest/real Chromium flows, inspect all tiny energy/decoding rows, verify the original-domain proofs and all hidden configuration files. QUBO compile/inspect is the B1 quantum-compatible boundary; no B1 QAOA or cross-domain research experiment is claimed. The historical OR-Tools cold-start/tail-latency risk is still an acceptance limitation, not a repaired defect. Windows/Linux/Intel Mac and remote CI remain unexecuted here.
+
+**Stop for independent Phase 2 acceptance.** Passing local gates does not authorize Phase 3, hardware, release, publication or a Git remote push. License choice remains blocked on explicit owner instruction before public release.

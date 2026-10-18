@@ -1,0 +1,54 @@
+{
+  "status": 200,
+  "body": {
+    "execution_status": "completed",
+    "result": {
+      "schema_version": 1,
+      "kind": "timetable",
+      "method": "classical",
+      "objective_unit": "preference_penalty",
+      "instance_hash": "5858246a9cd8c09577818a925837e8f41a5fe867342d837a90f6b715d6e4901a",
+      "solver_id": "cp_sat",
+      "native_status": "INFEASIBLE",
+      "assignment": null,
+      "validation": {
+        "checked": false,
+        "feasible": null,
+        "violations": []
+      },
+      "objective": null,
+      "best_objective_bound": null,
+      "proven_optimal": false,
+      "proven_infeasible": true,
+      "solver_elapsed_s": 0.0011987910000925694,
+      "enumerated_assignments": null,
+      "options": {
+        "timeout_s": 20,
+        "seed": 1729,
+        "num_search_workers": 1,
+        "native_wall_time_s": 0.000426
+      }
+    },
+    "backend_computation_elapsed_s": 0.27310383299993646,
+    "worker": {
+      "execution_status": "completed",
+      "process_start_call_s": 0.001497500000027685,
+      "first_worker_event_elapsed_s": 0.07417879199999788,
+      "observed_peak_worker_rss_bytes": 95846400,
+      "monitor_error": null,
+      "worker_pid": 4012,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.012167041999987305,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.2489952920000178,
+      "cleanup_elapsed_s": 0.02400995799996508,
+      "supervisor_elapsed_s": 0.2730056670000067,
+      "stage_timings": {
+        "ortools_import_s": 0.17342570799996793,
+        "model_and_solver_s": 0.0011987910000925694,
+        "worker_entry_to_result_s": 0.17481770800009144
+      }
+    }
+  }
+}

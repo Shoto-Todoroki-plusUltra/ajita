@@ -1,6 +1,6 @@
 # Quantum Workload Studio
 
-Checkpoints **1A, 1B and 1C** provide a locally usable symmetric TSP prototype: exact oracle, OR-Tools, verified optional QUBO, bounded local QAOA, FastAPI and a small React UI. No practical quantum speedup demonstrated; novelty unverified. Local quantum simulation executes classically. Work stops at 1C for review; later phases remain unauthorized. Unlicensed and unpublished: owner license instruction is required before public release.
+Checkpoints **1A, 1B and 1C** provide a locally usable symmetric TSP prototype: exact oracle, OR-Tools, verified optional QUBO, bounded local QAOA, FastAPI and a small React UI. No practical quantum speedup demonstrated; novelty unverified. Local quantum simulation executes classically. The owner accepted the targeted 1C remediation and authorized Phase 2 B1 classroom timetabling only. Phase 2 implementation now awaits independent acceptance; Phases 3–4 remain unauthorized. Unlicensed and unpublished: owner license instruction is required before public release.
 
 This is a symmetric single-tour research example, **not a real-world delivery-routing service**. Coordinates are planar Euclidean distances. The four-city fixture uses synthetic costs, not road distances or travel times. See [the architecture](docs/ARCHITECTURE.md), [phase plan](docs/PHASE_PLAN.md) and [implementation report](docs/IMPLEMENTATION_REPORT.md) for scope, tests and limitations.
 
@@ -108,7 +108,7 @@ Bit vectors are city-major, nondepot city then positions 1..n-1. Integer bit zer
 
 [Checkpoint artifacts](evidence/checkpoint1a/summary.json) include the full 512-row JSON/CSV table, all six oracle routes, OR-Tools result, portable QUBO/schema, materialized distances, package/source/lock hashes and artifact manifest. Mathematical tables reproduce identically; timestamps and single-run timings vary. Measurements are not comparative benchmarks. Every decoded candidate is checked against original constraints before original-objective reporting.
 
-Tests parameterize all 512 assignments independently, check the hand-tabulated routes and lower-bound proof, reject corrupt/malformed inputs/exports and exercise CLI behavior. [IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) records actual results and commands. The user reported external review of the 1A source/evidence; that reviewer lacked OR-Tools, so full Mac execution evidence remains separate. The user also reported independent review of 1B source/artifacts and separately approved 1C. Those reviewers lacked the complete local Qiskit/OR-Tools stack; the original Mac XML and raw evidence are preserved. 1C independent review is pending. Later phases require separate explicit approval.
+Tests parameterize all 512 assignments independently, check the hand-tabulated routes and lower-bound proof, reject corrupt/malformed inputs/exports and exercise CLI behavior. [IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md) records actual results and commands. The user reported external review of the 1A source/evidence; that reviewer lacked OR-Tools, so full Mac execution evidence remains separate. The user also reported independent review of 1B source/artifacts and separately approved 1C. Those reviewers lacked the complete local Qiskit/OR-Tools stack; the original Mac XML and raw evidence are preserved. The owner accepted the targeted 1C fixes, retaining the unresolved historical OR-Tools latency risk, and authorized Phase 2 only. Phase 2 independent acceptance is pending.
 
 ## Optional checkpoint 1B local experiment
 
@@ -153,4 +153,25 @@ Create a **sanitized source-only** review package from committed HEAD using:
 
 The new `.zip.manifest.json` sidecar covers the exact ZIP member set, including required `.gitignore`, `.github/workflows/checks.yml`, `.githooks/pre-commit` and the embedded manifest. Verify the archive SHA after transfer; hidden files should be inspected with a ZIP listing, not a shell `*` glob. Git internals/history bundles, virtual environments, installed modules, caches and untracked files are excluded. Old evidence is preserved verbatim and old manifests describe their own checkpoints. The three reported missing files exist in this repository and in the prior ZIP retained here; the reviewer copy's omission cannot be explained from available evidence.
 
-For new test evidence, set `QWS_EVIDENCE_DIR` to an absolute correction-evidence path before frontend tests; the default continues to target the original 1C directory for compatibility. No license is chosen. Stop for correction review and separate Phase 2 approval; no later phase is authorized.
+For new test evidence, set `QWS_EVIDENCE_DIR` to an absolute correction-evidence path before frontend tests; the default continues to target the original 1C directory for compatibility. No license is chosen. The owner accepted those corrections and authorized Phase 2 only; no Phase 3–4 work is authorized.
+
+
+## B1 classroom timetabling (Phase 2, acceptance pending)
+
+Choose **Classroom timetable** in the local UI. The editable two-course JSON preset describes one event per course, rooms/capacities, explicitly nonoverlapping discrete slots, lecturer IDs, cohort IDs and nonnegative integer preference costs. Missing preferences cost zero. A room/slot assignment must satisfy capacity, exact course coverage and all room/lecturer/cohort conflicts. There is no recurrence, hospital scheduling, individual student sectioning or external calendar service.
+
+The default **OR-Tools CP-SAT** is a first-class classical solver. The tiny exhaustive oracle independently enumerates original room/slot assignments. Native CP-SAT status, original objective, best objective bound and proof flags are displayed separately. A timeout/UNKNOWN response cannot establish infeasibility. The grid appears only for an independently verified feasible candidate. Input edits clear all previous timetable/QUBO evidence.
+
+```sh
+.venv-api/bin/python -m quantum_workload_studio.cli timetable solve --instance examples/timetable/tiny.json --solver cp_sat --timeout-s 20
+.venv-api/bin/python -m quantum_workload_studio.cli timetable solve --instance examples/timetable/tiny.json --solver enumeration --timeout-s 20
+.venv-api/bin/python -m quantum_workload_studio.cli timetable compile --instance examples/timetable/tiny.json --output /tmp/b1-qubo.json
+.venv-api/bin/python -m quantum_workload_studio.cli timetable inspect --instance examples/timetable/tiny.json --qubo /tmp/b1-qubo.json --bits 1001
+.venv-api/bin/python scripts/evidence_timetable.py
+```
+
+Additional HTTP paths: `/api/problems/timetable/solve`, `/compile`, `/inspect`, `/validate` under that same prefix. These domain-specific endpoints keep the existing TSP contracts unchanged; generated types are checked against OpenAPI. Timetable solve accepts `method: "classical"`, solver `cp_sat` or `enumeration`, seed, timeout and memory settings. Timetable quantum execution is unsupported; the optional QUBO path is compilation/inspection, never a fabricated quantum result. The UI defaults to a 20-second whole-work deadline, sharing the existing single-worker policy with TSP. **Historical 20–30-second OR-Tools cold-start/tail-latency failures remain unresolved; no root-cause fix is claimed.**
+
+Protective B1 caps: 50 courses, 20 rooms, 40 slots, 50 lecturers/cohorts, 20,000 assignment cells/preferences, integer counts/costs at most 1,000,000; enumeration at most 65,536 room/slot combinations; QUBO at most **16 capacity-admissible variables**. QUBO variable order is course → room → slot input order, omitting capacity-inadmissible triples. Unlike the TSP display convention, **B1 displayed bits run left to right in variable-index order**; the API/CLI/UI explicitly label this distinction. All-zero or otherwise invalid candidates retain original conflict explanations and null original objective. A course with no admissible placement can produce a zero-variable, positive-constant QUBO; it remains proven infeasible, never a feasible empty timetable. A sufficient penalty is one plus the sum of maximum admissible preference per course; custom weaker penalties are visibly marked insufficient. This is our versioned format, not an industry standard.
+
+[Phase 2 report and evidence](docs/IMPLEMENTATION_REPORT.md) include real Mac tests and reproducible tiny certificates. No dependency versions changed. Source archive generation remains committed-HEAD only; use `--output review-snapshots/phase2-source.zip`. No license has been selected; no remote push or publication was performed. Stop for independent Phase 2 acceptance before any Phase 3 work.

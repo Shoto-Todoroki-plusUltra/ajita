@@ -1,0 +1,75 @@
+{
+  "status": 200,
+  "body": {
+    "schema_version": 1,
+    "instance_hash": "7073e8e14a45435a71f4d9381cbf9abc20427eb66f87cca6400e728b122d0ed7",
+    "method": "classical",
+    "solver_id": "ortools_tsp",
+    "execution_status": "completed",
+    "outcome": "feasible",
+    "assignment": {
+      "tour": [
+        "A",
+        "D",
+        "C",
+        "B",
+        "A"
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "objective": 4,
+    "objective_unit": "synthetic_cost",
+    "proven_optimal": false,
+    "total_elapsed_s": 0.14101279199996952,
+    "quantum": null,
+    "worker": {
+      "execution_status": "completed",
+      "process_start_call_s": 0.001263875000063308,
+      "first_worker_event_elapsed_s": 0.07796095799994873,
+      "observed_peak_worker_rss_bytes": 53297152,
+      "monitor_error": null,
+      "worker_pid": 4027,
+      "worker_exitcode": 0,
+      "max_observed_watchdog_interval_s": 0.0122622080000383,
+      "worker_alive_after_cleanup": false,
+      "forced_cleanup": false,
+      "compute_elapsed_s": 0.12677733299994998,
+      "cleanup_elapsed_s": 0.014161166999997477,
+      "supervisor_elapsed_s": 0.14093958299997666,
+      "stage_timings": {
+        "ortools_import_s": 0.046111625000094136,
+        "dispatch_validation_model_solver_s": 0.002659834000041883,
+        "native_solver_s": 0.0007109160000027259,
+        "worker_entry_to_result_s": 0.04882008300000962
+      },
+      "phase_events": [
+        {
+          "kind": "worker_entry",
+          "monotonic_s": 924.969456458
+        },
+        {
+          "kind": "import_started",
+          "monotonic_s": 924.969482916
+        },
+        {
+          "kind": "imports_complete",
+          "import_seconds": 0.046111625000094136
+        }
+      ]
+    },
+    "effective_options": {
+      "scale": 1000,
+      "rounding": "nearest_ties_to_even",
+      "timeout_s": 20,
+      "strategy": "PATH_CHEAPEST_ARC",
+      "search": "GREEDY_DESCENT",
+      "seed": null,
+      "integer_objective": 4000,
+      "tour_rounding_error_bound": 0.002
+    }
+  }
+}

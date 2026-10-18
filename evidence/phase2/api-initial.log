@@ -1,0 +1,240 @@
+........FF.                                                              [100%]
+=================================== FAILURES ===================================
+________ test_cross_domain_admission_disconnect_and_cancellation[False] ________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10879b170>
+cancel_task = False
+
+    @pytest.mark.parametrize("cancel_task", [False, True])
+    def test_cross_domain_admission_disconnect_and_cancellation(monkeypatch, cancel_task):
+        import httpx
+    
+        module = importlib.import_module("quantum_workload_studio.api.timetable")
+        monkeypatch.setattr(module, "classical_worker", _sleep)
+        app = create_app()
+    
+        async def scenario():
+            queue = asyncio.Queue()
+            await queue.put(
+                {
+                    "type": "http.request",
+                    "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+                }
+            )
+    
+            async def send(message):
+                pass
+    
+            scope = {
+                "type": "http",
+                "asgi": {"version": "3.0"},
+                "http_version": "1.1",
+                "method": "POST",
+                "scheme": "http",
+                "path": "/api/problems/timetable/solve",
+                "raw_path": b"/api/problems/timetable/solve",
+                "query_string": b"",
+                "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+                "client": ("127.0.0.1", 1),
+                "server": ("127.0.0.1", 8000),
+            }
+            task = asyncio.create_task(app(scope, queue.get, send))
+            for _ in range(100):
+                if app.state.busy:
+                    break
+                await asyncio.sleep(0.01)
+            assert app.state.busy
+            from quantum_workload_studio.evidence import default_instance
+    
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://localhost"
+            ) as c:
+                # Any valid TSP request must share the timetable admission gate.
+                r = await c.post(
+                    "/api/problems/tsp/solve",
+                    json={"instance": default_instance().model_dump(), "solver": "exact_tsp"},
+                )
+                assert r.status_code == 503 and r.json()["error"]["code"] == "busy"
+            if cancel_task:
+                task.cancel()
+                with pytest.raises(asyncio.CancelledError):
+                    await asyncio.wait_for(task, 3)
+            else:
+                await queue.put({"type": "http.disconnect"})
+                await asyncio.wait_for(task, 3)
+            assert not app.state.busy and not app.state.last_worker["worker_alive_after_cleanup"]
+    
+>       asyncio.run(scenario())
+
+tests/api/test_timetable.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    async def scenario():
+        queue = asyncio.Queue()
+        await queue.put(
+            {
+                "type": "http.request",
+                "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+            }
+        )
+    
+        async def send(message):
+            pass
+    
+        scope = {
+            "type": "http",
+            "asgi": {"version": "3.0"},
+            "http_version": "1.1",
+            "method": "POST",
+            "scheme": "http",
+            "path": "/api/problems/timetable/solve",
+            "raw_path": b"/api/problems/timetable/solve",
+            "query_string": b"",
+            "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+            "client": ("127.0.0.1", 1),
+            "server": ("127.0.0.1", 8000),
+        }
+        task = asyncio.create_task(app(scope, queue.get, send))
+        for _ in range(100):
+            if app.state.busy:
+                break
+            await asyncio.sleep(0.01)
+        assert app.state.busy
+>       from quantum_workload_studio.evidence import default_instance
+E       ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)
+
+tests/api/test_timetable.py:175: ImportError
+________ test_cross_domain_admission_disconnect_and_cancellation[True] _________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1087f1cd0>
+cancel_task = True
+
+    @pytest.mark.parametrize("cancel_task", [False, True])
+    def test_cross_domain_admission_disconnect_and_cancellation(monkeypatch, cancel_task):
+        import httpx
+    
+        module = importlib.import_module("quantum_workload_studio.api.timetable")
+        monkeypatch.setattr(module, "classical_worker", _sleep)
+        app = create_app()
+    
+        async def scenario():
+            queue = asyncio.Queue()
+            await queue.put(
+                {
+                    "type": "http.request",
+                    "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+                }
+            )
+    
+            async def send(message):
+                pass
+    
+            scope = {
+                "type": "http",
+                "asgi": {"version": "3.0"},
+                "http_version": "1.1",
+                "method": "POST",
+                "scheme": "http",
+                "path": "/api/problems/timetable/solve",
+                "raw_path": b"/api/problems/timetable/solve",
+                "query_string": b"",
+                "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+                "client": ("127.0.0.1", 1),
+                "server": ("127.0.0.1", 8000),
+            }
+            task = asyncio.create_task(app(scope, queue.get, send))
+            for _ in range(100):
+                if app.state.busy:
+                    break
+                await asyncio.sleep(0.01)
+            assert app.state.busy
+            from quantum_workload_studio.evidence import default_instance
+    
+            async with httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://localhost"
+            ) as c:
+                # Any valid TSP request must share the timetable admission gate.
+                r = await c.post(
+                    "/api/problems/tsp/solve",
+                    json={"instance": default_instance().model_dump(), "solver": "exact_tsp"},
+                )
+                assert r.status_code == 503 and r.json()["error"]["code"] == "busy"
+            if cancel_task:
+                task.cancel()
+                with pytest.raises(asyncio.CancelledError):
+                    await asyncio.wait_for(task, 3)
+            else:
+                await queue.put({"type": "http.disconnect"})
+                await asyncio.wait_for(task, 3)
+            assert not app.state.busy and not app.state.last_worker["worker_alive_after_cleanup"]
+    
+>       asyncio.run(scenario())
+
+tests/api/test_timetable.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py:691: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    async def scenario():
+        queue = asyncio.Queue()
+        await queue.put(
+            {
+                "type": "http.request",
+                "body": json.dumps({"instance": instance_data(), "timeout_s": 20.0}).encode(),
+            }
+        )
+    
+        async def send(message):
+            pass
+    
+        scope = {
+            "type": "http",
+            "asgi": {"version": "3.0"},
+            "http_version": "1.1",
+            "method": "POST",
+            "scheme": "http",
+            "path": "/api/problems/timetable/solve",
+            "raw_path": b"/api/problems/timetable/solve",
+            "query_string": b"",
+            "headers": [(b"host", b"localhost"), (b"content-type", b"application/json")],
+            "client": ("127.0.0.1", 1),
+            "server": ("127.0.0.1", 8000),
+        }
+        task = asyncio.create_task(app(scope, queue.get, send))
+        for _ in range(100):
+            if app.state.busy:
+                break
+            await asyncio.sleep(0.01)
+        assert app.state.busy
+>       from quantum_workload_studio.evidence import default_instance
+E       ImportError: cannot import name 'default_instance' from 'quantum_workload_studio.evidence' (/Users/pradumnkapil/proj/ajita/src/quantum_workload_studio/evidence.py)
+
+tests/api/test_timetable.py:175: ImportError
+=============================== warnings summary ===============================
+.venv-api/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/pradumnkapil/proj/ajita/.venv-api/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/api/test_timetable.py::test_cross_domain_admission_disconnect_and_cancellation[False]
+FAILED tests/api/test_timetable.py::test_cross_domain_admission_disconnect_and_cancellation[True]
+2 failed, 9 passed, 1 warning in 4.23s

@@ -1,0 +1,40 @@
+{
+  "source": "parsed from actual final JUnit XML, not synthetic test results",
+  "checks": [
+    {
+      "xml": "evidence/phase2/full-macos-quantum.xml",
+      "tests": 1186,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "xml": "evidence/phase2/classical-macos.xml",
+      "tests": 648,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    {
+      "xml": "evidence/phase2/backend-final.xml",
+      "tests": 61,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "xml": "evidence/phase2/vitest.xml",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "xml": "evidence/phase2/playwright.xml",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ]
+}
