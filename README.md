@@ -59,7 +59,7 @@ For explicitly opt-in quantum mode, stop the classical server and use a distinct
 QWS_ENABLE_LOCAL_QUANTUM=1 .venv-api-quantum/bin/python -m uvicorn quantum_workload_studio.api.app:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-Choose the supplied matrix, manually edit its JSON matrix/coordinates, or load the planar square example. Matrix drawing positions are schematic and do not define costs. Select OR-Tools, exact enumeration or opt-in local QAOA. No result is prefilled. Quantum fields show **all optimizer shots**, weighted feasible/invalid fractions, trace-best feasible original cost, exact reference/gap and a separately labeled optimizer success flag. A trace-best tour is not final-parameter distribution quality. The six-feasible/two-optimal-of-512 uniform calculation is analytical for the supplied matrix only, excludes compute costs and is not a quantum benchmark.
+Choose the supplied matrix, manually edit its JSON matrix/coordinates, or load the planar square example. Matrix drawing positions are schematic and do not define costs. Select OR-Tools, exact enumeration or opt-in local QAOA. No result is prefilled. Quantum fields show **all optimizer shots**, weighted feasible/invalid fractions, trace-best feasible original cost, exact reference/gap and a separately labeled optimizer success flag. A trace-best tour is not final-parameter distribution quality. The six-feasible/two-optimal-of-512 uniform calculation appears only when the current input structurally equals the complete unchanged original preset (not merely its ID). Otherwise it states that no analytical uniform baseline has been calculated. Editing clears previous results and sampling figures. The panel is an analytical expectation, excludes compute costs and is not an executed random/quantum benchmark. Backend computation elapsed includes cleanup but excludes HTTP/network/browser latency.
 
 API paths: `GET /api/health`, `POST /api/problems/tsp/solve`, `POST /api/qubo/compile`, `POST /api/qubo/inspect`; contracts are in [OpenAPI](schemas/openapi.json). The solve body contains `instance`, `method`, classical `solver`, top-level `timeout_s`, `memory_limit_mb`, integer `scale` and optional `quantum` settings. **Top-level deadline/memory govern the entire job and replace the nested LocalOptions values**, which are echoed as effective settings. No file paths, serialized executables, accounts, network solver backends or arbitrary converter options are accepted.
 
@@ -140,3 +140,17 @@ Mapper 0.1.0 is isolated in `.venv-mapper`, with a separate [hashed lock](requir
 ```
 
 The [saved cross-check](evidence/checkpoint1b/mapper-crosscheck.json) compares the exact reduced variables, explicit penalty 16, canonical coefficients/offset, all 512 energies/Ising expectations and six feasible assignments. Direct core execution remains the QAOA path. No general converter correctness or broader compatibility is claimed.
+
+## Targeted 1C correction review
+
+The [correction report](docs/IMPLEMENTATION_REPORT.md) and [executed commands](evidence/checkpoint1c-corrections/commands.md) record the fixture-reference patch, bounded startup investigation and fresh acceptance runs. The 20-second tiny OR-Tools audit did not reproduce the historical long delays; its cause remains unproven, and no timeout was raised to hide it. Worker metadata now separates process-start call, first event/bootstrap observation, native imports, model/solver dispatch, native solver and cleanup; these nested intervals must not be summed as disjoint stages.
+
+Create a **sanitized source-only** review package from committed HEAD using:
+
+```sh
+.venv-api/bin/python scripts/create_review_archive.py --output review-snapshots/checkpoint1c-corrections.zip
+```
+
+The new `.zip.manifest.json` sidecar covers the exact ZIP member set, including required `.gitignore`, `.github/workflows/checks.yml`, `.githooks/pre-commit` and the embedded manifest. Verify the archive SHA after transfer; hidden files should be inspected with a ZIP listing, not a shell `*` glob. Git internals/history bundles, virtual environments, installed modules, caches and untracked files are excluded. Old evidence is preserved verbatim and old manifests describe their own checkpoints. The three reported missing files exist in this repository and in the prior ZIP retained here; the reviewer copy's omission cannot be explained from available evidence.
+
+For new test evidence, set `QWS_EVIDENCE_DIR` to an absolute correction-evidence path before frontend tests; the default continues to target the original 1C directory for compatibility. No license is chosen. Stop for correction review and separate Phase 2 approval; no later phase is authorized.

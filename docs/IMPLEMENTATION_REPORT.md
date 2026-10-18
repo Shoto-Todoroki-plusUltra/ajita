@@ -1,3 +1,65 @@
+# Targeted 1C corrections and reliability review
+
+18 October 2026. Scope: only the user's fixture-reference, sanitized-archive, cold-start audit and elapsed-label corrections. The original web/API slice is **provisionally accepted** by the user-reported independent review; these corrections await review. No Phase 2, QPU/cloud integration, CVRP or research benchmark began. No push/publication/license choice. Codex authored this patch; no independent review of it is claimed.
+
+## Changes and regression evidence
+
+- The nine-bit/512-assignment/six-feasible/two-cost-4 analytical panel now requires **full structural equality of the current parsed input with the complete unchanged original preset**, independent of JSON key order. `instance_id` alone cannot authorize it. Changed same-ID matrices, coordinates, five cities, invalid JSON and other nonmatching inputs receive: “No analytical uniform baseline has been calculated for the selected instance.” Editing clears prior results, sampled-shot figures and the previous tour sketch. No new baseline was inferred or simulated. Analytical expectation remains distinct from executed experiments.
+- The elapsed label is now **Backend computation elapsed (including cleanup)**, with a visible qualifier excluding HTTP/network/browser latency. No end-to-end timing was invented.
+- Existing worker supervision/solver options remain unchanged. Added measured startup/import/spawn/solve/cleanup diagnostic fields/events; failures retain the reached phases. This is instrumentation, **not a claimed root-cause fix**. No deadline was increased for this audit.
+- `scripts/create_review_archive.py` builds committed source only, explicitly requires all three hidden configuration files, refuses Git internals/bundles, credentials markers/credential URLs, environments/modules/caches and unrelated untracked files. Its external manifest is derived from actual ZIP bytes and hashes **every member including the embedded manifest**; exact member set, each digest and ZIP CRC are verified. It also supplies a whole-ZIP SHA-256. Targeted credential checks are not a universal secret-audit claim.
+
+The required `.gitignore`, `.github/workflows/checks.yml` and `.githooks/pre-commit` exist, are tracked and are unchanged from `4b93eed`. They also exist with matching hashes in the old ZIP retained on this Mac, `checkpoint1c-source-4b93eed.zip`. The provenance of the reviewer's copy is unavailable, so its omission is **unexplained**, not attributed to an invented history or cause. [Input audit](../evidence/checkpoint1c-corrections/archive-input-audit.json). The new archive has an exact external manifest; prior manifests remain frozen historical records and are not used to claim the new ZIP is complete. The new package contains **no Git history bundle or `.git` objects**, unlike the earlier package.
+
+| Actual post-patch check | Result |
+| --- | --- |
+| Full pinned optional-quantum Python suite, including all 1A/1B math regressions, API and new archive/timing tests | **1,125 passed**, zero failures/errors/skips; three original SWIG warnings and Starlette/HTTPX deprecation. [XML](../evidence/checkpoint1c-corrections/python-full.xml) |
+| Classical API/mathematical/archive selection without Qiskit | **589 passed, one intentional Qiskit-only skip**, zero failures/errors; same four warnings. [XML](../evidence/checkpoint1c-corrections/python-classical.xml) |
+| Isolated pytest startup timing probes | **3 passed** with fixed 20-second deadlines. [XML](../evidence/checkpoint1c-corrections/pytest-isolated.xml) |
+| Archive contract tests | **3 passed**: required dotfiles, exact members/hashes, tamper detection, forbidden paths. Included in full suite. [XML](../evidence/checkpoint1c-corrections/archive-tests.xml) |
+| Vitest | **9 passed**, including unchanged preset, changed matrix with same ID, actual coordinate control, five-city matrix, stale-sample/sketch clearing and elapsed-label qualifier. [XML](../evidence/checkpoint1c-corrections/vitest.xml) |
+| Real Mac Chromium against real API/Vite | **7 passed**, including prior flows and actual original-preset solve → edit same ID → solve changed matrix → coordinates → five-city solve; no incorrect analytical figures and no mocked production success. [XML](../evidence/checkpoint1c-corrections/playwright.xml), [screenshot](../evidence/checkpoint1c-corrections/baseline-neutral.png) |
+| Build / quality / schema drift / package consistency | TypeScript/Vite build, Ruff/format, generated OpenAPI/TypeScript checks and both `pip check` commands passed. [Build log](../evidence/checkpoint1c-corrections/frontend-build.log). No dependency versions changed. |
+
+Initial correction full suite passed 1,122 before the three archive tests were added; final full count above is authoritative. No required test failed during this correction run. Two patch-context attempts failed without changing files, a missing optional `.gitattributes` read returned an error, and initial Ruff import ordering was corrected; these tooling outcomes are recorded in [commands](../evidence/checkpoint1c-corrections/commands.md). Deliberate timeout/resource/error test cases are still genuine failures of those requested runs, not relabeled successful solves. All previous 1A/1B and initial 1C raw artifacts, XML, locks and historical failure records remain byte-for-byte unchanged.
+
+## Bounded startup investigation — risk remains unresolved
+
+Pinned `.venv-api` on actual **macOS 26.5.2/build 25F84, arm64, CPython 3.12.13**. FastAPI 0.143.2, Uvicorn 0.54.0, OR-Tools 9.15.6755 and the existing lock versions were reused. Browser stack remains Node 24.22.0/npm 11.19.1 and Chromium 156.0.8078.4. See [raw environment/measurements](../evidence/checkpoint1c-corrections/cold-start.json), [derived summary](../evidence/checkpoint1c-corrections/reliability-summary.json) and actual commands. No cache purge, dependency reinstall, algorithm tuning, native-library substitution or paid resources were used.
+
+The sequential driver ran **three fresh API interpreter processes**, with a first request and a warmed-server second request each; **every request still starts a fresh worker**. Then it ran **three fresh standalone workers** outside ASGI/pytest. Startup cap 10 seconds, unchanged per-request/native solver cap **20 seconds**, HTTP cap 23 seconds and whole-audit cap 240 seconds. Server shutdown and owned worker cleanup were bounded and observed. The audit actually finished in ~2.75 seconds: six HTTP 200s, three completed standalone workers, all verified original cost 4, clean worker exits/no surviving workers in those results.
+
+| Recorded interval (seconds) | Actual observation |
+| --- | --- |
+| First observed server spawn-to-health | 0.2355; subsequent fresh-server starts 0.1925 and 0.1900 |
+| First server Uvicorn / API-module imports | 0.0547 / 0.1111; measured inside that new interpreter |
+| First observed HTTP request | 0.5755 driver wall time; native OR-Tools import 0.4533; native solver 0.0052 |
+| Warmed-server requests (each with fresh worker) | 0.1271–0.1284 driver wall time |
+| `.start()` call across six requests | 0.0010–0.0102 |
+| Parent-observed first worker event | 0.0706–0.0799; includes bootstrap/module imports/IPC/polling, not isolated OS spawn time |
+| Native OR-Tools import across six requests | 0.0398–0.4533 |
+| Native solve across six requests | 0.00064–0.00522 |
+| Worker cleanup across six requests | 0.0105–0.0116 |
+| Standalone worker total | 0.1238–0.1403 |
+| Isolated pytest/TestClient service computation | 0.1245–0.2363; separate artifacts from full-suite probes |
+| Full-regression pytest/TestClient service computation | 0.1271–0.1324 in latest recorded three cases |
+
+These timings are **nested**, not additive disjoint stages. Driver wall includes local HTTP/client overhead; UI backend computation does not. Fresh processes are not proof of flushed OS/file caches or a first-ever Mac native import. The very first *observed request in this audit* is retained distinctly, not silently discarded as warmup. Isolated and full-regression pytest observations are separate; ordinary desktop scheduling and overlapping frontend checks are not claimed absent. The sample is too small to characterize tail reliability or establish causality.
+
+**The historical 20–30-second timeouts were not reproduced, and their cause is not demonstrated.** A slower first native import in this run does not explain those historical failures. No speculative fix, larger timeout, hidden warmup, fallback, stress/benchmark grid or major redesign was attempted. Unexplained cold-start/tail-latency risk remains explicitly open for independent review. Polling-based memory/deadline enforcement still has the earlier documented OS/overshoot/abrupt-parent-death limitations. This is a bounded reliability investigation, not a Phase 3 research benchmark.
+
+## Review package and stop gate
+
+[Commands](../evidence/checkpoint1c-corrections/commands.md) and [changed-file inventory](../evidence/checkpoint1c-corrections/file-inventory.txt) accompany the new sanitized full-project ZIP. `scripts/create_review_archive.py` packages committed HEAD, not arbitrary working-tree files; `.zip.manifest.json` outside the ZIP covers the exact actual member set and includes the embedded manifest's hash. The external checksum/manifest and required-hidden-file entries must be checked after transfer. Installed tools, environments, credentials, unrelated files and Git internals/history are excluded; required source-controlled configuration is retained. The archive is local only. Source/test milestone: `60b4fb6`; final evidence/report commit appears in Git log and archive metadata. No new platform or remote CI execution is claimed. No license chosen; project remains unlicensed/unpublished.
+
+**Stop here. Please review these corrections and the unresolved reliability risk before any separately authorized Phase 2 work.**
+
+---
+
+# Historical initial 1C, 1B and 1A reports
+
+The following original records, including all failures, are retained. Their prior archive packaging and fixture-panel behavior are superseded by the targeted corrections above.
+
 # Implementation report — checkpoint 1C
 
 Executed 16 October 2026; final review/package 17 October 2026. Scope: **1C only, tasks 1.9–1.11**, separately authorized after user-reported external 1B source/artifact review. Implementation and local acceptance checks are complete; independent 1C review remains pending. Work stops here. No Phase 2 timetable, Phase 3 benchmark study, Phase 4 hardware, CVRP, publication or remote push was started. **Unlicensed/unpublished: an explicit owner license instruction is a public-release blocker.** No practical quantum speedup demonstrated; novelty unverified.
