@@ -1,0 +1,26 @@
+{
+  "algorithm": "sha256",
+  "self_excluded": true,
+  "files": {
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/certificate-command.log": "21799f17726df1f4a1b889481bf45e587f7f3eae3f5b67afc415b958f96ca84b",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/classical-policy.json": "654aaa901f4d2343ee00adbfd5d1a2389d13bc0101c44b59e8b006655767cc80",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/classical.log": "f828c787790aaa55b0dad4a7d8996ffbce21d55fbeb5b96c2a628cfa93d8be15",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/classical.xml": "5c7feac4f1a3f4220ab86404e235388fde61b7436f37257a283b6420658d8204",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/commands.md": "fa82e42b7c3cde5ce26b2d4cf2be8b6b9727f00522b78b483059aa7648b6f183",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/environment.json": "8107cb8c497f1bc101c72f8dfdba7afbd701a67557fdc9c9e770af52084d644e",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/final-mapping-only.log": "63d0b3a5d3819a0d90cb23667e80a2c78038ec9b541c867b16809ce32ef45fc4",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/final-mapping-only.xml": "a99f3cea59bbed62721078f6ee07c1db783dd8017484b236f27d02f128a35c85",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/final-policy.json": "c728dce67ee71cd9c3a3b9ec3b045731fa217b0bc81f70bac6c668d1ee17bf43",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/full-mapping-only.log": "1233a4ab8a7370922cdfa779556042cddc5b4e23d1d186fe657317adc137b1c4",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/full-mapping-only.xml": "1de6c98fa3f1bc370d343c0f4d252ca7c719a87b452b365a9d320362249e8c41",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/full-policy.json": "c728dce67ee71cd9c3a3b9ec3b045731fa217b0bc81f70bac6c668d1ee17bf43",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/inventory.json": "dd0f452de33c82a8e31d262af021dd7af6c47d248e251fbf90665dce75907318",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/mapping-certificate.json": "ed4b40c3744f6297b576564f9741f8bf2cd1ab35566235e890468cabacfb4b44",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/mapping-initial.log": "15eb72ef0da9aaada35b47aa296f8461396316ce4f2c8e0ae5ff7c3498abbfc4",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/mapping-initial.xml": "e68c99839b88d2736a91033a8a806b7bcb60d01dd955779fd5463294b68b34ee",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/preservation.json": "5b17de2c5a04e498b241bb2ec8596007060f50458748e965a0b9c5663c3cca22",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/quality.log": "a8de894e03053e519b463ae30fc334f8088eceaa996ef907e39a8a3304f560d1",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/quantum-pip-check.log": "aff71c80b5587dcef5d0fedc4a87711c4f53ee25e265ad4e988a55ac79ac952f",
+    "/Users/pradumnkapil/proj/ajita/evidence/3bm/targeted-policy.json": "24aee3b3c292d5afa180b6633b650a59adc456c045eb4ac58aec834a055a8b47"
+  }
+}

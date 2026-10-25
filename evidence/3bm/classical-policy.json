@@ -1,0 +1,8 @@
+{
+  "deferred_not_passed": [
+    "tests/api/test_service.py::test_real_quantum_and_no_feasible_outcome"
+  ],
+  "forbidden_call_attempts": [],
+  "pytest_exitstatus": 0,
+  "policy": "No real sampler, optimizer experiment or default QAOA worker execution"
+}

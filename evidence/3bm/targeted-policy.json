@@ -1,0 +1,6 @@
+{
+  "deferred_not_passed": [],
+  "forbidden_call_attempts": [],
+  "pytest_exitstatus": 1,
+  "policy": "No real sampler, optimizer experiment or default QAOA worker execution"
+}
