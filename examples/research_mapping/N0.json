@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "timetable",
+  "instance_id": "p3a-b1-N0",
+  "rooms": [
+    {
+      "id": "R1",
+      "capacity": 30
+    }
+  ],
+  "slots": [
+    {
+      "id": "S1",
+      "label": "Monday 09:00",
+      "order": 0
+    }
+  ],
+  "lecturer_ids": [
+    "L1"
+  ],
+  "cohort_ids": [
+    "G1"
+  ],
+  "courses": [
+    {
+      "id": "Math",
+      "lecturer_id": "L1",
+      "cohort_ids": [
+        "G1"
+      ],
+      "enrollment": 20
+    },
+    {
+      "id": "Physics",
+      "lecturer_id": "L1",
+      "cohort_ids": [
+        "G1"
+      ],
+      "enrollment": 25
+    }
+  ],
+  "preferences": []
+}

@@ -3,6 +3,7 @@
 import math
 from dataclasses import dataclass
 
+from quantum_workload_studio.qubo.timetable import TimetableQubo
 from quantum_workload_studio.qubo.tsp import QuboArtifact, validate_bits
 
 
@@ -19,7 +20,7 @@ class IsingPolynomial:
                           *(a*z[i]*z[j] for i, j, a in self.quadratic)])
 
 
-def to_ising_basis(qubo: QuboArtifact) -> IsingPolynomial:
+def to_ising_basis(qubo: QuboArtifact | TimetableQubo) -> IsingPolynomial:
     linear = [0.0] * len(qubo.variables)
     constant = [qubo.offset]
     pairs = []

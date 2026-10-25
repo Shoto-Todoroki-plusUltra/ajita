@@ -6,15 +6,14 @@ RSS is sampled enforcement, NOT a kernel hard memory reservation/ceiling.
 import math
 import multiprocessing as mp
 import os
-import threading
 import time
 from typing import Annotated, Literal
 
 from pydantic import Field, model_validator
 
+from quantum_workload_studio.execution.operator import normalize_counts
 from quantum_workload_studio.models.tsp import StrictModel, TspInstance, evaluate_original_objective
 from quantum_workload_studio.qubo.tsp import bits_from_display, compile_qubo, decode_assignment
-from quantum_workload_studio.execution.operator import normalize_counts
 
 
 class LocalOptions(StrictModel):
@@ -97,17 +96,25 @@ def _qaoa_worker(send, payload):
         for name in ["OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "RAYON_NUM_THREADS"]:
             os.environ[name] = "1"
         import numpy as np
-        from scipy.optimize import minimize
         from qiskit import transpile
         from qiskit.circuit.library import qaoa_ansatz
         from qiskit.primitives import StatevectorSampler
+        from scipy.optimize import minimize
+
         from quantum_workload_studio.execution.operator import sparse_operator
 
         start = time.monotonic()
         instance = TspInstance.model_validate(payload["instance"])
         options = LocalOptions.model_validate(payload["options"])
-        qubo = compile_qubo(instance)
-        operator, offset = sparse_operator(qubo)
+        divisor = 1.0
+        research_metadata = None
+        if payload.get("research") is None:
+            qubo = compile_qubo(instance)
+            operator, offset = sparse_operator(qubo)
+        else:
+            from quantum_workload_studio.execution.research_mapping import resolve_tsp_worker_input
+            qubo, operator, offset, divisor, research_metadata = resolve_tsp_worker_input(
+                instance, options, payload["research"])
         # No offset in evolution: global phase only. Sample objective includes it.
         circuit = qaoa_ansatz(operator, reps=options.reps, flatten=True)
         pre = {"depth": circuit.depth(), "gates": dict(circuit.count_ops()), "qubits": circuit.num_qubits}
@@ -126,6 +133,8 @@ def _qaoa_worker(send, payload):
                    "transpile_seconds": time.monotonic()-trans_start,
                    "target": "local all-to-all u/cx basis; no device calibration or hardware model",
                    "logical_to_classical": list(range(circuit.num_qubits))})
+        if research_metadata is not None:
+            send.send({"kind": "research_mapping", **research_metadata})
         evaluations = 0
 
         def objective(parameters):
@@ -153,7 +162,7 @@ def _qaoa_worker(send, payload):
             mean = math.fsum(qubo.energy(bits_from_display(s, len(qubo.variables)))*count
                              for s, count in normalized.items())/options.shots
             evaluations += 1
-            return mean
+            return mean/divisor
 
         solve_start = time.monotonic()
         optimized = minimize(objective, initial, method="COBYLA",
@@ -266,7 +275,7 @@ def supervise(payload, options, *, cancel=None, target=None, on_event=None):
             "cleanup_elapsed_s": cleanup_elapsed, "supervisor_elapsed_s": time.monotonic()-started}
 
 
-def run_local(instance, options=None, *, cancel=None):
+def run_local(instance, options=None, *, cancel=None, research=None):
     """Entry point: classical oracle is reference-only, never supplies candidates."""
     started = time.monotonic()
     options = options or LocalOptions()
@@ -274,6 +283,17 @@ def run_local(instance, options=None, *, cancel=None):
     instance = TspInstance.model_validate(instance.model_dump())
     options = LocalOptions.model_validate(options.model_dump())
     count = (len(instance.city_ids)-1)**2
+    research_payload, research_metadata = None, None
+    if research is not None:
+        from quantum_workload_studio.execution.research_mapping import (
+            TspResearchInput,
+            check_research_options,
+            prepare_tsp,
+        )
+        options = check_research_options(options)
+        research = TspResearchInput.model_validate(research.model_dump())
+        _, mapping = prepare_tsp(instance, research)
+        research_payload, research_metadata = research.model_dump(), mapping.metadata()
     preflight = memory_preflight(count, options)
     from quantum_workload_studio.classical.tsp import exact_solve
     oracle_start = time.monotonic()
@@ -297,7 +317,10 @@ def run_local(instance, options=None, *, cancel=None):
     if remaining <= 0:
         raise TimeoutError("deadline expired during preflight")
     worker_options = options.model_copy(update={"timeout_s": remaining})
-    result = supervise({"instance": instance.model_dump(), "options": options.model_dump()}, worker_options,
+    payload = {"instance": instance.model_dump(), "options": options.model_dump()}
+    if research_payload is not None:
+        payload["research"] = research_payload
+    result = supervise(payload, worker_options,
                        cancel=cancel, on_event=on_event)
     failures = [event for event in result["events"] if event["kind"] == "error"]
     # No second decode outside the deadline; aggregate only already validated rows.
@@ -316,7 +339,8 @@ def run_local(instance, options=None, *, cancel=None):
     elapsed = time.monotonic()-started
     if elapsed-result["cleanup_elapsed_s"] > options.timeout_s and result["execution_status"] == "completed":
         result["execution_status"] = "timeout"  # includes parent reference/validation, never relabel late completion
-    return {"schema_version": 1, "method": "quantum_local", "backend": options.backend,
+    research_fields = {"research_mapping": research_metadata} if research_metadata is not None else {}
+    return {**research_fields, "schema_version": 1, "method": "quantum_local", "backend": options.backend,
             "candidate_source": "V2 sampler shots only; no classical fallback or repair",
             "instance_hash": instance.instance_hash(), "options": options.model_dump(),
             "preflight": preflight, **result, "sample_evaluations": sample_evaluations,

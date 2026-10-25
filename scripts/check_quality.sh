@@ -12,3 +12,7 @@ npm --prefix frontend run format:check
 
 "$QWS_PYTHON" -m ruff check src/quantum_workload_studio/models/timetable.py src/quantum_workload_studio/classical/timetable.py src/quantum_workload_studio/qubo/timetable.py src/quantum_workload_studio/domains/timetable.py src/quantum_workload_studio/timetable_cli.py scripts/evidence_timetable.py scripts/audit_phase2_preservation.py tests/test_timetable.py
 "$QWS_PYTHON" -m ruff format --check src/quantum_workload_studio/models/timetable.py src/quantum_workload_studio/classical/timetable.py src/quantum_workload_studio/qubo/timetable.py src/quantum_workload_studio/domains/timetable.py src/quantum_workload_studio/timetable_cli.py scripts/evidence_timetable.py scripts/audit_phase2_preservation.py tests/test_timetable.py
+
+# 3B-M: lint/format only. No mapping certificate or sampler runs in the hook.
+"$QWS_PYTHON" -m ruff check src/quantum_workload_studio/execution/research_mapping.py src/quantum_workload_studio/execution/mapping_certificate.py src/quantum_workload_studio/execution/local.py src/quantum_workload_studio/qubo/basis.py scripts/certify_research_mapping.py tests/mapping_only_policy.py tests/quantum/test_research_mapping.py
+"$QWS_PYTHON" -m ruff format --check src/quantum_workload_studio/execution/research_mapping.py src/quantum_workload_studio/execution/mapping_certificate.py scripts/certify_research_mapping.py tests/mapping_only_policy.py tests/quantum/test_research_mapping.py
