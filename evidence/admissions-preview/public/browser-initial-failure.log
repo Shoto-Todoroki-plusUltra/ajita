@@ -1,0 +1,48 @@
+
+> quantum-workload-studio-local-ui@0.1.0 e2e
+> playwright test --config playwright.preview.config.ts
+
+
+Running 8 tests using 1 worker
+
+(node:20747) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium-mac] › tests/e2e/timetable.spec.ts:32:1 › real CP-SAT and exhaustive oracle grid (1.5s)
+  ✓  2 [chromium-mac] › tests/e2e/timetable.spec.ts:57:1 › real QUBO feasible and invalid candidates with conflict reasons (380ms)
+  ✓  3 [chromium-mac] › tests/e2e/timetable.spec.ts:90:1 › real infeasible, invalid, timeout and unsupported states (767ms)
+  ✓  4 [chromium-mac] › tests/e2e/timetable.spec.ts:125:1 › small B1 viewport and module switch (313ms)
+  ✓  5 [chromium-mac] › tests/e2e/tsp.spec.ts:47:1 › real classical preset and coordinate flows (894ms)
+  ✓  6 [chromium-mac] › tests/e2e/tsp.spec.ts:105:1 › invalid and oversized instances have no fabricated route (312ms)
+  ✓  7 [chromium-mac] › tests/e2e/tsp.spec.ts:130:1 › small viewport remains usable (249ms)
+  ✘  8 [chromium-mac] › tests/e2e/tsp.spec.ts:191:1 › fixture reference follows current input, not its ID or previous solve (296ms)
+
+
+  1) [chromium-mac] › tests/e2e/tsp.spec.ts:191:1 › fixture reference follows current input, not its ID or previous solve 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+      198 |   await page.getByLabel("Shots per evaluation").fill("1");
+      199 |   await page.getByLabel("Optimizer evaluations").fill("4");
+    > 200 |   expect((await solve(page, "baseline-preset")).status()).toBe(200);
+          |                                                           ^
+      201 |   await expect(page.getByText(/With 4 independent draws/)).toBeVisible();
+      202 |   const edited = structuredClone(preset);
+      203 |   if (edited.geometry.kind === "matrix") {
+        at <PREVIEW_WORKTREE>/frontend/tests/e2e/tsp.spec.ts:200:59
+
+    Error Context: test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium-mac] › tests/e2e/tsp.spec.ts:191:1 › fixture reference follows current input, not its ID or previous solve 
+  7 passed (5.5s)

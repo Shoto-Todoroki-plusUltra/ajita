@@ -1,0 +1,5 @@
+{
+  "owned_loopback_processes_found_at_final_check": 0,
+  "owned_processes_alive_after_cleanup": 0,
+  "scope": "only matching preview cwd and uvicorn/vite command; not a general orphan cleanup guarantee"
+}

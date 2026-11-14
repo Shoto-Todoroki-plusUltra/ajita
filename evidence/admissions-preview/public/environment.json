@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07",
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "packages": {
+    "ortools": "9.15.6755",
+    "pydantic": "2.14.1",
+    "fastapi": "0.143.2",
+    "uvicorn": "0.54.0",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1",
+    "ruff": "0.17.1"
+  },
+  "node": "24.22.0",
+  "npm": "11.19.1",
+  "quantum_sdk_present": false,
+  "physical_ram_bytes_observed": 17179869184,
+  "available_ram_bytes_observed": 5019844608,
+  "environment_reuse": "fresh source checkout and locked offline frontend install; reused pinned classical Python dependencies",
+  "fresh_npm_install": "passed after separately retained ENOSPC failure and observed disk-space recovery",
+  "remote_ci": "not run"
+}

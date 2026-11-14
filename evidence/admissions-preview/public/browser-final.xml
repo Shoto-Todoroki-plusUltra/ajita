@@ -1,0 +1,20 @@
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="5.229535">
+<testsuite name="timetable.spec.ts" timestamp="2026-11-07T05:40:53.574Z" hostname="chromium-mac" tests="4" failures="0" skipped="0" time="3.211" errors="0">
+<testcase name="real CP-SAT and exhaustive oracle grid" classname="timetable.spec.ts" time="1.397">
+</testcase>
+<testcase name="real QUBO feasible and invalid candidates with conflict reasons" classname="timetable.spec.ts" time="0.383">
+</testcase>
+<testcase name="real infeasible, invalid, timeout and unsupported states" classname="timetable.spec.ts" time="1.021">
+</testcase>
+<testcase name="small B1 viewport and module switch" classname="timetable.spec.ts" time="0.41">
+</testcase>
+</testsuite>
+<testsuite name="tsp.spec.ts" timestamp="2026-11-07T05:40:53.574Z" hostname="chromium-mac" tests="3" failures="0" skipped="0" time="1.435" errors="0">
+<testcase name="real classical preset and coordinate flows" classname="tsp.spec.ts" time="0.853">
+</testcase>
+<testcase name="invalid and oversized instances have no fabricated route" classname="tsp.spec.ts" time="0.316">
+</testcase>
+<testcase name="small viewport remains usable" classname="tsp.spec.ts" time="0.266">
+</testcase>
+</testsuite>
+</testsuites>

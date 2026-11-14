@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="12" failures="0" errors="0" time="0.675341876">
+    <testsuite name="tests/App.test.tsx" timestamp="2026-11-07T13:26:21.902Z" hostname="Pradumns-MacBook-Air.local" tests="9" failures="0" errors="0" skipped="0" time="0.417091209">
+        <testcase classname="tests/App.test.tsx" name="honest presentation &gt; never prefills a result" time="0.041063583">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="honest presentation &gt; shows no-feasible state and separate convergence flag" time="0.097302708">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="honest presentation &gt; uses exact analytical uniform probabilities" time="0.000442">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="honest presentation &gt; shows server errors without a fabricated solution" time="0.085395958">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="fixture-specific analytical reference &gt; shows expectations only for the unchanged original preset" time="0.013224209">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="fixture-specific analytical reference &gt; hides preset numbers for an edited matrix with the same ID" time="0.046692708">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="fixture-specific analytical reference &gt; hides numbers for the actual coordinate example control" time="0.036604">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="fixture-specific analytical reference &gt; hides numbers for five-city matrices" time="0.002368625">
+        </testcase>
+        <testcase classname="tests/App.test.tsx" name="fixture-specific analytical reference &gt; clears previous sampled-shot figures as soon as input is edited" time="0.09187225">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/Timetable.test.tsx" timestamp="2026-11-07T13:26:21.904Z" hostname="Pradumns-MacBook-Air.local" tests="3" failures="0" errors="0" skipped="0" time="0.258250667">
+        <testcase classname="tests/Timetable.test.tsx" name="B1 presentation &gt; offers a separate module without TSP fixture statistics" time="0.151605">
+        </testcase>
+        <testcase classname="tests/Timetable.test.tsx" name="B1 presentation &gt; clears QUBO and candidate evidence on edited input" time="0.05592425">
+        </testcase>
+        <testcase classname="tests/Timetable.test.tsx" name="B1 presentation &gt; retains structured errors without fabricated grid" time="0.049273167">
+        </testcase>
+    </testsuite>
+</testsuites>

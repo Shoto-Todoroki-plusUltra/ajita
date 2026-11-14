@@ -1,9 +1,0 @@
-{
-  "output": "evidence/3bm/mapping-certificate.json",
-  "execution_status": "completed",
-  "basis_rows": 3897,
-  "sampler_calls": 0,
-  "worker_exitcode": 0,
-  "forced_cleanup": false,
-  "worker_alive_after_cleanup": false
-}

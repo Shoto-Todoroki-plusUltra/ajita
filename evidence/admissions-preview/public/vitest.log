@@ -1,0 +1,16 @@
+
+> quantum-workload-studio-local-ui@0.1.0 test
+> vitest run
+
+
+ RUN  v5.0.5 <PREVIEW_WORKTREE>/frontend
+
+ ✓ tests/Timetable.test.tsx (3 tests) 258ms
+ ✓ tests/App.test.tsx (9 tests) 417ms
+
+ Test Files  2 passed (2)
+      Tests  12 passed (12)
+   Start at  18:56:20
+   Duration  1.34s (environment 50%, tests 30%, setup 10%, transform 6%, import 4%)
+
+JUNIT report written to <PREVIEW_WORKTREE>/evidence/admissions-preview/fresh-frontend/vitest.xml

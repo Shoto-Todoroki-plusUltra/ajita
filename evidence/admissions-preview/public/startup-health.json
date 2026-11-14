@@ -1,0 +1,13 @@
+{
+  "health": {
+    "status": "ok",
+    "quantum_enabled": false,
+    "quantum_available": false,
+    "busy": false,
+    "concurrency": 1,
+    "max_payload_bytes": 2097152,
+    "memory_policy": "sampled RSS; not a kernel hard cap"
+  },
+  "ui_html_received": 571,
+  "contains_root": true
+}

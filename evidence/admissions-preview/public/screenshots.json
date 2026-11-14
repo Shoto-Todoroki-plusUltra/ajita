@@ -1,0 +1,15 @@
+{
+  "capture_date": "2026-10-18",
+  "source_baseline": "c6afdcc",
+  "reused_without_modification": true,
+  "files": {
+    "docs/images/tsp-classical.png": {
+      "source": "evidence/phase2/classical-desktop.png",
+      "sha256": "c9da6bbee7a920122b53c5b54906edb49a6c84e514cfbdd217e767d9fe1fc9e0"
+    },
+    "docs/images/b1-timetable.png": {
+      "source": "evidence/phase2/timetable-grid.png",
+      "sha256": "ca3f4a172f0917a3468d456ddca3f887b5e618cd0ccc9853f1a8d35a14bfa1db"
+    }
+  }
+}

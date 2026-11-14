@@ -1,0 +1,57 @@
+<testsuites id="" name="" tests="8" failures="1" skipped="0" errors="0" time="5.547605">
+<testsuite name="timetable.spec.ts" timestamp="2026-11-07T05:39:41.437Z" hostname="chromium-mac" tests="4" failures="0" skipped="0" time="2.965" errors="0">
+<testcase name="real CP-SAT and exhaustive oracle grid" classname="timetable.spec.ts" time="1.505">
+</testcase>
+<testcase name="real QUBO feasible and invalid candidates with conflict reasons" classname="timetable.spec.ts" time="0.38">
+</testcase>
+<testcase name="real infeasible, invalid, timeout and unsupported states" classname="timetable.spec.ts" time="0.767">
+</testcase>
+<testcase name="small B1 viewport and module switch" classname="timetable.spec.ts" time="0.313">
+</testcase>
+</testsuite>
+<testsuite name="tsp.spec.ts" timestamp="2026-11-07T05:39:41.437Z" hostname="chromium-mac" tests="4" failures="1" skipped="0" time="1.751" errors="0">
+<testcase name="real classical preset and coordinate flows" classname="tsp.spec.ts" time="0.894">
+</testcase>
+<testcase name="invalid and oversized instances have no fabricated route" classname="tsp.spec.ts" time="0.312">
+</testcase>
+<testcase name="small viewport remains usable" classname="tsp.spec.ts" time="0.249">
+</testcase>
+<testcase name="fixture reference follows current input, not its ID or previous solve" classname="tsp.spec.ts" time="0.296">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../frontend/test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/error-context.md]]
+
+[[ATTACHMENT|../../frontend/test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chromium-mac] › tsp.spec.ts:191:1 › fixture reference follows current input, not its ID or previous solve 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 400
+
+      198 |   await page.getByLabel("Shots per evaluation").fill("1");
+      199 |   await page.getByLabel("Optimizer evaluations").fill("4");
+    > 200 |   expect((await solve(page, "baseline-preset")).status()).toBe(200);
+          |                                                           ^
+      201 |   await expect(page.getByText(/With 4 independent draws/)).toBeVisible();
+      202 |   const edited = structuredClone(preset);
+      203 |   if (edited.geometry.kind === "matrix") {
+        at <PREVIEW_WORKTREE>/frontend/tests/e2e/tsp.spec.ts:200:59
+
+    Error Context: ../../test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/tsp-fixture-reference-foll-d6417-ot-its-ID-or-previous-solve-chromium-mac/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>

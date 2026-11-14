@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "quantum-workload-studio"
 version = "0.1.0"
+license = "Apache-2.0"
 description = "Locally verified TSP, optional QUBO and bounded quantum simulation"
 requires-python = ">=3.11,<3.13"
 dependencies = ["pydantic==2.14.1", "ortools==9.15.6755"]

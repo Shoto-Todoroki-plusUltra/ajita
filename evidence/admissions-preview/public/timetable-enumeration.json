@@ -1,0 +1,107 @@
+{
+  "execution": {
+    "execution_status": "completed",
+    "events": [
+      {
+        "kind": "worker_entry"
+      },
+      {
+        "kind": "import_started"
+      },
+      {
+        "kind": "imports_complete",
+        "import_s": null
+      },
+      {
+        "kind": "completed",
+        "result": {
+          "schema_version": 1,
+          "kind": "timetable",
+          "method": "classical",
+          "objective_unit": "preference_penalty",
+          "instance_hash": "6f43e19230ce7c09e2950ccb974a9d6d436a623a91a710a4a770a5a1ac130922",
+          "solver_id": "enumeration",
+          "native_status": "OPTIMAL",
+          "assignment": {
+            "assignments": [
+              {
+                "course_id": "Math",
+                "room_id": "R1",
+                "slot_id": "S1"
+              },
+              {
+                "course_id": "Physics",
+                "room_id": "R1",
+                "slot_id": "S2"
+              }
+            ]
+          },
+          "validation": {
+            "checked": true,
+            "feasible": true,
+            "violations": []
+          },
+          "objective": 1,
+          "best_objective_bound": 1.0,
+          "proven_optimal": true,
+          "proven_infeasible": false,
+          "solver_elapsed_s": 5.8542005717754364e-05,
+          "enumerated_assignments": 4,
+          "options": {}
+        },
+        "worker_timings": {
+          "ortools_import_s": null,
+          "model_and_solver_s": 5.8542005717754364e-05,
+          "worker_entry_to_result_s": 0.00024250000569736585
+        }
+      }
+    ],
+    "process_start_call_s": 0.003063000003749039,
+    "first_worker_event_elapsed_s": 0.0987346250039991,
+    "observed_peak_worker_rss_bytes": 36028416,
+    "monitor_error": null,
+    "worker_pid": 20530,
+    "worker_exitcode": 0,
+    "max_observed_watchdog_interval_s": 0.011318499993649311,
+    "worker_alive_after_cleanup": false,
+    "forced_cleanup": false,
+    "compute_elapsed_s": 0.09884550000424497,
+    "cleanup_elapsed_s": 0.01153587499720743,
+    "supervisor_elapsed_s": 0.11038237500179093
+  },
+  "result": {
+    "schema_version": 1,
+    "kind": "timetable",
+    "method": "classical",
+    "objective_unit": "preference_penalty",
+    "instance_hash": "6f43e19230ce7c09e2950ccb974a9d6d436a623a91a710a4a770a5a1ac130922",
+    "solver_id": "enumeration",
+    "native_status": "OPTIMAL",
+    "assignment": {
+      "assignments": [
+        {
+          "course_id": "Math",
+          "room_id": "R1",
+          "slot_id": "S1"
+        },
+        {
+          "course_id": "Physics",
+          "room_id": "R1",
+          "slot_id": "S2"
+        }
+      ]
+    },
+    "validation": {
+      "checked": true,
+      "feasible": true,
+      "violations": []
+    },
+    "objective": 1,
+    "best_objective_bound": 1.0,
+    "proven_optimal": true,
+    "proven_infeasible": false,
+    "solver_elapsed_s": 5.8542005717754364e-05,
+    "enumerated_assignments": 4,
+    "options": {}
+  }
+}

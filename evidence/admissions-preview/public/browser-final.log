@@ -1,0 +1,18 @@
+
+> quantum-workload-studio-local-ui@0.1.0 e2e
+> playwright test --config playwright.preview.config.ts
+
+
+Running 7 tests using 1 worker
+
+(node:20824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium-mac] › tests/e2e/timetable.spec.ts:32:1 › real CP-SAT and exhaustive oracle grid (1.4s)
+  ✓  2 [chromium-mac] › tests/e2e/timetable.spec.ts:57:1 › real QUBO feasible and invalid candidates with conflict reasons (383ms)
+  ✓  3 [chromium-mac] › tests/e2e/timetable.spec.ts:90:1 › real infeasible, invalid, timeout and unsupported states (1.0s)
+  ✓  4 [chromium-mac] › tests/e2e/timetable.spec.ts:125:1 › small B1 viewport and module switch (410ms)
+  ✓  5 [chromium-mac] › tests/e2e/tsp.spec.ts:47:1 › real classical preset and coordinate flows (853ms)
+  ✓  6 [chromium-mac] › tests/e2e/tsp.spec.ts:105:1 › invalid and oversized instances have no fabricated route (316ms)
+  ✓  7 [chromium-mac] › tests/e2e/tsp.spec.ts:130:1 › small viewport remains usable (266ms)
+
+  7 passed (5.2s)

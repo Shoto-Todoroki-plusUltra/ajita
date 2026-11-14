@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "projections_not_unchanged_raw": true,
+  "records": [
+    {
+      "portable_file": "classical.log",
+      "source_path": "evidence/admissions-preview/classical.log",
+      "source_sha256": "9680ff378e715c5308fa51ea73ac197b5f13d8467291386048642d876dcca0fe",
+      "portable_sha256": "95a04efb94ccd7e8d877cc0f7bbb694c0e9010c312f3aaf5bbb947715fe8ad26",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "classical.xml",
+      "source_path": "evidence/admissions-preview/classical.xml",
+      "source_sha256": "6bc4f8001d5316da0f636f42fc46801cc5482503743075f0eb09d84f96be679e",
+      "portable_sha256": "6bc4f8001d5316da0f636f42fc46801cc5482503743075f0eb09d84f96be679e",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "classical-policy.json",
+      "source_path": "evidence/admissions-preview/classical-policy.json",
+      "source_sha256": "654aaa901f4d2343ee00adbfd5d1a2389d13bc0101c44b59e8b006655767cc80",
+      "portable_sha256": "654aaa901f4d2343ee00adbfd5d1a2389d13bc0101c44b59e8b006655767cc80",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "browser-final.log",
+      "source_path": "evidence/admissions-preview/playwright-classical-final.log",
+      "source_sha256": "9b25d0e4809341ca7e759dda1868958a64a337ec15af49ccc09f25c3d91eaa8a",
+      "portable_sha256": "9b25d0e4809341ca7e759dda1868958a64a337ec15af49ccc09f25c3d91eaa8a",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "browser-final.xml",
+      "source_path": "evidence/admissions-preview/browser-classical-final/playwright.xml",
+      "source_sha256": "f5d7e353deb4e39c05e891c3cc67cdebc6dc1f22af8358bb7dc667af3b12d95a",
+      "portable_sha256": "f5d7e353deb4e39c05e891c3cc67cdebc6dc1f22af8358bb7dc667af3b12d95a",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "browser-initial-failure.log",
+      "source_path": "evidence/admissions-preview/playwright.log",
+      "source_sha256": "fc13a5ddccaa80f37e1043e622adc2107f9db7099b0d9dc55f7d30158cee5e7e",
+      "portable_sha256": "dbce73af9d0ce4bb41e57220fe935e4dfb5cecbbee862f31eecd82c529bba587",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "browser-initial-failure.xml",
+      "source_path": "evidence/admissions-preview/playwright-initial.xml",
+      "source_sha256": "25470f1d80028ac6d4b35712c1a7e180b70c612cc745283d96000625b1f0aff8",
+      "portable_sha256": "2dc71ca423d88ac49926fdd946dcc6d769006d7a2e56d1d086975116651dd143",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "npm-ci-failure.log",
+      "source_path": "evidence/admissions-preview/npm-ci.log",
+      "source_sha256": "f3cb245d2a6cadcf8835f1cd755853772dc808eab6f1e8b6eb54a03629a3788a",
+      "portable_sha256": "3555b2e046a781c63a1aaa2958b4620f365475dd1b1b492ed81928c753fbb605",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "archive-interrupted.log",
+      "source_path": "evidence/admissions-preview/archive-tests-interrupted.log",
+      "source_sha256": "ab5df625bc76dbd4e163bed2dd888df828f90159bb93556525c31821b6541d46",
+      "portable_sha256": "ab5df625bc76dbd4e163bed2dd888df828f90159bb93556525c31821b6541d46",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "archive-quality.log",
+      "source_path": "evidence/admissions-preview/archive-quality-final.log",
+      "source_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "portable_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "startup-health.json",
+      "source_path": "evidence/admissions-preview/startup-health.json",
+      "source_sha256": "1b202c0a07b6e1d374a0abab997c761ec6c00065140cab3113902702c1cfed05",
+      "portable_sha256": "1b202c0a07b6e1d374a0abab997c761ec6c00065140cab3113902702c1cfed05",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "tsp-exact.json",
+      "source_path": "evidence/admissions-preview/tsp-exact.json",
+      "source_sha256": "456106616ce80ea73021d4f35aac64d31dd30ba9296963e9c78a5331f7e53217",
+      "portable_sha256": "456106616ce80ea73021d4f35aac64d31dd30ba9296963e9c78a5331f7e53217",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "tsp-ortools.json",
+      "source_path": "evidence/admissions-preview/tsp-ortools.json",
+      "source_sha256": "fbfe0968d88ccfe64687da273cc522704a3bc5387a9e1957ac7b9cc66e34b88c",
+      "portable_sha256": "fbfe0968d88ccfe64687da273cc522704a3bc5387a9e1957ac7b9cc66e34b88c",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "timetable-cp-sat.json",
+      "source_path": "evidence/admissions-preview/timetable-cp-sat.json",
+      "source_sha256": "a2eee5c452d5e94e645368aed0958860ed9f96901f63b19932d8adcf158e6531",
+      "portable_sha256": "a2eee5c452d5e94e645368aed0958860ed9f96901f63b19932d8adcf158e6531",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "timetable-enumeration.json",
+      "source_path": "evidence/admissions-preview/timetable-enumeration.json",
+      "source_sha256": "e25f8ff6c576e26595c0ca00edf61e443bd2c69d1f343c0236223070f0093745",
+      "portable_sha256": "e25f8ff6c576e26595c0ca00edf61e443bd2c69d1f343c0236223070f0093745",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "four-city-512.json",
+      "source_path": "evidence/checkpoint1a/assignments.json",
+      "source_sha256": "eb9b4654be68d1f4881f26aeee717f5dee809638252a02b076ee35bea4bb0705",
+      "portable_sha256": "eb9b4654be68d1f4881f26aeee717f5dee809638252a02b076ee35bea4bb0705",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "four-city-routes.json",
+      "source_path": "evidence/checkpoint1a/routes.json",
+      "source_sha256": "b9505cbfaa85a257dfe8923893381726758bdc12630c245a3d2237988250cd8f",
+      "portable_sha256": "b9505cbfaa85a257dfe8923893381726758bdc12630c245a3d2237988250cd8f",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "tsp-operator-512.json",
+      "source_path": "evidence/checkpoint1b/operator-basis.json",
+      "source_sha256": "b94a729c83398e8b10fe3939af5cce2cbbe7bf93a714ec33d67b62a198f56040",
+      "portable_sha256": "b94a729c83398e8b10fe3939af5cce2cbbe7bf93a714ec33d67b62a198f56040",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-tsp-statevector.json",
+      "source_path": "evidence/checkpoint1b/qaoa-statevector.json",
+      "source_sha256": "afcd8b1f9b4f4c811f4e44b8a40c0eb4b9a045be0f015b7363154a6800802b26",
+      "portable_sha256": "13b76190e30722e4831ad68e0c0482e7017d5f0a853debf5fd59d808b8c8f33e",
+      "privacy_or_ansi_projection": true,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-tsp-no-feasible.json",
+      "source_path": "evidence/checkpoint1c/browser-no-feasible.json",
+      "source_sha256": "d35e0f632d5665b5e1929d83ea82a3671fb9213033e415a8a2ef1ffbfd4bbfa0",
+      "portable_sha256": "d35e0f632d5665b5e1929d83ea82a3671fb9213033e415a8a2ef1ffbfd4bbfa0",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "b1-mathematical-summary.json",
+      "source_path": "evidence/phase2/mathematical-summary.json",
+      "source_sha256": "874ff22fb39c4eda955e20590b46f6ebddd24ab0dad08b64d65451c3ed87687a",
+      "portable_sha256": "874ff22fb39c4eda955e20590b46f6ebddd24ab0dad08b64d65451c3ed87687a",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "mapping-3897.json",
+      "source_path": "evidence/3bm/mapping-certificate.json",
+      "source_sha256": "ed4b40c3744f6297b576564f9741f8bf2cd1ab35566235e890468cabacfb4b44",
+      "portable_sha256": "df1744a81d8b7ff86f7f834b0a3babd242cd039a02a908a895fd699ce519daff",
+      "privacy_or_ansi_projection": true,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-phase2-full.xml",
+      "source_path": "evidence/phase2/full-macos-quantum.xml",
+      "source_sha256": "855b53098c61c65b7e11843f13310e54e559ed609e6d2faa09f94aa33e096235",
+      "portable_sha256": "855b53098c61c65b7e11843f13310e54e559ed609e6d2faa09f94aa33e096235",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-3bm-tests.xml",
+      "source_path": "evidence/3bm/final-mapping-only.xml",
+      "source_sha256": "a99f3cea59bbed62721078f6ee07c1db783dd8017484b236f27d02f128a35c85",
+      "portable_sha256": "a99f3cea59bbed62721078f6ee07c1db783dd8017484b236f27d02f128a35c85",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-3bs-gate.xml",
+      "source_path": "evidence/3bs-gate/protected-pre-shot.xml",
+      "source_sha256": "5b3ee58b4e047cc6ecc6a3d05bb1cf1c4b29967aa51e1dbb6b479609d2ed8242",
+      "portable_sha256": "5b3ee58b4e047cc6ecc6a3d05bb1cf1c4b29967aa51e1dbb6b479609d2ed8242",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "historical-3bs-policy.json",
+      "source_path": "evidence/3bs-gate/protected-policy.json",
+      "source_sha256": "c728dce67ee71cd9c3a3b9ec3b045731fa217b0bc81f70bac6c668d1ee17bf43",
+      "portable_sha256": "c728dce67ee71cd9c3a3b9ec3b045731fa217b0bc81f70bac6c668d1ee17bf43",
+      "privacy_or_ansi_projection": false,
+      "kind": "historical evidence view"
+    },
+    {
+      "portable_file": "vitest.log",
+      "source_path": "evidence/admissions-preview/vitest-fresh-final.log",
+      "source_sha256": "f3b2a61a379e04944257c16831e4da5dd5359ce2ac603df6b517cb7f76854602",
+      "portable_sha256": "dd668a8ce41653357acb772f1802716fffe48d4538399708022f32b33ccd56e2",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "vitest.xml",
+      "source_path": "evidence/admissions-preview/fresh-frontend/vitest.xml",
+      "source_sha256": "d2d4de6bb93e56ecc2c2a738b722b48ebe22255e17c3cbf06b42c1d2267eece1",
+      "portable_sha256": "d2d4de6bb93e56ecc2c2a738b722b48ebe22255e17c3cbf06b42c1d2267eece1",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "build.log",
+      "source_path": "evidence/admissions-preview/build-fresh-final.log",
+      "source_sha256": "b01e2c90ebeeabb3ca334e72ae287cca0b82bb3fe88e0ab7816f14e73a682d2e",
+      "portable_sha256": "b01e2c90ebeeabb3ca334e72ae287cca0b82bb3fe88e0ab7816f14e73a682d2e",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "hook.log",
+      "source_path": "evidence/admissions-preview/quality-fresh-final.log",
+      "source_sha256": "a8de894e03053e519b463ae30fc334f8088eceaa996ef907e39a8a3304f560d1",
+      "portable_sha256": "a8de894e03053e519b463ae30fc334f8088eceaa996ef907e39a8a3304f560d1",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "npm-ci-fresh-final.log",
+      "source_path": "evidence/admissions-preview/npm-ci-fresh-final.log",
+      "source_sha256": "4d44a8a4b22ead0c3ab767f4095b9a5ce3329442e9689288b82edbc127c51aed",
+      "portable_sha256": "4d44a8a4b22ead0c3ab767f4095b9a5ce3329442e9689288b82edbc127c51aed",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview classical/tooling evidence view"
+    },
+    {
+      "portable_file": "archive-tests.log",
+      "source_path": "evidence/admissions-preview/archive-publication-final.log",
+      "source_sha256": "15be9e29acfb9af509f76be546e214ba2e874086568562b11118d8a499c56aad",
+      "portable_sha256": "15be9e29acfb9af509f76be546e214ba2e874086568562b11118d8a499c56aad",
+      "privacy_or_ansi_projection": false,
+      "kind": "current preview packaging verification; synthetic adversarial parameter IDs relabeled in portable view"
+    },
+    {
+      "portable_file": "archive-tests.xml",
+      "source_path": "evidence/admissions-preview/archive-publication-final.xml",
+      "source_sha256": "12614f562a88d232f0e6ad8b9a75eb32b4e02e863f195566b902ada880e1da28",
+      "portable_sha256": "f791256c6e236eb3ac378a097029c7940fb3e3389efcd26b7714abde23f19f0c",
+      "privacy_or_ansi_projection": true,
+      "kind": "current preview packaging verification; synthetic adversarial parameter IDs relabeled in portable view"
+    }
+  ]
+}

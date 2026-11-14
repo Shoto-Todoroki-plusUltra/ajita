@@ -16,3 +16,13 @@ review-snapshots/
 .ruff_cache/
 .env.*
 !.env.example
+res/# Local development instructions and release-review notes are not public docs.
+/AGENTS.md
+/PROJECT_BRIEF.md
+/CODEX_START_PROMPT.md
+/ARCHIVE_MANIFEST.json
+/PUBLIC_EXPORT.json
+/docs/ADMISSIONS_BRIEF.md
+/docs/ADMISSIONS_PREVIEW_REPORT.md
+/docs/LICENSE_OPTIONS.md
+/docs/RELEASE_NOTES.md

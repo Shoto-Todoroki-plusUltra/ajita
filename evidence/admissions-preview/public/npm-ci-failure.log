@@ -1,0 +1,13 @@
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, write
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, write
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/tldts/dist/cjs/src/data/trie.js.map'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, write
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/@redocly/openapi-core/lib/js-yaml/index.js'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/jsdom/lib/jsdom/living/helpers/svg/basic-types.js'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, write
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/yaml-ast-parser/dist/src/type.js'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/@asamuzakjp/css-color/dist/esm/resolvers/resolve.d.ts'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/type-fest/source/literal-to-primitive.d.ts'
+npm warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, lstat '<PREVIEW_WORKTREE>/frontend/node_modules/css-tree/cjs/syntax/config'
+npm warn tar TAR_ENTRY_ERROR ENOSPC: no space left on device, open '<PREVIEW_WORKTREE>/frontend/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js'
+npm error A complete log of this run can be found in: <INSTALL_CACHE>/_logs/2026-11-07T05_28_08_119Z-debug-0.log
